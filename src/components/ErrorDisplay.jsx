@@ -7,7 +7,7 @@ const ErrorDisplay = () => {
   return (
     <div
       id="error-display"
-      className="font-san flex h-dvh flex-col items-center justify-center bg-gradient-to-br from-amber-300/30 from-10% via-slate-300/20 via-60% to-red-300/20 to-90% text-center text-2xl text-slate-700 font-stretch-125%"
+      className="flex h-dvh flex-col items-center justify-center bg-gradient-to-br from-amber-300/30 from-10% via-slate-300/20 via-60% to-red-300/20 to-90% text-center text-2xl text-slate-700 font-stretch-125%"
     >
       <h1 className="flex items-center gap-4 text-4xl">
         <span className="text-6xl">❌ </span>ERROR!!
