@@ -5,7 +5,7 @@ const AboutMe = () => {
   return (
     <div
       id="about-me"
-      className="col-span-2 row-span-5 rounded-2xl bg-slate-900/30 p-8 text-start text-xl font-stretch-110%"
+      className="col-span-2 row-span-5 rounded-2xl bg-slate-900/20 p-8 text-start text-xl"
     >
       <h3 className="mb-5 text-4xl font-semibold font-stretch-120%">
         About Me...
