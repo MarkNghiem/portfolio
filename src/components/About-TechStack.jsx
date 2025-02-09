@@ -229,7 +229,7 @@ const TechStack = () => {
   return (
     <div
       id="tech-stack"
-      className="col-span-3 row-span-3 rounded-2xl bg-slate-900/30 font-stretch-105%"
+      className="col-span-3 row-span-3 rounded-2xl bg-slate-900/20"
     >
       <h1 className="mt-5 text-7xl font-semibold font-stretch-120%">
         Tech Stacks
@@ -249,7 +249,7 @@ const TechStack = () => {
               title={lang.label}
               aria-label={lang.label}
             >
-              <button className="m-0.5 flex items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5">
+              <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition-opacity duration-200 hover:opacity-80 active:opacity-90">
                 <img src={lang.icon} className="mr-1.5 size-10 p-1" />
                 {lang.name}
               </button>
@@ -272,7 +272,7 @@ const TechStack = () => {
               title={tech.label}
               aria-label={tech.label}
             >
-              <button className="m-0.5 flex items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5">
+              <button className="m-0.5 flex items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition-opacity duration-200 hover:opacity-80 active:opacity-90 cursor-pointer">
                 <img src={tech.icon} className="mr-1.5 size-10 p-1" />
                 {tech.name}
               </button>
@@ -290,7 +290,7 @@ const TechStack = () => {
               title={other.label}
               aria-label={other.label}
             >
-              <button className="m-0.5 flex items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5">
+              <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition-opacity duration-200 hover:opacity-80 active:opacity-90">
                 <img src={other.icon} className="mr-1.5 size-10 p-1" />
                 {other.name}
               </button>

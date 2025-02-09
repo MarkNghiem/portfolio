@@ -6,7 +6,7 @@ import TechStack from '../components/About-TechStack';
 
 const AboutContainer = () => {
   return (
-    <div id="about" className="grid grid-cols-5 grid-rows-5 w-[90%] place-self-center mt-20 gap-16">
+    <div id="about" className="grid grid-cols-5 grid-rows-5 w-[90%] place-self-center mt-20 gap-16 max-w-[1920px]">
       <Info />
       <AboutMe />
       <TechStack />
