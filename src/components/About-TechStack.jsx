@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import JavaScriptIcon from "../../public/svg/javascript.svg";
 import TypeScriptIcon from "../../public/svg/typescript.svg";
 import ReactIcon from "../../public/svg/react.svg";
@@ -31,6 +33,24 @@ import JSONIcon from "../../public/svg/json.svg";
 import YAMLIcon from "../../public/svg/yaml.svg";
 
 const TechStack = () => {
+  const [divVisible, setDivVisible] = useState(false);
+  const [contentVisible, setContentVisible] = useState(false);
+
+  useEffect(() => {
+    const divTimer = setTimeout(() => {
+      setDivVisible(true);
+    }, 5700);
+
+    const contentTimer = setTimeout(() => {
+      setContentVisible(true);
+    }, 6100);
+
+    return () => {
+      clearTimeout(divTimer);
+      clearTimeout(contentTimer);
+    };
+  }, []);
+
   const langs = [
     {
       name: "JavaScript",
@@ -229,78 +249,80 @@ const TechStack = () => {
   return (
     <div
       id="tech-stack"
-      className="col-span-3 row-span-3 rounded-2xl bg-slate-900/20"
+      className={`col-span-3 row-span-3 rounded-2xl bg-slate-900/20 transition-all duration-1000 ease-out ${divVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}
     >
-      <h1 className="mt-5 text-7xl font-semibold font-stretch-120%">
-        Tech Stacks
-      </h1>
-      <h3 className="mt-8 mb-4 text-3xl font-semibold">
-        Programming Languages
-      </h3>
-      <div
-        id="lang-button"
-        className="flex justify-center gap-2 place-self-center"
-      >
-        {langs.map((lang) => {
-          return (
-            <a
-              href={lang.url}
-              key={lang.name}
-              title={lang.label}
-              aria-label={lang.label}
-            >
-              <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition-opacity duration-200 hover:opacity-80 active:opacity-90">
-                <img src={lang.icon} className="mr-1.5 size-10 p-1" />
-                {lang.name}
-              </button>
-            </a>
-          );
-        })}
+      <div id="tech-stack-content" className={`transition-opacity duration-1000 ease-out ${contentVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <h1 className="mt-5 text-7xl font-semibold font-stretch-120%">
+          Tech Stacks
+        </h1>
+        <h3 className="mt-8 mb-4 text-3xl font-semibold">
+          Programming Languages
+        </h3>
+        <div
+          id="lang-button"
+          className="flex justify-center gap-2 place-self-center"
+        >
+          {langs.map((lang) => {
+            return (
+              <a
+                href={lang.url}
+                key={lang.name}
+                title={lang.label}
+                aria-label={lang.label}
+              >
+                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition-opacity duration-200 hover:opacity-80 active:opacity-90">
+                  <img src={lang.icon} className="mr-1.5 size-10 p-1" />
+                  {lang.name}
+                </button>
+              </a>
+            );
+          })}
+        </div>
+        <h3 className="mt-8 mb-4 text-3xl font-semibold">
+          Frameworks and Technologies
+        </h3>
+        <div
+          id="tech-button"
+          className="flex w-[90%] flex-wrap gap-2 place-self-center"
+        >
+          {techs.map((tech) => {
+            return (
+              <a
+                href={tech.url}
+                key={tech.name}
+                title={tech.label}
+                aria-label={tech.label}
+              >
+                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition-opacity duration-200 hover:opacity-80 active:opacity-90">
+                  <img src={tech.icon} className="mr-1.5 size-10 p-1" />
+                  {tech.name}
+                </button>
+              </a>
+            );
+          })}
+        </div>
+        <h3 className="mt-8 mb-4 text-3xl font-semibold">Others</h3>
+        <div id="other-button" className="flex justify-center gap-2">
+          {others.map((other) => {
+            return (
+              <a
+                href={other.url}
+                key={other.name}
+                title={other.label}
+                aria-label={other.label}
+              >
+                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition-opacity duration-200 hover:opacity-80 active:opacity-90">
+                  <img src={other.icon} className="mr-1.5 size-10 p-1" />
+                  {other.name}
+                </button>
+              </a>
+            );
+          })}
+        </div>
+        <h1 className="mt-8 text-5xl font-semibold font-stretch-120%">
+          And more to come...
+        </h1>
       </div>
-      <h3 className="mt-8 mb-4 text-3xl font-semibold">
-        Frameworks and Technologies
-      </h3>
-      <div
-        id="tech-button"
-        className="flex w-[95%] flex-wrap gap-2 place-self-center"
-      >
-        {techs.map((tech) => {
-          return (
-            <a
-              href={tech.url}
-              key={tech.name}
-              title={tech.label}
-              aria-label={tech.label}
-            >
-              <button className="m-0.5 flex items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition-opacity duration-200 hover:opacity-80 active:opacity-90 cursor-pointer">
-                <img src={tech.icon} className="mr-1.5 size-10 p-1" />
-                {tech.name}
-              </button>
-            </a>
-          );
-        })}
-      </div>
-      <h3 className="mt-8 mb-4 text-3xl font-semibold">Others</h3>
-      <div id="other-button" className="flex justify-center gap-2">
-        {others.map((other) => {
-          return (
-            <a
-              href={other.url}
-              key={other.name}
-              title={other.label}
-              aria-label={other.label}
-            >
-              <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition-opacity duration-200 hover:opacity-80 active:opacity-90">
-                <img src={other.icon} className="mr-1.5 size-10 p-1" />
-                {other.name}
-              </button>
-            </a>
-          );
-        })}
-      </div>
-      <h1 className="mt-8 text-5xl font-semibold font-stretch-120%">
-        And more to come...
-      </h1>
     </div>
   );
 };
