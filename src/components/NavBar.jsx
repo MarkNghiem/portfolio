@@ -28,7 +28,7 @@ const NavBar = () => {
   return (
     <div
       id="navbar"
-      className={`sticky top-0 z-10 flex rounded-b-4xl border-b border-slate-200 bg-slate-100/95 text-xl transition-transform duration-1000 ease-out ${visible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
+      className={`sticky top-0 z-20 flex rounded-b-4xl border-b border-slate-200 bg-slate-100/95 text-xl transition-transform duration-1000 ease-out ${visible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
     >
       <div
         id="navbar-left"
@@ -40,8 +40,8 @@ const NavBar = () => {
         id="navbar-right"
         className={`flex w-2/3 items-center justify-around transition-transform duration-1000 ease-out ${rightVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
       >
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
+        <a href="#about-shortcut">About</a>
+        <a href="#projects-shortcut">Projects</a>
         <a href="#publications">Publications</a>
       </div>
     </div>

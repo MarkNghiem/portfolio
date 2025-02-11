@@ -34,14 +34,19 @@ const Info = () => {
 
   return (
     <div
-      id="info"
-      className={`col-span-3 row-span-2 flex flex-col rounded-2xl bg-slate-900/20 text-3xl transition-all duration-1000 ease-out ${divVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}
+      className={`col-span-3 row-span-2 flex flex-col rounded-2xl bg-slate-900/20 text-3xl transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
-      <div id='info-content' className={`transition-opacity duration-1000 ease-in-out ${contentVisible ? 'opacity-100' : 'opacity-0'}`}>
-        <h1 className="pt-5 text-7xl font-semibold font-stretch-125%">
+      <div
+        id="info-content"
+        className={`transition-opacity duration-1000 ease-in-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
+      >
+        <h1
+          id="about-shortcut"
+          className="pt-5 text-7xl font-semibold font-stretch-125%"
+        >
           Kiet (Mark) Nghiem
         </h1>
-        <div className="grid h-full w-[90%] grid-cols-5 items-center place-self-center mt-5">
+        <div className="mt-5 grid h-full w-[90%] grid-cols-5 items-center place-self-center">
           <img
             src={me}
             aria-label="Avatar"
