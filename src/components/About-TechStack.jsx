@@ -270,7 +270,7 @@ const TechStack = () => {
                 title={lang.label}
                 aria-label={lang.label}
               >
-                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition-opacity duration-200 hover:opacity-80 active:opacity-90">
+                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition duration-200 hover:scale-110 hover:bg-slate-900/30 active:bg-slate-900/40">
                   <img src={lang.icon} className="mr-1.5 size-10 p-1" />
                   {lang.name}
                 </button>
@@ -293,7 +293,7 @@ const TechStack = () => {
                 title={tech.label}
                 aria-label={tech.label}
               >
-                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition-opacity duration-200 hover:opacity-80 active:opacity-90">
+                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition duration-200 hover:scale-110 hover:bg-slate-900/30 active:bg-slate-900/40">
                   <img src={tech.icon} className="mr-1.5 size-10 p-1" />
                   {tech.name}
                 </button>
@@ -311,7 +311,7 @@ const TechStack = () => {
                 title={other.label}
                 aria-label={other.label}
               >
-                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition-opacity duration-200 hover:opacity-80 active:opacity-90">
+                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition duration-200 hover:scale-110 hover:bg-slate-900/30 active:bg-slate-900/40">
                   <img src={other.icon} className="mr-1.5 size-10 p-1" />
                   {other.name}
                 </button>
@@ -319,7 +319,7 @@ const TechStack = () => {
             );
           })}
         </div>
-        <h1 className="mt-8 text-5xl font-semibold font-stretch-120%">
+        <h1 className="mt-8 mb-10 text-5xl font-semibold font-stretch-120%">
           And more to come...
         </h1>
       </div>
