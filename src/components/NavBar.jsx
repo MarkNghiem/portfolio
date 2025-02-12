@@ -25,6 +25,10 @@ const NavBar = () => {
     };
   }, []);
 
+  const scrollTo = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div
       id="navbar"
@@ -34,15 +38,30 @@ const NavBar = () => {
         id="navbar-left"
         className={`w-1/3 rounded-r-4xl rounded-bl-4xl bg-slate-900/30 p-3.5 transition-transform duration-500 ease-out ${leftVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
       >
-        <p className="font-semibold">Hey it&apos;s Mark!</p>
+        <p className="font-semibold animate-font-stretch">Hey it&apos;s Mark!</p>
       </div>
       <div
         id="navbar-right"
         className={`flex w-2/3 items-center justify-around transition-transform duration-1000 ease-out ${rightVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
       >
-        <a href="#about-shortcut">About</a>
-        <a href="#projects-shortcut">Projects</a>
-        <a href="#publications">Publications</a>
+        <a
+          onClick={() => scrollTo("about-navigate")}
+          className="rounded-3xl px-10 py-2 transition-colors duration-200 hover:cursor-pointer hover:bg-slate-300 active:bg-slate-400"
+        >
+          About
+        </a>
+        <a
+          onClick={() => scrollTo("projects-navigate")}
+          className="rounded-3xl px-10 py-2 transition-colors duration-200 hover:cursor-pointer hover:bg-slate-300 active:bg-slate-400"
+        >
+          Projects
+        </a>
+        <a
+          href="#publications"
+          className="rounded-3xl px-10 py-2 transition-colors duration-200 hover:cursor-pointer hover:bg-slate-300 active:bg-slate-400"
+        >
+          Publications
+        </a>
       </div>
     </div>
   );

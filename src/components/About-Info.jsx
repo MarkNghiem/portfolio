@@ -38,12 +38,9 @@ const Info = () => {
     >
       <div
         id="info-content"
-        className={`transition-opacity duration-1000 ease-in-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
+        className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <h1
-          id="about-shortcut"
-          className="pt-5 text-7xl font-semibold font-stretch-125%"
-        >
+        <h1 className="pt-5 text-7xl font-semibold font-stretch-125%">
           Kiet (Mark) Nghiem
         </h1>
         <div className="mt-5 grid h-full w-[90%] grid-cols-5 items-center place-self-center">
@@ -63,7 +60,7 @@ const Info = () => {
                 title="My Resume"
                 aria-label="My Resume"
               >
-                <button className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:brightness-50 active:brightness-150">
+                <button className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150">
                   <FaFilePdf className="size-10" />
                 </button>
               </a>
@@ -72,7 +69,7 @@ const Info = () => {
                 title="LinkedIn"
                 aria-label="LinkedIn"
               >
-                <button className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:brightness-50 active:brightness-150">
+                <button className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150">
                   <FaLinkedin className="size-10" />
                 </button>
               </a>
@@ -81,7 +78,7 @@ const Info = () => {
                 title="GitHub"
                 aria-label="GitHub"
               >
-                <button className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:brightness-50 active:brightness-150">
+                <button className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150">
                   <FaGithub className="size-10" />
                 </button>
               </a>
@@ -90,13 +87,13 @@ const Info = () => {
                 title="WellFound"
                 aria-label="WellFound"
               >
-                <button className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:brightness-50 active:brightness-150">
+                <button className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150">
                   <SiWellfound className="size-10" />
                 </button>
               </a>
               <button
                 onClick={handleEmail}
-                className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:brightness-50 active:brightness-150"
+                className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150"
                 title="Send me an Email"
                 aria-label="Send me an Email"
               >
