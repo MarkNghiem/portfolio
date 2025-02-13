@@ -93,7 +93,7 @@ const Navigator = () => {
         })}
         <li
           className=
-          {`mb-2 flex justify-end transition duration-300 ${activeDiv === 3 ? "scale-110 text-red-500" : ""}`}
+          {`mb-2 flex justify-end transition duration-300 ${activeDiv === 3 ? "scale-105 text-red-500" : ""}`}
           >
           <p
             className={`font-semibold text-red-500 transition duration-300 ${activeDiv === 3 ? "opacity-100" : "opacity-0"}`}

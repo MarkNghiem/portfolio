@@ -37,7 +37,7 @@ const AboutMe = () => {
         <h3 className="mb-5 text-4xl font-semibold font-stretch-120%">
           About Me...
         </h3>
-        <p className="mb-2">
+        <p className="mb-3">
           👋🏼 Hey there! my name is Kiet Nghiem but I go by Mark most of the
           time. I am a passionate and hungry-for-knowledge Software Engineer
           dedicated to continuously improve myself with self-education and
@@ -45,17 +45,17 @@ const AboutMe = () => {
           user and developer experiences while adhering to best practices and
           staying informed with the latest technologies.
         </p>
-        <p className="mb-2">
+        <p className="mb-3">
           🛠️ With expertise in JavaScript, TypeScript, React, Node.js, and
           Kubernetes, I specialize in creating efficient, maintainable, and
           secure software solutions.
         </p>
-        <p className="mb-2">
+        <p className="mb-3">
           ✨ I love seeing people around me happy and accomplish great things.
           Therefore I enjoy helping my teammates both technical and
           non-technical issues within my ability whenever I can.
         </p>
-        <p className="mb-2">
+        <p className="mb-3">
           🎮 Beyond coding, I enjoy collaborating in agile environments,
           mentoring engineers, and constantly pushing myself to learn new
           technologies. When I&apos;m not coding, you can find me tweaking UI
@@ -66,7 +66,7 @@ const AboutMe = () => {
           </span>
         </p>
         <p>Let&apos;s build something amazing together! 🚀</p>
-        <h3 className="mt-8 mb-5 text-4xl font-semibold font-stretch-120%">
+        <h3 className="mt-20 mb-8 text-4xl font-semibold font-stretch-120%">
           Meet My Partners!
         </h3>
         <div id="pika" className="mb-8 flex items-center gap-4">
@@ -74,7 +74,7 @@ const AboutMe = () => {
             src={pikaLarge}
             title="Pika"
             aria-label="Pika"
-            className="size-60 rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40"
+            className="size-60 rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105"
           />
           <div id="pika-details">
             <h4 className="mb-3 text-center text-3xl font-semibold font-stretch-120%">
@@ -93,7 +93,7 @@ const AboutMe = () => {
             src={chuchuLarge}
             title="Chuchu"
             aria-label="Chuchu"
-            className="order-2 size-60 rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40"
+            className="order-2 size-60 rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105"
           />
           <div id="chuchu-details" className="order-1">
             <h4 className="mb-3 text-center text-3xl font-semibold font-stretch-120%">

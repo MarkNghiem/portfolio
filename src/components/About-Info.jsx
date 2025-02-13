@@ -1,6 +1,8 @@
 // 'Info' Section - Containing personal portrait and links
 
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
+
 import { FaFilePdf } from "react-icons/fa6";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiWellfound } from "react-icons/si";
@@ -9,7 +11,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import me from "../../public/me.jpeg";
 import resume from "../../public/my-resume.pdf";
 
-const Info = () => {
+const Info = ({ handleEmail }) => {
   const [divVisible, setDivVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
 
@@ -29,13 +31,6 @@ const Info = () => {
     };
   }, []);
 
-  // Redirect to mailing to the provided email address
-  const handleEmail = () => {
-    const myEmail = "mark.kietnghiem@gmail.com";
-    const mailTo = `mailto:${myEmail}`;
-    window.location.href = mailTo;
-  };
-
   return (
     <div
       className={`col-span-3 row-span-2 flex flex-col rounded-2xl bg-slate-900/20 text-3xl shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
@@ -52,7 +47,7 @@ const Info = () => {
             src={me}
             aria-label="Avatar"
             title="Avatar"
-            className="col-span-2 size-76 justify-self-center rounded-full border-2 border-slate-300 object-cover shadow-2xl shadow-slate-900"
+            className="col-span-2 size-84 justify-self-center rounded-full border-2 border-slate-300 object-cover shadow-2xl shadow-slate-900 transition-transform duration-200 hover:scale-105"
           />
           <div className="col-span-3 justify-self-end text-end font-stretch-120%">
             <p>Software Engineer</p>
@@ -111,5 +106,9 @@ const Info = () => {
     </div>
   );
 };
+
+Info.propTypes = {
+  handleEmail: PropTypes.func
+}
 
 export default Info;
