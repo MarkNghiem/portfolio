@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 import chuchuLarge from "../../public/chuchu-large.jpeg";
 import pikaLarge from "../../public/pika-large.jpeg";
@@ -25,9 +25,12 @@ const AboutMe = () => {
   return (
     <div
       id="about-me"
-      className={`col-span-2 row-span-5 rounded-2xl bg-slate-900/20 p-8 text-start text-xl transition-all duration-1000 ease-out ${divVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}
+      className={`col-span-2 row-span-5 rounded-2xl bg-slate-900/20 p-8 text-start text-xl shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
-      <div id="about-me-content" className={`transition-opacity duration-1000 ease-out ${contentVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div
+        id="about-me-content"
+        className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
+      >
         <h3 className="mb-5 text-4xl font-semibold font-stretch-120%">
           About Me...
         </h3>
@@ -68,7 +71,7 @@ const AboutMe = () => {
             src={pikaLarge}
             title="Pika"
             aria-label="Pika"
-            className="size-60 rounded-4xl object-cover"
+            className="size-60 rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40"
           />
           <div id="pika-details">
             <h4 className="mb-3 text-center text-3xl font-semibold font-stretch-120%">
@@ -87,7 +90,7 @@ const AboutMe = () => {
             src={chuchuLarge}
             title="Chuchu"
             aria-label="Chuchu"
-            className="order-2 size-60 rounded-4xl object-cover"
+            className="order-2 size-60 rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40"
           />
           <div id="chuchu-details" className="order-1">
             <h4 className="mb-3 text-center text-3xl font-semibold font-stretch-120%">

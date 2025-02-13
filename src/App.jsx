@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Navigator from './components/Navigator';
 import AboutContainer from "./containers/AboutContainer";
 import ProjectsContainer from "./containers/ProjectsContainer";
+import PublicationsContainer from './containers/PublicationContainer';
 
 const App = () => {
   const [visible, setVisible] = useState(false);
@@ -43,6 +44,7 @@ const App = () => {
         <div id='projects-navigate' className='h-1' />
         <ProjectsContainer />
         <div id='publications-navigate' className='h-1' />
+        <PublicationsContainer />
       </div>
     </div>
   );
