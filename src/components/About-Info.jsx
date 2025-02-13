@@ -1,3 +1,5 @@
+// 'Info' Section - Containing personal portrait and links
+
 import { useEffect, useState } from "react";
 import { FaFilePdf } from "react-icons/fa6";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
@@ -11,6 +13,7 @@ const Info = () => {
   const [divVisible, setDivVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
 
+  // Timer to create smooth fade in effect for each components
   useEffect(() => {
     const divTimer = setTimeout(() => {
       setDivVisible(true);
@@ -26,6 +29,7 @@ const Info = () => {
     };
   }, []);
 
+  // Redirect to mailing to the provided email address
   const handleEmail = () => {
     const myEmail = "mark.kietnghiem@gmail.com";
     const mailTo = `mailto:${myEmail}`;

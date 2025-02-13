@@ -7,7 +7,7 @@ const PublicationsContainer = () => {
   return (
     <div
       id="publications"
-      className="mt-40 grid w-4/5 max-w-[1920px] grid-cols-9 gap-10 place-self-center mb-20"
+      className="mt-40 grid w-4/5 max-w-[1920px] grid-cols-9 gap-10 place-self-center"
     >
       <Publications />
       <Recommendation />

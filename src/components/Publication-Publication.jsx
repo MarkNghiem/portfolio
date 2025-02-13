@@ -1,9 +1,12 @@
+// Publications Section - Containing article and video featuring me and the products of the group
+
 import { useState, useEffect } from "react";
 
 const Publications = () => {
   const [divVisible, setDivVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
 
+  // Timer to create smooth fade in effect for each components
   useEffect(() => {
     const divTimer = setTimeout(() => {
       setDivVisible(true);
