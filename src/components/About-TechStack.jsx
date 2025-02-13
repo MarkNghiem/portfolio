@@ -1,6 +1,6 @@
 // 'Tech Stack' Section - Contain the stack that I have experience in
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 // Icons imported from 'svg' folder
 import JavaScriptIcon from "../../public/svg/javascript.svg";
@@ -19,7 +19,7 @@ import ReduxIcon from "../../public/svg/redux.svg";
 import ReactRouterIcon from "../../public/svg/reactrouter.svg";
 import PassportIcon from "../../public/svg/passport.svg";
 import TailwindCSSIcon from "../../public/svg/tailwindcss.svg";
-import SassIcon from '../../public/svg/sass.svg';
+import SassIcon from "../../public/svg/sass.svg";
 import ChartJSIcon from "../../public/svg/chartdotjs.svg";
 import ZustandIcon from "../../public/svg/zustand.svg";
 import SequelizeIcon from "../../public/svg/sequelize.svg";
@@ -35,6 +35,7 @@ import HTMLIcon from "../../public/svg/html5.svg";
 import CSSIcon from "../../public/svg/css.svg";
 import JSONIcon from "../../public/svg/json.svg";
 import YAMLIcon from "../../public/svg/yaml.svg";
+import ExternalLink from "../../public/svg/external-link.svg";
 
 const TechStack = () => {
   const [divVisible, setDivVisible] = useState(false);
@@ -272,73 +273,90 @@ const TechStack = () => {
         <h1 className="mt-5 text-7xl font-semibold font-stretch-120%">
           Tech Stacks
         </h1>
-        <h3 className="mt-8 mb-4 text-3xl font-semibold">
-          Programming Languages
-        </h3>
-        <div
-          id="lang-button"
-          className="flex justify-center gap-2 place-self-center"
-        >
-          {langs.map((lang) => {
-            return (
-              <a
-                href={lang.url}
-                key={lang.name}
-                title={lang.label}
-                aria-label={lang.label}
-              >
-                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 px-2 py-1.5 transition duration-200 hover:scale-110 hover:bg-slate-900/30 active:bg-slate-900/40">
-                  <img src={lang.icon} className="mr-1.5 size-10 p-1" />
-                  {lang.name}
-                </button>
-              </a>
-            );
-          })}
+        <div className="h-[58vh] overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 p-3 m-5">
+          <h3 className="mb-4 text-3xl font-semibold">
+            Programming Languages
+          </h3>
+          <div
+            id="lang-button"
+            className="group flex justify-center gap-2 place-self-center"
+          >
+            {langs.map((lang) => {
+              return (
+                <a
+                  href={lang.url}
+                  key={lang.name}
+                  title={lang.label}
+                  aria-label={lang.label}
+                >
+                  <button className="relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 px-4 py-2 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40">
+                    <img src={lang.icon} className="mr-3 size-10 p-1" />
+                    {lang.name}
+                    <img
+                      src={ExternalLink}
+                      className="absolute top-0 right-0 m-0.5 size-4"
+                    />
+                  </button>
+                </a>
+              );
+            })}
+          </div>
+          <h3 className="mt-8 mb-4 text-3xl font-semibold">
+            Frameworks and Technologies
+          </h3>
+          <div
+            id="tech-button"
+            className="group flex flex-wrap gap-2 place-self-center"
+          >
+            {techs.map((tech) => {
+              return (
+                <a
+                  href={tech.url}
+                  key={tech.name}
+                  title={tech.label}
+                  aria-label={tech.label}
+                >
+                  <button className="relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 px-4 py-2 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40">
+                    <img src={tech.icon} className="mr-3 size-10 p-1" />
+                    {tech.name}
+                    <img
+                      src={ExternalLink}
+                      className="absolute top-0 right-0 m-0.5 size-4"
+                    />
+                  </button>
+                </a>
+              );
+            })}
+          </div>
+          <h3 className="mt-8 mb-4 text-3xl font-semibold">Others</h3>
+          <div
+            id="other-button"
+            className="group flex justify-center gap-2 place-self-center"
+          >
+            {others.map((other) => {
+              return (
+                <a
+                  href={other.url}
+                  key={other.name}
+                  title={other.label}
+                  aria-label={other.label}
+                >
+                  <button className="relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 px-4 py-2 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40">
+                    <img src={other.icon} className="mr-1.5 size-10 p-1" />
+                    {other.name}
+                    <img
+                      src={ExternalLink}
+                      className="absolute top-0 right-0 m-0.5 size-4"
+                    />
+                  </button>
+                </a>
+              );
+            })}
+          </div>
+          <h1 className="mt-8 text-5xl font-semibold font-stretch-120%">
+            And more to come...
+          </h1>
         </div>
-        <h3 className="mt-8 mb-4 text-3xl font-semibold">
-          Frameworks and Technologies
-        </h3>
-        <div
-          id="tech-button"
-          className="flex w-[90%] flex-wrap gap-2 place-self-center"
-        >
-          {techs.map((tech) => {
-            return (
-              <a
-                href={tech.url}
-                key={tech.name}
-                title={tech.label}
-                aria-label={tech.label}
-              >
-                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 px-2 py-1.5 transition duration-200 hover:scale-110 hover:bg-slate-900/30 active:bg-slate-900/40">
-                  <img src={tech.icon} className="mr-1.5 size-10 p-1" />
-                  {tech.name}
-                </button>
-              </a>
-            );
-          })}
-        </div>
-        <h3 className="mt-8 mb-4 text-3xl font-semibold">Others</h3>
-        <div id="other-button" className="flex justify-center gap-2">
-          {others.map((other) => {
-            return (
-              <a
-                href={other.url}
-                key={other.name}
-                title={other.label}
-                aria-label={other.label}
-              >
-                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 px-2 py-1.5 transition duration-200 hover:scale-110 hover:bg-slate-900/30 active:bg-slate-900/40">
-                  <img src={other.icon} className="mr-1.5 size-10 p-1" />
-                  {other.name}
-                </button>
-              </a>
-            );
-          })}
-        </div>
-        <h1 className="mt-8 mb-10 text-5xl font-semibold font-stretch-120%">
-          And more to come...
-        </h1>
       </div>
     </div>
   );

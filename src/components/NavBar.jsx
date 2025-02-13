@@ -1,8 +1,9 @@
 //The Navigation Bar - Sticky on top of the page
 
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 
-const NavBar = () => {
+const NavBar = ({ scrollTo }) => {
   const [visible, setVisible] = useState(false);
   const [leftVisible, setLeftVisible] = useState(false);
   const [rightVisible, setRightVisible] = useState(false);
@@ -27,11 +28,6 @@ const NavBar = () => {
       clearTimeout(rightTimer);
     };
   }, []);
-
-  // Smooth scrolling behaviour when clicking on a button in the NavBar
-  const scrollTo = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <div
@@ -72,5 +68,9 @@ const NavBar = () => {
     </div>
   );
 };
+
+NavBar.propTypes = {
+  scrollTo: PropTypes.func,
+}
 
 export default NavBar;
