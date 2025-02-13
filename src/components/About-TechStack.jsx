@@ -16,6 +16,7 @@ import ReduxIcon from "../../public/svg/redux.svg";
 import ReactRouterIcon from "../../public/svg/reactrouter.svg";
 import PassportIcon from "../../public/svg/passport.svg";
 import TailwindCSSIcon from "../../public/svg/tailwindcss.svg";
+import SassIcon from '../../public/svg/sass.svg';
 import ChartJSIcon from "../../public/svg/chartdotjs.svg";
 import ZustandIcon from "../../public/svg/zustand.svg";
 import SequelizeIcon from "../../public/svg/sequelize.svg";
@@ -158,6 +159,12 @@ const TechStack = () => {
       icon: TailwindCSSIcon,
     },
     {
+      name: "Sass",
+      url: "https://sass-lang.com/",
+      label: "Sass Homepage",
+      icon: SassIcon,
+    },
+    {
       name: "Chart.js",
       url: "https://www.chartjs.org/",
       label: "Chart.js Homepage",
@@ -249,9 +256,12 @@ const TechStack = () => {
   return (
     <div
       id="tech-stack"
-      className={`col-span-3 row-span-3 rounded-2xl bg-slate-900/20 transition-all duration-1000 ease-out ${divVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}
+      className={`col-span-3 row-span-3 rounded-2xl bg-slate-900/20 shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
-      <div id="tech-stack-content" className={`transition-opacity duration-1000 ease-out ${contentVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div
+        id="tech-stack-content"
+        className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
+      >
         <h1 className="mt-5 text-7xl font-semibold font-stretch-120%">
           Tech Stacks
         </h1>
@@ -270,7 +280,7 @@ const TechStack = () => {
                 title={lang.label}
                 aria-label={lang.label}
               >
-                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition duration-200 hover:scale-110 hover:bg-slate-900/30 active:bg-slate-900/40">
+                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 px-2 py-1.5 transition duration-200 hover:scale-110 hover:bg-slate-900/30 active:bg-slate-900/40">
                   <img src={lang.icon} className="mr-1.5 size-10 p-1" />
                   {lang.name}
                 </button>
@@ -293,7 +303,7 @@ const TechStack = () => {
                 title={tech.label}
                 aria-label={tech.label}
               >
-                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition duration-200 hover:scale-110 hover:bg-slate-900/30 active:bg-slate-900/40">
+                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 px-2 py-1.5 transition duration-200 hover:scale-110 hover:bg-slate-900/30 active:bg-slate-900/40">
                   <img src={tech.icon} className="mr-1.5 size-10 p-1" />
                   {tech.name}
                 </button>
@@ -311,7 +321,7 @@ const TechStack = () => {
                 title={other.label}
                 aria-label={other.label}
               >
-                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl bg-slate-900/20 px-2 py-1.5 transition duration-200 hover:scale-110 hover:bg-slate-900/30 active:bg-slate-900/40">
+                <button className="m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 px-2 py-1.5 transition duration-200 hover:scale-110 hover:bg-slate-900/30 active:bg-slate-900/40">
                   <img src={other.icon} className="mr-1.5 size-10 p-1" />
                   {other.name}
                 </button>

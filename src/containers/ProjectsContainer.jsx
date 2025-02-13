@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 
 import { CgWebsite } from "react-icons/cg";
 import { SiMedium } from "react-icons/si";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaProductHunt } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 import BottleNetes from "../../public/bottlenetes.png";
 import YAP from "../../public/yap.png";
@@ -60,6 +61,16 @@ const ProjectsContainer = () => {
           type: "LinkedIn",
           url: "https://www.linkedin.com/company/bottlenetes/posts/?feedView=all",
           icon: <FaLinkedin className="size-6" />,
+        },
+        {
+          type: "Product Hunt",
+          url: "https://www.producthunt.com/products/bottlenetes#bottlenetes",
+          icon: <FaProductHunt className="size-6" />,
+        },
+        {
+          type: "X",
+          url: "https://x.com/bottlenetes",
+          icon: <FaSquareXTwitter className="size-6" />,
         },
       ],
       style:
@@ -165,78 +176,80 @@ const ProjectsContainer = () => {
 
   return (
     <div
-      id="projects-container"
-      className={`mt-40 w-4/5 max-w-[1920px] place-self-center rounded-2xl bg-slate-900/20 pb-8 transition duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      id="projects"
+      className={`mt-40 w-4/5 max-w-[1920px] place-self-center rounded-2xl bg-slate-900/20 pb-8 shadow-2xl shadow-slate-900/50 transition duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
       <div
         id="projects-content"
         className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <h1 className="pt-8 pb-16 text-8xl font-semibold font-stretch-125%">
+        <h1 className="py-8 text-8xl font-semibold font-stretch-125%">
           Projects
         </h1>
-        <div
-          id="projects"
-          className="group grid w-[95%] grid-cols-5 grid-rows-7 gap-2 place-self-center"
-        >
-          {projects.map((project, index) => {
-            return (
-              <div
-                key={index}
-                className={`relative h-full rounded-2xl border border-slate-400 transition duration-300 group-hover:scale-95 group-hover:opacity-70 hover:z-10 hover:scale-110 hover:opacity-100 ${project.style}`}
-              >
+        <div className="max-h-[1050px] w-[95%] place-self-center overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/30 to-amber-900/20 py-10">
+          <div
+            id="projects"
+            className="group grid w-[95%] grid-cols-5 grid-rows-7 gap-2 place-self-center"
+          >
+            {projects.map((project, index) => {
+              return (
                 <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url(${project.background})`,
-                    opacity: 0.05,
-                  }}
-                />
-                <div className="flex h-full flex-col py-10 transition-opacity duration-200 group-hover:opacity-0">
-                  <h4 className="z-10 text-3xl font-stretch-125%">
-                    {project.type}
-                  </h4>
-                  <div className="z-10 h-full place-content-center">
-                    <h2 className="text-7xl font-semibold font-stretch-125%">
+                  key={index}
+                  className={`relative h-full rounded-2xl border border-slate-400 shadow-2xl shadow-black/80 transition duration-300 group-hover:scale-95 group-hover:opacity-70 hover:z-10 hover:scale-105 hover:opacity-100 ${project.style}`}
+                >
+                  <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{
+                      backgroundImage: `url(${project.background})`,
+                      opacity: 0.05,
+                    }}
+                  />
+                  <div className="flex h-full flex-col py-10 transition-opacity duration-200 group-hover:opacity-0">
+                    <h4 className="z-10 text-3xl font-stretch-125%">
+                      {project.type}
+                    </h4>
+                    <div className="z-10 h-full place-content-center">
+                      <h2 className="text-7xl font-semibold font-stretch-125% mx-2">
+                        {project.name}
+                      </h2>
+                      <p className="text-xl">{project.slogan}</p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 z-20 flex flex-col items-center justify-center p-10 text-2xl opacity-0 transition-opacity duration-200 hover:opacity-100">
+                    <div className="absolute top-0 left-0 z-30 m-3 flex gap-3">
+                      {project.resources?.map((resource, index) => {
+                        return (
+                          <a
+                            key={index}
+                            href={resource.url}
+                            title={resource.type}
+                            aria-label={resource.type}
+                          >
+                            <button className="cursor-pointer transition-transform duration-300 hover:scale-125">
+                              {resource.icon}
+                            </button>
+                          </a>
+                        );
+                      })}
+                    </div>
+                    <p className="pb-3 text-7xl font-semibold font-stretch-125%">
                       {project.name}
-                    </h2>
-                    <p className="text-xl">{project.slogan}</p>
+                    </p>
+                    <p>{project.description}</p>
                   </div>
                 </div>
-                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center p-10 text-2xl opacity-0 transition-opacity duration-200 hover:opacity-100">
-                  <div className="absolute top-0 left-0 z-30 m-2 flex gap-3">
-                    {project.resources?.map((resource, index) => {
-                      return (
-                        <a
-                          key={index}
-                          href={resource.url}
-                          title={resource.type}
-                          aria-label={resource.type}
-                        >
-                          <button className="cursor-pointer transition-transform duration-300 hover:scale-125">
-                            {resource.icon}
-                          </button>
-                        </a>
-                      );
-                    })}
-                  </div>
-                  <p className="pb-3 text-7xl font-semibold font-stretch-125%">
-                    {project.name}
-                  </p>
-                  <p>{project.description}</p>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
 
-          {blankGridPosition.map((grid, index) => {
-            return (
-              <div
-                key={index}
-                className={`rounded-2xl bg-slate-900/70 py-20 ${grid}`}
-              />
-            );
-          })}
+            {blankGridPosition.map((grid, index) => {
+              return (
+                <div
+                  key={index}
+                  className={`rounded-2xl bg-slate-900/70 py-20 ${grid}`}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

@@ -34,7 +34,7 @@ const Info = () => {
 
   return (
     <div
-      className={`col-span-3 row-span-2 flex flex-col rounded-2xl bg-slate-900/20 text-3xl transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      className={`col-span-3 row-span-2 flex flex-col rounded-2xl bg-slate-900/20 text-3xl shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
       <div
         id="info-content"
@@ -48,7 +48,7 @@ const Info = () => {
             src={me}
             aria-label="Avatar"
             title="Avatar"
-            className="col-span-2 size-76 justify-self-center rounded-full object-cover"
+            className="col-span-2 size-76 justify-self-center rounded-full border-2 border-slate-300 object-cover shadow-2xl shadow-slate-900"
           />
           <div className="col-span-3 justify-self-end text-end font-stretch-120%">
             <p>Software Engineer</p>

@@ -57,7 +57,7 @@ const NavBar = () => {
           Projects
         </a>
         <a
-          href="#publications"
+          onClick={() => scrollTo('publications-navigate')}
           className="rounded-3xl px-10 py-2 transition-colors duration-200 hover:cursor-pointer hover:bg-slate-300 active:bg-slate-400"
         >
           Publications
