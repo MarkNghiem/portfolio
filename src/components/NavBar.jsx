@@ -1,3 +1,5 @@
+//The Navigation Bar - Sticky on top of the page
+
 import { useEffect, useState } from "react";
 
 const NavBar = () => {
@@ -5,6 +7,7 @@ const NavBar = () => {
   const [leftVisible, setLeftVisible] = useState(false);
   const [rightVisible, setRightVisible] = useState(false);
 
+  // Timer to create smooth fade in effect for each components
   useEffect(() => {
     const navBarTimer = setTimeout(() => {
       setVisible(true);
@@ -25,6 +28,7 @@ const NavBar = () => {
     };
   }, []);
 
+  // Smooth scrolling behaviour when clicking on a button in the NavBar
   const scrollTo = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
   };
@@ -38,7 +42,9 @@ const NavBar = () => {
         id="navbar-left"
         className={`w-1/3 rounded-r-4xl rounded-bl-4xl bg-slate-900/30 p-3.5 transition-transform duration-500 ease-out ${leftVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
       >
-        <p className="font-semibold animate-font-stretch">Hey it&apos;s Mark!</p>
+        <p className="animate-font-stretch font-semibold">
+          Hey it&apos;s Mark!
+        </p>
       </div>
       <div
         id="navbar-right"
@@ -57,7 +63,7 @@ const NavBar = () => {
           Projects
         </a>
         <a
-          onClick={() => scrollTo('publications-navigate')}
+          onClick={() => scrollTo("publications-navigate")}
           className="rounded-3xl px-10 py-2 transition-colors duration-200 hover:cursor-pointer hover:bg-slate-300 active:bg-slate-400"
         >
           Publications

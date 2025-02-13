@@ -1,5 +1,8 @@
+// 'Tech Stack' Section - Contain the stack that I have experience in
+
 import { useEffect, useState } from 'react';
 
+// Icons imported from 'svg' folder
 import JavaScriptIcon from "../../public/svg/javascript.svg";
 import TypeScriptIcon from "../../public/svg/typescript.svg";
 import ReactIcon from "../../public/svg/react.svg";
@@ -37,6 +40,7 @@ const TechStack = () => {
   const [divVisible, setDivVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
 
+  // Timer to create smooth fade in effect for each components
   useEffect(() => {
     const divTimer = setTimeout(() => {
       setDivVisible(true);
@@ -52,6 +56,7 @@ const TechStack = () => {
     };
   }, []);
 
+  // Programming Language list
   const langs = [
     {
       name: "JavaScript",
@@ -67,6 +72,7 @@ const TechStack = () => {
     },
   ];
 
+  // Framework and Technology list
   const techs = [
     {
       name: "React",
@@ -226,6 +232,7 @@ const TechStack = () => {
     },
   ];
 
+  // Other minor techs and languages
   const others = [
     {
       name: "HTML",

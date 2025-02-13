@@ -1,3 +1,5 @@
+// 'About Me' Section - Containing a summary of me as well as Pika and Chuchu
+
 import { useEffect, useState } from "react";
 
 import chuchuLarge from "../../public/chuchu-large.jpeg";
@@ -7,6 +9,7 @@ const AboutMe = () => {
   const [divVisible, setDivVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
 
+  // Timer to create smooth fade in effect for each components
   useEffect(() => {
     const divTimer = setTimeout(() => {
       setDivVisible(true);

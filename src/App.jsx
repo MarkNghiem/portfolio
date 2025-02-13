@@ -7,10 +7,12 @@ import Navigator from './components/Navigator';
 import AboutContainer from "./containers/AboutContainer";
 import ProjectsContainer from "./containers/ProjectsContainer";
 import PublicationsContainer from './containers/PublicationContainer';
+import EndingContainer from './containers/EndingContainer';
 
 const App = () => {
   const [visible, setVisible] = useState(false);
 
+  // Timer to create smooth fade in effect for each components
   useEffect(() => {
     const fadeInTimer = setTimeout(() => {
       setVisible(true);
@@ -39,12 +41,22 @@ const App = () => {
       <div id="main-container">
         <NavBar />
         <Navigator />
-        <div id='about-navigate' className=' h-1' />
+        <div id="about-navigate" className="h-1" />
         <AboutContainer />
-        <div id='projects-navigate' className='h-1' />
+        <div id="projects-navigate" className="h-1" />
         <ProjectsContainer />
-        <div id='publications-navigate' className='h-1' />
+        <div id="publications-navigate" className="h-1" />
         <PublicationsContainer />
+        <div
+          className="h-[90vh] text-5xl font-semibold font-stretch-120% flex items-center justify-end flex-col"
+        >
+          <h3 className='mb-5'>
+            Is it over? Or is it not?
+          </h3>
+          <p className=' animate-bounce'>↓</p>
+        </div>
+        <div id='ending-navigate' className='h-1' />
+        <EndingContainer />
       </div>
     </div>
   );
