@@ -8,11 +8,11 @@ const Recommendation = () => {
   useEffect(() => {
     const divTimer = setTimeout(() => {
       setDivVisible(true);
-    }, 5900);
+    }, 6000);
 
     const contentTimer = setTimeout(() => {
       setContentVisible(true);
-    }, 6300);
+    }, 6400);
 
     return () => {
       clearTimeout(divTimer);
