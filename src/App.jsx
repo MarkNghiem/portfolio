@@ -10,6 +10,8 @@ import PublicationsContainer from "./containers/PublicationContainer";
 import EndingContainer from "./containers/EndingContainer";
 import Footer from "./containers/Footer";
 
+import { app3xl } from './assets/styles';
+
 const App = () => {
   const [visible, setVisible] = useState(false);
 
@@ -47,7 +49,7 @@ const App = () => {
       className="bg-gradient-to-br from-amber-300/30 from-10% via-slate-300/20 via-60% to-red-300/20 to-90% text-center text-slate-700 font-stretch-110%"
     >
       <h1
-        className={`absolute top-1/2 left-1/2 -translate-1/2 text-9xl opacity-0 transition-opacity duration-1000 ease-in-out ${visible ? "opacity-100" : ""}`}
+        className={`fixed top-1/2 left-1/2 -translate-1/2 text-3xl opacity-0 transition-opacity duration-1000 ease-in-out ${visible ? "opacity-100" : ""} ${app3xl}`}
       >
         Hey it&apos;s Mark! 🎉
       </h1>
@@ -60,7 +62,7 @@ const App = () => {
         <ProjectsContainer />
         <div id="publications-navigate" className="h-1" />
         <PublicationsContainer />
-        <div className="flex h-[90vh] flex-col items-center justify-end text-5xl font-semibold font-stretch-120%">
+        <div className="3xl:text-5xl 3xl:font-stretch-125% flex h-[90vh] animate-font-stretch flex-col items-center justify-end font-semibold">
           <h3 className="mb-5">Is it over? Or is it not?</h3>
           <p className="animate-bounce">↓</p>
         </div>

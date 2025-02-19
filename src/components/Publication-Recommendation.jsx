@@ -29,11 +29,11 @@ const Recommendation = () => {
         id="recommendations-content"
         className={`h-full transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <h1 className="py-8 text-7xl font-semibold font-stretch-125%">
+        <h1 className="py-8 3xl:text-7xl font-semibold font-stretch-125%">
           Recommendations
         </h1>
         <div className="h-[80%] w-[95%] place-content-center place-self-center rounded-2xl bg-linear-to-br from-slate-900/30 to-amber-900/20">
-          <h1 className="py-10 text-5xl font-semibold font-stretch-125%">
+          <h1 className="py-10 3xl:text-5xl font-semibold font-stretch-125%">
             Coming soon...
           </h1>
         </div>

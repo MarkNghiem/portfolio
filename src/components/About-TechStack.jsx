@@ -2,6 +2,17 @@
 
 import { useEffect, useState } from "react";
 
+import {
+  techStack3xl1,
+  techStack3xl2,
+  techStack3xl3,
+  techStack3xl4,
+  displayBlock3xl,
+  title3xl,
+  subtitle3xl,
+  ender3xl,
+} from "../assets/styles";
+
 // Icons imported from 'svg' folder
 import JavaScriptIcon from "../../public/svg/javascript.svg";
 import TypeScriptIcon from "../../public/svg/typescript.svg";
@@ -264,17 +275,21 @@ const TechStack = () => {
   return (
     <div
       id="tech-stack"
-      className={`col-span-3 row-span-3 rounded-2xl bg-slate-900/20 shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      className={`rounded-2xl bg-slate-900/20 shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${techStack3xl1}`}
     >
       <div
         id="tech-stack-content"
-        className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
+        className={`max-h-[90vh] transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <h1 className="mt-5 text-7xl font-semibold font-stretch-120%">
+        <h1
+          className={`mt-5 text-5xl font-semibold font-stretch-115% ${title3xl}`}
+        >
           Tech Stacks
         </h1>
-        <div className="h-[58vh] overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 p-3 m-5">
-          <h3 className="mb-4 text-3xl font-semibold">
+        <div
+          className={`m-5 max-h-130 overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 p-3 ${techStack3xl2}`}
+        >
+          <h3 className={`mb-4 text-xl font-semibold ${subtitle3xl}`}>
             Programming Languages
           </h3>
           <div
@@ -289,9 +304,14 @@ const TechStack = () => {
                   title={lang.label}
                   aria-label={lang.label}
                 >
-                  <button className="relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 px-4 py-2 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40">
-                    <img src={lang.icon} className="mr-3 size-10 p-1" />
-                    {lang.name}
+                  <button
+                    className={`relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 p-4.5 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40 ${techStack3xl3}`}
+                  >
+                    <img
+                      src={lang.icon}
+                      className={`size-10 ${techStack3xl4}`}
+                    />
+                    <p className={`hidden ${displayBlock3xl}`}>{lang.name}</p>
                     <img
                       src={ExternalLink}
                       className="absolute top-0 right-0 m-0.5 size-4"
@@ -301,12 +321,12 @@ const TechStack = () => {
               );
             })}
           </div>
-          <h3 className="mt-8 mb-4 text-3xl font-semibold">
+          <h3 className={`mt-8 mb-4 text-xl font-semibold ${subtitle3xl}`}>
             Frameworks and Technologies
           </h3>
           <div
             id="tech-button"
-            className="group flex flex-wrap gap-2 place-self-center"
+            className="group flex flex-wrap justify-center gap-2 place-self-center"
           >
             {techs.map((tech) => {
               return (
@@ -316,9 +336,14 @@ const TechStack = () => {
                   title={tech.label}
                   aria-label={tech.label}
                 >
-                  <button className="relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 px-4 py-2 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40">
-                    <img src={tech.icon} className="mr-3 size-10 p-1" />
-                    {tech.name}
+                  <button
+                    className={`relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 p-4.5 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40 ${techStack3xl3}`}
+                  >
+                    <img
+                      src={tech.icon}
+                      className={`size-10 ${techStack3xl4}`}
+                    />
+                    <p className={`hidden ${displayBlock3xl}`}>{tech.name}</p>
                     <img
                       src={ExternalLink}
                       className="absolute top-0 right-0 m-0.5 size-4"
@@ -328,10 +353,12 @@ const TechStack = () => {
               );
             })}
           </div>
-          <h3 className="mt-8 mb-4 text-3xl font-semibold">Others</h3>
+          <h3 className={`mt-8 mb-4 text-xl font-semibold ${subtitle3xl}`}>
+            Others
+          </h3>
           <div
             id="other-button"
-            className="group flex justify-center gap-2 place-self-center"
+            className="group flex flex-wrap justify-center gap-2 place-self-center"
           >
             {others.map((other) => {
               return (
@@ -341,9 +368,14 @@ const TechStack = () => {
                   title={other.label}
                   aria-label={other.label}
                 >
-                  <button className="relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 px-4 py-2 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40">
-                    <img src={other.icon} className="mr-1.5 size-10 p-1" />
-                    {other.name}
+                  <button
+                    className={`relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 p-4.5 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40 ${techStack3xl3}`}
+                  >
+                    <img
+                      src={other.icon}
+                      className={`size-10 ${techStack3xl4}`}
+                    />
+                    <p className={`hidden ${displayBlock3xl}`}>{other.name}</p>
                     <img
                       src={ExternalLink}
                       className="absolute top-0 right-0 m-0.5 size-4"
@@ -353,7 +385,7 @@ const TechStack = () => {
               );
             })}
           </div>
-          <h1 className="mt-8 text-5xl font-semibold font-stretch-120%">
+          <h1 className={`my-8 text-3xl font-semibold font-stretch-115% ${ender3xl}`}>
             And more to come...
           </h1>
         </div>

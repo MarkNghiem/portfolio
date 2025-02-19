@@ -26,13 +26,13 @@ const EndingContainer = () => {
       className={`mt-[100vh] mb-20 w-4/5 place-self-center rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 py-8 shadow-2xl shadow-slate-900/50 transition duration-1000 ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
       <div id="ending-content">
-        <h1 className="pb-5 text-5xl font-semibold font-stretch-120%">
+        <h1 className="pb-5 text-7xl font-semibold font-stretch-125%">
           You have reached the end!
         </h1>
         <h1 className="pb-10 text-4xl font-semibold font-stretch-120%">
           Here&apos;s more cat pictures for your effort.
         </h1>
-        <div className="group flex justify-center gap-10 place-self-center">
+        <div className="group flex flex-col 3xl:flex-row justify-center gap-10 place-self-center">
           {endingPictures.map((picture, index) => {
             return (
               <img

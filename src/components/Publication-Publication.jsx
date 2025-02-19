@@ -50,7 +50,7 @@ const Publications = () => {
         id="publications-content"
         className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <h1 className="py-8 text-7xl font-semibold font-stretch-125%">
+        <h1 className="py-8 3xl:text-7xl font-semibold font-stretch-125%">
           Publications
         </h1>
         <div className="flex w-[95%] flex-col gap-5 place-self-center rounded-2xl bg-linear-to-br from-slate-900/30 to-amber-900/20 p-3 py-10">
