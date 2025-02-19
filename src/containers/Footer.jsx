@@ -31,14 +31,14 @@ const Footer = ({ handleEmail, scrollTo }) => {
   return (
     <div
       id="footer"
-      className="relative grid h-[30vh] grid-cols-4 rounded-t-4xl bg-linear-to-br from-amber-400/80 to-red-400/80"
+      className="relative flex flex-col 3xl:grid 3xl:h-[30vh] 3xl:grid-cols-4 rounded-t-full bg-linear-to-br from-amber-400/80 to-red-400/80"
     >
-      <div className="col-span-3 mr-30 ml-50 flex items-center justify-between">
+      <div className="3xl:col-span-3 3xl:mr-30 3xl:ml-50 3xl:flex items-center justify-between">
         <img
           src={MeFooter}
           title="My Portrait 2"
           aria-label="My Portrait 2"
-          className="size-72 rounded-full border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105"
+          className=" size-20 3xl:size-72 rounded-full border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105"
         />
         <div className="mb-10 text-start">
           <h3 className="mb-10 text-5xl font-semibold font-stretch-120%">
@@ -84,7 +84,7 @@ const Footer = ({ handleEmail, scrollTo }) => {
             );
           })}
         </div>
-        <p className="absolute bottom-0 left-1/2 -translate-x-1/2 text-xl">
+        <p className="absolute bottom-2 left-1/2 -translate-x-1/2 text-xl">
           Changelog
         </p>
       </div>

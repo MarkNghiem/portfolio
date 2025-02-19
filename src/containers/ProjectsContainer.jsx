@@ -177,13 +177,13 @@ const ProjectsContainer = () => {
   return (
     <div
       id="projects"
-      className={`mt-40 w-4/5 max-w-[1920px] place-self-center rounded-2xl bg-slate-900/20 pb-8 shadow-2xl shadow-slate-900/50 transition duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      className={`3xl:mt-40 3xl:w-4/5 mt-20 w-9/10 place-self-center rounded-2xl bg-slate-900/20 pb-8 shadow-2xl shadow-slate-900/50 transition duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
       <div
         id="projects-content"
         className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <h1 className="py-8 text-8xl font-semibold font-stretch-125%">
+        <h1 className="3xl:text-7xl py-8 font-semibold 3xl:font-stretch-125% text-5xl font-stretch-115%">
           Projects
         </h1>
         <div className="max-h-[1050px] w-[95%] place-self-center overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/30 to-amber-900/20 py-10">
@@ -209,7 +209,7 @@ const ProjectsContainer = () => {
                       {project.type}
                     </h4>
                     <div className="z-10 h-full place-content-center">
-                      <h2 className="text-7xl font-semibold font-stretch-125% mx-2">
+                      <h2 className="mx-2 text-7xl font-semibold font-stretch-125%">
                         {project.name}
                       </h2>
                       <p className="text-xl">{project.slogan}</p>

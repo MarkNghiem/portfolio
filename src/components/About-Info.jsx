@@ -1,12 +1,23 @@
 // 'Info' Section - Containing personal portrait and links
 
 import { useEffect, useState } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import { FaFilePdf } from "react-icons/fa6";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiWellfound } from "react-icons/si";
 import { BiLogoGmail } from "react-icons/bi";
+import {
+  info3xl1,
+  info3xl2,
+  info3xl3,
+  info3xl4,
+  info3xl5,
+  info3xl6,
+  info3xl7,
+  info3xl8,
+  title3xl
+} from "../assets/styles";
 
 import me from "../../public/me.jpeg";
 import resume from "../../public/my-resume.pdf";
@@ -31,75 +42,87 @@ const Info = ({ handleEmail }) => {
     };
   }, []);
 
+  const buttons = [
+    {
+      type: "LinkedIn",
+      url: "https://www.linkedin.com/in/mark-nghiem/",
+      icon: <FaLinkedin className={`${info3xl7}`} />,
+    },
+    {
+      type: "GitHub",
+      url: "https://github.com/MarkNghiem",
+      icon: <FaGithub className={`${info3xl7}`} />,
+    },
+    {
+      type: "WellFound",
+      url: "https://wellfound.com/u/mark-nghiem",
+      icon: <SiWellfound className={`${info3xl7}`} />,
+    },
+  ];
+
   return (
     <div
-      className={`col-span-3 row-span-2 flex flex-col rounded-2xl bg-slate-900/20 text-3xl shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      id="info-component"
+      className={`flex flex-col rounded-2xl bg-slate-900/20 text-2xl shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${info3xl1}`}
     >
       <div
         id="info-content"
         className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <h1 className="pt-5 text-7xl font-semibold font-stretch-125%">
+        <h1
+          className={`pt-5 text-5xl/15 font-semibold font-stretch-115% ${title3xl}`}
+        >
           Kiet (Mark) Nghiem
         </h1>
-        <div className="mt-5 grid h-full w-[90%] grid-cols-5 items-center place-self-center">
+        <div className={`my-10 items-center place-self-center ${info3xl2}`}>
           <img
             src={me}
             aria-label="Avatar"
             title="Avatar"
-            className="col-span-2 size-84 justify-self-center rounded-full border-2 border-slate-300 object-cover shadow-2xl shadow-slate-900 transition-transform duration-200 hover:scale-105"
+            className={`size-72 justify-self-center rounded-full border-2 border-slate-300 object-cover shadow-2xl shadow-slate-900 transition-transform duration-200 hover:scale-105 ${info3xl3}`}
           />
-          <div className="col-span-3 justify-self-end text-end font-stretch-120%">
+          <div className={`mt-10 font-stretch-115% ${info3xl4}`}>
             <p>Software Engineer</p>
             <p>Los Angeles, California</p>
-            <div className="flex justify-end gap-5 py-8">
+            <div className={`flex justify-center gap-2 py-5 ${info3xl5}`}>
               <a
                 href={resume}
                 download="mark-resume.pdf"
                 title="My Resume"
                 aria-label="My Resume"
               >
-                <button className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150">
-                  <FaFilePdf className="size-10" />
+                <button
+                  className={`cursor-pointer rounded-xl bg-slate-900/20 p-2 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150 ${info3xl6}`}
+                >
+                  <FaFilePdf className={`${info3xl7}`} />
                 </button>
               </a>
-              <a
-                href="https://www.linkedin.com/in/mark-nghiem/"
-                title="LinkedIn"
-                aria-label="LinkedIn"
-              >
-                <button className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150">
-                  <FaLinkedin className="size-10" />
-                </button>
-              </a>
-              <a
-                href="https://github.com/MarkNghiem"
-                title="GitHub"
-                aria-label="GitHub"
-              >
-                <button className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150">
-                  <FaGithub className="size-10" />
-                </button>
-              </a>
-              <a
-                href="https://wellfound.com/u/mark-nghiem"
-                title="WellFound"
-                aria-label="WellFound"
-              >
-                <button className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150">
-                  <SiWellfound className="size-10" />
-                </button>
-              </a>
+              {buttons.map((button, index) => {
+                return (
+                  <a
+                    key={index}
+                    href={button.url}
+                    title={button.type}
+                    aria-label={button.type}
+                  >
+                    <button
+                      className={`cursor-pointer rounded-xl bg-slate-900/20 p-2 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150 ${info3xl6}`}
+                    >
+                      {button.icon}
+                    </button>
+                  </a>
+                );
+              })}
               <button
                 onClick={handleEmail}
-                className="cursor-pointer rounded-xl bg-slate-900/20 p-3 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150"
+                className={`cursor-pointer rounded-xl bg-slate-900/20 p-2 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150 ${info3xl6}`}
                 title="Send me an Email"
                 aria-label="Send me an Email"
               >
-                <BiLogoGmail className="size-10" />
+                <BiLogoGmail className={`${info3xl7}`} />
               </button>
             </div>
-            <h2 className="text-5xl">Welcome to my Portfolio!</h2>
+            <h2 className={`text-4xl ${info3xl8}`}>Welcome to my Portfolio!</h2>
           </div>
         </div>
       </div>
@@ -108,7 +131,7 @@ const Info = ({ handleEmail }) => {
 };
 
 Info.propTypes = {
-  handleEmail: PropTypes.func
-}
+  handleEmail: PropTypes.func,
+};
 
 export default Info;

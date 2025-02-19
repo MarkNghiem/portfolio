@@ -2,6 +2,16 @@
 
 import { useEffect, useState } from "react";
 
+import {
+  about3xl1,
+  about3xl2,
+  about3xl3,
+  about3xl4,
+  about3xl5,
+  flex3xl,
+  ender3xl
+} from "../assets/styles";
+
 import chuchuLarge from "../../public/chuchu-large.jpeg";
 import pikaLarge from "../../public/pika-large.jpeg";
 
@@ -28,13 +38,15 @@ const AboutMe = () => {
   return (
     <div
       id="about-me"
-      className={`col-span-2 row-span-5 rounded-2xl bg-slate-900/20 p-8 text-start text-xl shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      className={`rounded-2xl bg-slate-900/20 p-5 text-start shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${about3xl1}`}
     >
       <div
         id="about-me-content"
         className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <h3 className="mb-5 text-4xl font-semibold font-stretch-120%">
+        <h3
+          className={`mb-5 text-3xl font-semibold font-stretch-115% ${ender3xl}`}
+        >
           About Me...
         </h3>
         <p className="mb-3">
@@ -52,7 +64,7 @@ const AboutMe = () => {
         </p>
         <p className="mb-3">
           ✨ I love seeing people around me happy and accomplish great things.
-          Therefore I enjoy helping my teammates both technical and
+          Therefore I enjoy helping my teammates with both technical and
           non-technical issues within my ability whenever I can.
         </p>
         <p className="mb-3">
@@ -66,18 +78,20 @@ const AboutMe = () => {
           </span>
         </p>
         <p>Let&apos;s build something amazing together! 🚀</p>
-        <h3 className="mt-20 mb-8 text-4xl font-semibold font-stretch-120%">
+        <h3
+          className={`my-10 text-3xl font-semibold font-stretch-115% ${about3xl2}`}
+        >
           Meet My Partners!
         </h3>
-        <div id="pika" className="mb-8 flex items-center gap-4">
+        <div id="pika" className={`mb-8 items-center gap-4 ${flex3xl}`}>
           <img
             src={pikaLarge}
             title="Pika"
             aria-label="Pika"
-            className="size-60 rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105"
+            className={`mb-5 rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105 ${about3xl3}`}
           />
           <div id="pika-details">
-            <h4 className="mb-3 text-center text-3xl font-semibold font-stretch-120%">
+            <h4 className="mb-3 text-center text-3xl font-semibold">
               Pika
             </h4>
             <p>
@@ -88,15 +102,15 @@ const AboutMe = () => {
             </p>
           </div>
         </div>
-        <div id="chuchu" className="flex items-center gap-4">
+        <div id="chuchu" className={`items-center gap-4 ${flex3xl}`}>
           <img
             src={chuchuLarge}
             title="Chuchu"
             aria-label="Chuchu"
-            className="order-2 size-60 rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105"
+            className={`mb-5 rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105 ${about3xl4}`}
           />
-          <div id="chuchu-details" className="order-1">
-            <h4 className="mb-3 text-center text-3xl font-semibold font-stretch-120%">
+          <div id="chuchu-details" className={`${about3xl5}`}>
+            <h4 className="mb-3 text-center text-3xl font-semibold">
               Chuchu
             </h4>
             <p className="text-start">
