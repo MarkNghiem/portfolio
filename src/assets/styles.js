@@ -31,17 +31,16 @@ export const info3xl7 = "3xl:size-10";
 export const info3xl8 = "3xl:text-5xl";
 
 // About 3xl Styling
-export const about3xl1 = "3xl:col-span-2 3xl:row-span-6 3xl:p-8 3xl:text-xl";
+export const about3xl1 = "3xl:col-span-2 3xl:row-span-6 3xl:p-8 3xl:text-xl 3xl:h-fit";
 export const about3xl2 = `3xl:mt-10 3xl:mb-8 ${ender3xl}`;
 export const about3xl3 = "3xl:size-60";
 export const about3xl4 = "3xl:size-60 3xl:order-2";
 export const about3xl5 = "3xl:order-1";
 
 // Tech Stack 3xl Styling
-export const techStack3xl1 = "3xl:col-span-3 3xl:row-span-4";
-export const techStack3xl2 = "3xl:max-h-[65dvh]";
-export const techStack3xl3 = "3xl:px-4 3xl:py-2";
-export const techStack3xl4 = "3xl:mr-3 3xl:p-1";
+export const techStack3xl1 = "3xl:col-span-3 3xl:row-span-4 3xl:h-fit";
+export const techStack3xl2 = "3xl:px-4 3xl:py-2";
+export const techStack3xl3 = "3xl:mr-3 3xl:p-1";
 
 // ProjectsContainer 3xl Styling
 export const projects3xl1 = "3xl:size-6";

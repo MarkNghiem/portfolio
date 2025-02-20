@@ -6,7 +6,6 @@ import {
   techStack3xl1,
   techStack3xl2,
   techStack3xl3,
-  techStack3xl4,
   displayBlock3xl,
   title3xl,
   subtitle3xl,
@@ -287,7 +286,7 @@ const TechStack = () => {
           Tech Stacks
         </h1>
         <div
-          className={`mx-5 h-[70dvh] overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 p-3 ${techStack3xl2}`}
+          className={`mx-5 max-h-[70dvh] overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 p-3`}
         >
           <h3 className={`mb-4 text-xl font-semibold ${subtitle3xl}`}>
             Programming Languages
@@ -305,11 +304,11 @@ const TechStack = () => {
                   aria-label={lang.label}
                 >
                   <button
-                    className={`relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 p-4.5 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40 ${techStack3xl3}`}
+                    className={`relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 p-4.5 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40 ${techStack3xl2}`}
                   >
                     <img
                       src={lang.icon}
-                      className={`size-10 ${techStack3xl4}`}
+                      className={`size-10 ${techStack3xl3}`}
                     />
                     <p className={`hidden ${displayBlock3xl}`}>{lang.name}</p>
                     <img
@@ -337,11 +336,11 @@ const TechStack = () => {
                   aria-label={tech.label}
                 >
                   <button
-                    className={`relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 p-4.5 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40 ${techStack3xl3}`}
+                    className={`relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 p-4.5 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40 ${techStack3xl2}`}
                   >
                     <img
                       src={tech.icon}
-                      className={`size-10 ${techStack3xl4}`}
+                      className={`size-10 ${techStack3xl3}`}
                     />
                     <p className={`hidden ${displayBlock3xl}`}>{tech.name}</p>
                     <img
@@ -369,11 +368,11 @@ const TechStack = () => {
                   aria-label={other.label}
                 >
                   <button
-                    className={`relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 p-4.5 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40 ${techStack3xl3}`}
+                    className={`relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 p-4.5 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40 ${techStack3xl2}`}
                   >
                     <img
                       src={other.icon}
-                      className={`size-10 ${techStack3xl4}`}
+                      className={`size-10 ${techStack3xl3}`}
                     />
                     <p className={`hidden ${displayBlock3xl}`}>{other.name}</p>
                     <img
