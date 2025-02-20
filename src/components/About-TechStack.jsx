@@ -275,19 +275,19 @@ const TechStack = () => {
   return (
     <div
       id="tech-stack"
-      className={`rounded-2xl bg-slate-900/20 shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${techStack3xl1}`}
+      className={`rounded-2xl pb-8 bg-slate-900/20 shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${techStack3xl1}`}
     >
       <div
         id="tech-stack-content"
         className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
         <h1
-          className={`my-8 text-5xl font-semibold font-stretch-115% ${title3xl}`}
+          className={`py-8 text-5xl font-semibold font-stretch-115% ${title3xl}`}
         >
           Tech Stacks
         </h1>
         <div
-          className={`m-5 h-[70dvh] overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 p-3 ${techStack3xl2}`}
+          className={`mx-5 h-[70dvh] overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 p-3 ${techStack3xl2}`}
         >
           <h3 className={`mb-4 text-xl font-semibold ${subtitle3xl}`}>
             Programming Languages
