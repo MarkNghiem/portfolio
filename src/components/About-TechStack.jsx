@@ -308,7 +308,7 @@ const TechStack = () => {
                   >
                     <img
                       src={lang.icon}
-                      className={`size-10 ${techStack3xl3}`}
+                      className={`size-10 rounded-lg ${techStack3xl3}`}
                     />
                     <p className={`hidden ${displayBlock3xl}`}>{lang.name}</p>
                     <img

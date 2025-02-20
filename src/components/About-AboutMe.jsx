@@ -73,7 +73,7 @@ const AboutMe = () => {
           mods in games, enjoying great food, watching Anime and TV Shows.{" "}
           <span className="italic">
             My current favorites right now are &apos;The Apothecary
-            Diaries&apos; as well as &apos;Suits&apos;
+            Diaries&apos; as well as &apos;Suits&apos;.
           </span>
         </p>
         <p>Let&apos;s build something amazing together! 🚀</p>
@@ -97,7 +97,7 @@ const AboutMe = () => {
               My first ever kitty I adopted since 2016. He was 6 months old when
               I first met him at a local shelter. Since then he has been very
               needy and always want snuggle times but very shy when it comes to
-              strangers
+              strangers.
             </p>
           </div>
         </div>
