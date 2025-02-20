@@ -98,4 +98,4 @@ export const footer3xl3 = '3xl:my-0'
 export const footer3xl4 = '3xl:mb-10 3xl:text-start '
 export const footer3xl5 = "3xl:mb-10";
 export const footer3xl6 = '3xl:h-4/5'
-export const footer3xl7 = '3xl:mx-15'
+export const footer3xl7 = '3xl:w-2/3 3xl:place-self-center'
