@@ -23,7 +23,7 @@ const Recommendation = () => {
   return (
     <div
       id="recommendations"
-      className={`col-span-5 rounded-2xl bg-slate-900/20 shadow-2xl shadow-slate-900/50 transition duration-1000 ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      className={`col-span-5 pb-8 rounded-2xl bg-slate-900/20 shadow-2xl shadow-slate-900/50 transition duration-1000 ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
       <div
         id="recommendations-content"

@@ -71,3 +71,12 @@ export const projects3xl20 = "3xl:hover:scale-125";
 // PublicationsContainer 3xl Styling
 export const publicationsContainer3xl =
   "3xl:mt-40 3xl:grid 3xl:w-4/5 3xl:max-w-[1920px] 3xl:grid-cols-9 3xl:gap-10";
+
+// Publications 3xl Styling
+export const publications3xl1 = "3xl:col-span-4";
+export const publications3xl2 = "3xl:py-10 3xl:h-fit";
+export const publications3xl3 = "3xl:py-5 3xl:text-xl";
+export const publications3xl4 = "3xl:flex 3xl:items-end 3xl:justify-between";
+export const publications3xl5 = "3xl:text-xl";
+export const publications3xl6 = "3xl:text-end 3xl:pt-0";
+export const publications3xl7 = "3xl:pb-0";
