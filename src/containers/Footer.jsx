@@ -8,6 +8,19 @@
 
 import PropTypes from "prop-types";
 
+import {
+  footer3xl1,
+  footer3xl2,
+  footer3xl3,
+  footer3xl4,
+  footer3xl5,
+  footer3xl6,
+  footer3xl7,
+  title3xl,
+  subtitle3xl,
+  displayBlock3xl,
+} from "../assets/styles";
+
 import MeFooter from "../../public/me-footer.jpg";
 import JavaScriptIcon from "../../public/svg/javascript.svg";
 import HTMLIcon from "../../public/svg/html5.svg";
@@ -31,21 +44,23 @@ const Footer = ({ handleEmail, scrollTo }) => {
   return (
     <div
       id="footer"
-      className="relative flex flex-col 3xl:grid 3xl:h-[30vh] 3xl:grid-cols-4 rounded-t-full bg-linear-to-br from-amber-400/80 to-red-400/80"
+      className={`relative flex flex-col rounded-t-full bg-linear-to-br from-amber-400/80 to-red-400/80 ${footer3xl1}`}
     >
-      <div className="3xl:col-span-3 3xl:mr-30 3xl:ml-50 3xl:flex items-center justify-between">
+      <div className={`${footer3xl2}`}>
         <img
           src={MeFooter}
           title="My Portrait 2"
           aria-label="My Portrait 2"
-          className=" size-20 3xl:size-72 rounded-full border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105"
+          className={`my-8 size-72 rounded-full border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105 max-sm:place-self-center ${footer3xl3}`}
         />
-        <div className="mb-10 text-start">
-          <h3 className="mb-10 text-5xl font-semibold font-stretch-120%">
+        <div className={`mb-8 ${footer3xl4}`}>
+          <h3
+            className={`mb-5 text-5xl font-semibold font-stretch-115% ${title3xl} ${footer3xl5}`}
+          >
             Mark Nghiem
           </h3>
-          <ul className="list-disc text-2xl">
-            Contact Me via ~
+          <ul className={`ml-6 list-disc text-start text-lg ${subtitle3xl}`}>
+            Contact Me via:
             <li className="first:mt-2">
               Email:{" "}
               <span
@@ -69,11 +84,15 @@ const Footer = ({ handleEmail, scrollTo }) => {
           </ul>
         </div>
       </div>
-      <div className="relative col-span-1 h-4/5 self-end rounded-t-full bg-linear-to-br from-slate-100 to-slate-400">
+      <div
+        className={`relative col-span-1 place-self-end rounded-t-full bg-linear-to-br from-slate-100 to-slate-400 ${footer3xl6}`}
+      >
         <h5 className="my-8 text-2xl font-semibold font-stretch-120%">
           Built With
         </h5>
-        <div className="mx-15 flex flex-wrap items-center justify-center gap-x-10 gap-y-2">
+        <div
+          className={`mx-10 mb-15 flex flex-wrap items-center justify-center gap-x-10 gap-y-2 ${footer3xl7}`}
+        >
           {builtWithIcons.map((icon, index) => {
             return (
               <img
@@ -90,7 +109,7 @@ const Footer = ({ handleEmail, scrollTo }) => {
       </div>
       <div
         onClick={() => scrollTo("about-navigate")}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 rounded-t-full bg-slate-900/10 px-3 pt-3 pb-1 transition-colors duration-200 hover:cursor-pointer hover:bg-slate-900/20 active:bg-slate-900/30"
+        className={`absolute bottom-0 left-1/2 hidden -translate-x-1/2 rounded-t-full bg-slate-900/10 px-3 pt-3 pb-1 transition-colors duration-200 hover:cursor-pointer hover:bg-slate-900/20 active:bg-slate-900/30 ${displayBlock3xl}`}
       >
         <p className="animate-bounce text-xl">↑</p>
         <p>Back to top</p>

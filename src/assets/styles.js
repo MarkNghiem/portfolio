@@ -90,3 +90,12 @@ export const ending3xl1 = "3xl:w-4/5 3xl:max-w-[1920px]";
 export const ending3xl2 = "3xl:mx-0";
 export const ending3xl3 = "3xl:flex-row";
 export const ending3xl4 = '3xl:size-80'
+
+// Footer 3xl Styling
+export const footer3xl1 = '3xl:grid 3xl:min-h-[30dvh] 3xl:grid-cols-4'
+export const footer3xl2 = '3xl:col-span-3 3xl:flex 3xl:justify-evenly 3xl:items-center'
+export const footer3xl3 = '3xl:my-0'
+export const footer3xl4 = '3xl:mb-10 3xl:text-start '
+export const footer3xl5 = "3xl:mb-10";
+export const footer3xl6 = '3xl:h-4/5'
+export const footer3xl7 = '3xl:mx-15'
