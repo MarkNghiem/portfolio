@@ -12,10 +12,10 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Release Please
+      - name: Run Release Please (Generating CHANGELOG.md)
         id: release_please
         uses: google-github-actions/release-please-action@v3
         with:
