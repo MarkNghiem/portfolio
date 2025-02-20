@@ -67,3 +67,7 @@ export const projects3xl17 = "3xl:text-xl";
 export const projects3xl18 = "3xl:text-2xl 3xl:hover:opacity-100";
 export const projects3xl19 = "3xl:m-3 3xl:gap-3";
 export const projects3xl20 = "3xl:hover:scale-125";
+
+// PublicationsContainer 3xl Styling
+export const publicationsContainer3xl =
+  "3xl:mt-40 3xl:grid 3xl:w-4/5 3xl:max-w-[1920px] 3xl:grid-cols-9 3xl:gap-10";
