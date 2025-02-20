@@ -44,11 +44,11 @@ const AboutMe = () => {
         id="about-me-content"
         className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <h3
+        <h2
           className={`mb-5 text-3xl font-semibold font-stretch-115% ${ender3xl}`}
         >
           About Me...
-        </h3>
+        </h2>
         <p className="mb-3">
           👋🏼 Hey there! my name is Kiet Nghiem but I go by Mark most of the
           time. I am a passionate and hungry-for-knowledge Software Engineer
@@ -78,11 +78,11 @@ const AboutMe = () => {
           </span>
         </p>
         <p>Let&apos;s build something amazing together! 🚀</p>
-        <h3
+        <h2
           className={`my-10 text-3xl font-semibold font-stretch-115% ${about3xl2}`}
         >
           Meet My Partners!
-        </h3>
+        </h2>
         <div id="pika" className={`mb-8 items-center gap-4 ${flex3xl}`}>
           <img
             src={pikaLarge}

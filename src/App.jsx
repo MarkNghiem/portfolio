@@ -49,7 +49,7 @@ const App = () => {
       className="bg-gradient-to-br from-amber-300/30 from-10% via-slate-300/20 via-60% to-red-300/20 to-90% text-center text-slate-700 font-stretch-110%"
     >
       <h1
-        className={`fixed top-1/2 left-1/2 -translate-1/2 text-3xl opacity-0 transition-opacity duration-1000 ease-in-out ${visible ? "opacity-100" : ""} ${app3xl}`}
+        className={`fixed w-full top-1/2 left-1/2 -translate-1/2 text-3xl font-semibold opacity-0 transition-opacity duration-1000 ease-in-out ${visible ? "opacity-100" : ""} ${app3xl}`}
       >
         Hey it&apos;s Mark! 🎉
       </h1>

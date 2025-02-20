@@ -7,6 +7,30 @@ import { SiMedium } from "react-icons/si";
 import { FaGithub, FaLinkedin, FaProductHunt } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
+import {
+  projects3xl1,
+  projects3xl2,
+  projects3xl3,
+  projects3xl4,
+  projects3xl5,
+  projects3xl6,
+  projects3xl7,
+  projects3xl8,
+  projects3xl9,
+  projects3xl10,
+  projects3xl11,
+  projects3xl12,
+  projects3xl13,
+  projects3xl14,
+  projects3xl15,
+  projects3xl16,
+  projects3xl17,
+  projects3xl18,
+  projects3xl19,
+  projects3xl20,
+  title3xl,
+} from "../assets/styles";
+
 import BottleNetes from "../../public/bottlenetes.png";
 import YAP from "../../public/yap.png";
 import Attune from "../../public/attune.png";
@@ -45,36 +69,35 @@ const ProjectsContainer = () => {
         {
           type: "Website",
           url: "https://www.bottlenetes.com/",
-          icon: <CgWebsite className="size-6" />,
+          icon: <CgWebsite className={`size-4 ${projects3xl1}`} />,
         },
         {
           type: "Medium Article",
           url: "https://medium.com/@bottlenetes/bottlenetes-simplifying-kubernetes-management-f91118f07f1c",
-          icon: <SiMedium className="size-6" />,
+          icon: <SiMedium className={`size-4 ${projects3xl1}`} />,
         },
         {
           type: "GitHub Repository",
           url: "https://github.com/oslabs-beta/BottleNetes",
-          icon: <FaGithub className="size-6" />,
+          icon: <FaGithub className={`size-4 ${projects3xl1}`} />,
         },
         {
           type: "LinkedIn",
           url: "https://www.linkedin.com/company/bottlenetes/posts/?feedView=all",
-          icon: <FaLinkedin className="size-6" />,
+          icon: <FaLinkedin className={`size-4 ${projects3xl1}`} />,
         },
         {
           type: "Product Hunt",
           url: "https://www.producthunt.com/products/bottlenetes#bottlenetes",
-          icon: <FaProductHunt className="size-6" />,
+          icon: <FaProductHunt className={`size-4 ${projects3xl1}`} />,
         },
         {
           type: "X",
           url: "https://x.com/bottlenetes",
-          icon: <FaSquareXTwitter className="size-6" />,
+          icon: <FaSquareXTwitter className={`size-4 ${projects3xl1}`} />,
         },
       ],
-      style:
-        "col-span-3 row-span-4 bg-linear-to-br from-slate-400 from-40% to-cyan-900",
+      style: `bg-linear-to-br from-slate-400 from-40% to-cyan-900 ${projects3xl2}`,
     },
     {
       type: "Collaboration",
@@ -87,11 +110,10 @@ const ProjectsContainer = () => {
         {
           type: "GitHub Repository",
           url: "https://github.com/bugs-go-away/ai",
-          icon: <FaGithub className="size-6" />,
+          icon: <FaGithub className={`size-4 ${projects3xl1}`} />,
         },
       ],
-      style:
-        "col-start-4 col-span-2 row-span-3 bg-linear-to-br from-slate-400 from-40% to-violet-900",
+      style: `bg-linear-to-br from-slate-400 from-40% to-violet-900 ${projects3xl3}`,
     },
     {
       type: "Collaboration",
@@ -104,11 +126,10 @@ const ProjectsContainer = () => {
         {
           type: "GitHub Repository",
           url: "https://github.com/attune-iteration/attune_2.0",
-          icon: <FaGithub className="size-6" />,
+          icon: <FaGithub className={`size-4 ${projects3xl1}`} />,
         },
       ],
-      style:
-        "col-start-4 col-span-2 row-start-4 row-span-2 bg-linear-to-br from-slate-400 from-40% to-teal-900",
+      style: `bg-linear-to-br from-slate-400 from-40% to-teal-900 ${projects3xl4}`,
     },
     {
       type: "Collaboration",
@@ -121,11 +142,10 @@ const ProjectsContainer = () => {
         {
           type: "GitHub Repository",
           url: "https://github.com/PFArmadillos/scratch",
-          icon: <FaGithub className="size-6" />,
+          icon: <FaGithub className={`size-4 ${projects3xl1}`} />,
         },
       ],
-      style:
-        "col-span-2 row-start-5 row-span-2 bg-linear-to-br from-slate-400 from-40% to-pink-900",
+      style: `bg-linear-to-br from-slate-400 from-40% to-pink-900 ${projects3xl5}`,
     },
     {
       type: "Solo",
@@ -138,11 +158,10 @@ const ProjectsContainer = () => {
         {
           type: "GitHub Repository",
           url: "https://github.com/MarkNghiem/Clockin",
-          icon: <FaGithub className="size-6" />,
+          icon: <FaGithub className={`size-4 ${projects3xl1}`} />,
         },
       ],
-      style:
-        "col-start-3 col-span-3 row-start-6 bg-linear-to-br from-slate-400 from-40% to-sky-900",
+      style: `bg-linear-to-br from-slate-400 from-40% to-sky-900 ${projects3xl6}`,
     },
     {
       type: "Solo",
@@ -155,11 +174,10 @@ const ProjectsContainer = () => {
         {
           type: "GitHub Repository",
           url: "https://github.com/MarkNghiem/portfolio",
-          icon: <FaGithub className="size-6" />,
+          icon: <FaGithub className={`size-4 ${projects3xl1}`} />,
         },
       ],
-      style:
-        "col-span-3 row-start-7 bg-linear-to-br from-slate-400 from-40% to-amber-900",
+      style: `bg-linear-to-br from-slate-400 from-40% to-amber-900 ${projects3xl7}`,
     },
     {
       type: "",
@@ -167,35 +185,38 @@ const ProjectsContainer = () => {
       slogan: "",
       description: "Stay tuned for incoming projects!",
       logo: "",
-      style:
-        "col-start-4 col-span-2 row-start-7 bg-linear-to-br from-slate-400 from-40% to-slate-700",
+      style: `bg-linear-to-br from-slate-400 from-40% to-slate-700 ${projects3xl8}`,
     },
   ];
 
-  const blankGridPosition = ["col-start-3 row-start-5"];
+  const blankGridPosition = [`hidden ${projects3xl9}`];
 
   return (
     <div
       id="projects"
-      className={`3xl:mt-40 3xl:w-4/5 mt-20 w-9/10 place-self-center rounded-2xl bg-slate-900/20 pb-8 shadow-2xl shadow-slate-900/50 transition duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      className={`mt-20 w-9/10 place-self-center rounded-2xl bg-slate-900/20 pb-8 shadow-2xl shadow-slate-900/50 transition duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${projects3xl10}`}
     >
       <div
         id="projects-content"
         className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <h1 className="3xl:text-7xl py-8 font-semibold 3xl:font-stretch-125% text-5xl font-stretch-115%">
+        <h1
+          className={`py-8 text-5xl font-semibold font-stretch-115% ${title3xl}`}
+        >
           Projects
         </h1>
-        <div className="max-h-[1050px] w-[95%] place-self-center overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/30 to-amber-900/20 py-10">
+        <div
+          className={`mx-5 h-[70dvh] overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/30 to-amber-900/20 py-5 ${projects3xl11}`}
+        >
           <div
             id="projects"
-            className="group grid w-[95%] grid-cols-5 grid-rows-7 gap-2 place-self-center"
+            className={`group flex w-[95%] flex-col gap-3 place-self-center ${projects3xl12}`}
           >
             {projects.map((project, index) => {
               return (
                 <div
                   key={index}
-                  className={`relative h-full rounded-2xl border border-slate-400 shadow-2xl shadow-black/80 transition duration-300 group-hover:scale-95 group-hover:opacity-70 hover:z-10 hover:scale-105 hover:opacity-100 ${project.style}`}
+                  className={`relative h-full rounded-2xl border border-slate-400 shadow-2xl shadow-black/80 transition duration-300 ${project.style} ${projects3xl13}`}
                 >
                   <div
                     className="absolute inset-0 bg-cover bg-center"
@@ -204,19 +225,29 @@ const ProjectsContainer = () => {
                       opacity: 0.05,
                     }}
                   />
-                  <div className="flex h-full flex-col py-10 transition-opacity duration-200 group-hover:opacity-0">
-                    <h4 className="z-10 text-3xl font-stretch-125%">
+                  <div
+                    className={`mx-2 flex h-80 flex-col transition-opacity duration-200 ${projects3xl14}`}
+                  >
+                    <h4 className={`z-10 pt-10 ${projects3xl15}`}>
                       {project.type}
                     </h4>
-                    <div className="z-10 h-full place-content-center">
-                      <h2 className="mx-2 text-7xl font-semibold font-stretch-125%">
+                    <div
+                      className={`z-10 h-full place-content-center pb-10 ${projects3xl16}`}
+                    >
+                      <h2
+                        className={`pb-2 text-3xl font-semibold font-stretch-115% ${projects3xl16} ${title3xl}`}
+                      >
                         {project.name}
                       </h2>
-                      <p className="text-xl">{project.slogan}</p>
+                      <p className={`${projects3xl17}`}>{project.slogan}</p>
                     </div>
                   </div>
-                  <div className="absolute inset-0 z-20 flex flex-col items-center justify-center p-10 text-2xl opacity-0 transition-opacity duration-200 hover:opacity-100">
-                    <div className="absolute top-0 left-0 z-30 m-3 flex gap-3">
+                  <div
+                    className={`absolute inset-0 z-20 flex flex-col items-center justify-center p-10 opacity-0 transition-opacity duration-200 active:opacity-100 max-md:opacity-100 ${projects3xl18}`}
+                  >
+                    <div
+                      className={`absolute top-0 left-0 z-30 m-1.5 flex gap-2 ${projects3xl19}`}
+                    >
                       {project.resources?.map((resource, index) => {
                         return (
                           <a
@@ -225,22 +256,27 @@ const ProjectsContainer = () => {
                             title={resource.type}
                             aria-label={resource.type}
                           >
-                            <button className="cursor-pointer transition-transform duration-300 hover:scale-125">
+                            <button
+                              className={`cursor-pointer transition-transform duration-300 ${projects3xl20}`}
+                            >
                               {resource.icon}
                             </button>
                           </a>
                         );
                       })}
                     </div>
-                    <p className="pb-3 text-7xl font-semibold font-stretch-125%">
+                    <p
+                      className={`pb-3 text-3xl font-semibold font-stretch-115% max-md:pointer-events-none max-md:opacity-0 ${title3xl}`}
+                    >
                       {project.name}
                     </p>
-                    <p>{project.description}</p>
+                    <p className="max-md:pointer-events-none max-md:opacity-0">
+                      {project.description}
+                    </p>
                   </div>
                 </div>
               );
             })}
-
             {blankGridPosition.map((grid, index) => {
               return (
                 <div
