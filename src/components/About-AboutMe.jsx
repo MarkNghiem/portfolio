@@ -7,7 +7,6 @@ import {
   about3xl2,
   about3xl3,
   about3xl4,
-  about3xl5,
   flex3xl,
   ender3xl
 } from "../assets/styles";
@@ -88,7 +87,7 @@ const AboutMe = () => {
             src={pikaLarge}
             title="Pika"
             aria-label="Pika"
-            className={`mb-5 rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105 ${about3xl3}`}
+            className={`mb-5 rounded-4xl border-2 size-60 place-self-center border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105`}
           />
           <div id="pika-details">
             <h4 className="mb-3 text-center text-3xl font-semibold">
@@ -107,9 +106,9 @@ const AboutMe = () => {
             src={chuchuLarge}
             title="Chuchu"
             aria-label="Chuchu"
-            className={`mb-5 rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105 ${about3xl4}`}
+            className={`mb-5 rounded-4xl border-2 size-60 place-self-center border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105 ${about3xl3}`}
           />
-          <div id="chuchu-details" className={`${about3xl5}`}>
+          <div id="chuchu-details" className={`${about3xl4}`}>
             <h4 className="mb-3 text-center text-3xl font-semibold">
               Chuchu
             </h4>

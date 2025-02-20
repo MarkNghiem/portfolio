@@ -31,11 +31,11 @@ export const info3xl7 = "3xl:size-10";
 export const info3xl8 = "3xl:text-5xl";
 
 // About 3xl Styling
-export const about3xl1 = "3xl:col-span-2 3xl:row-span-6 3xl:p-8 3xl:text-xl 3xl:h-fit";
+export const about3xl1 =
+  "3xl:col-span-2 3xl:row-span-6 3xl:p-8 3xl:text-xl 3xl:h-fit";
 export const about3xl2 = `3xl:mt-10 3xl:mb-8 ${ender3xl}`;
-export const about3xl3 = "3xl:size-60";
-export const about3xl4 = "3xl:size-60 3xl:order-2";
-export const about3xl5 = "3xl:order-1";
+export const about3xl3 = "3xl:order-2";
+export const about3xl4 = "3xl:order-1";
 
 // Tech Stack 3xl Styling
 export const techStack3xl1 = "3xl:col-span-3 3xl:row-span-4 3xl:h-fit";
@@ -81,6 +81,12 @@ export const publications3xl6 = "3xl:text-end 3xl:pt-0";
 export const publications3xl7 = "3xl:pb-0";
 
 // Recommendations 3xl Stylings
-export const recommendations3xl1 = '3xl:col-span-5'
-export const recommendations3xl2 = '3xl:h-4/5 3xl:max-h-4/5'
+export const recommendations3xl1 = "3xl:col-span-5";
+export const recommendations3xl2 = "3xl:h-4/5 3xl:max-h-4/5";
 export const recommendations3xl3 = `3xl:py-10 ${ender3xl}`;
+
+// EndingCOntainer 3xl Styling
+export const ending3xl1 = "3xl:w-4/5 3xl:max-w-[1920px]";
+export const ending3xl2 = "3xl:mx-0";
+export const ending3xl3 = "3xl:flex-row";
+export const ending3xl4 = '3xl:size-80'

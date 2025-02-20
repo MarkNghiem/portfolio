@@ -63,7 +63,7 @@ const App = () => {
         <div id="publications-navigate" className="h-1" />
         <PublicationsContainer />
         <div
-          className={`animate-font-stretch flex h-[90vh] flex-col items-center justify-end text-3xl font-semibold ${ender3xl}`}
+          className={`animate-font-stretch flex h-[90dvh] flex-col items-center justify-end text-3xl font-semibold ${ender3xl}`}
         >
           <h3 className="mb-5">Is it over? Or is it not?</h3>
           <p className="animate-bounce">↓</p>
