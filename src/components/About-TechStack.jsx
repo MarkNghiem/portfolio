@@ -279,15 +279,15 @@ const TechStack = () => {
     >
       <div
         id="tech-stack-content"
-        className={`max-h-[90vh] transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
+        className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
         <h1
-          className={`mt-5 text-5xl font-semibold font-stretch-115% ${title3xl}`}
+          className={`my-8 text-5xl font-semibold font-stretch-115% ${title3xl}`}
         >
           Tech Stacks
         </h1>
         <div
-          className={`m-5 max-h-130 overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 p-3 ${techStack3xl2}`}
+          className={`m-5 h-[70dvh] overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 p-3 ${techStack3xl2}`}
         >
           <h3 className={`mb-4 text-xl font-semibold ${subtitle3xl}`}>
             Programming Languages
@@ -385,9 +385,9 @@ const TechStack = () => {
               );
             })}
           </div>
-          <h1 className={`my-8 text-3xl font-semibold font-stretch-115% ${ender3xl}`}>
+          <h2 className={`my-8 text-3xl font-semibold font-stretch-115% ${ender3xl}`}>
             And more to come...
-          </h1>
+          </h2>
         </div>
       </div>
     </div>

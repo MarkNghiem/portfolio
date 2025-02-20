@@ -84,7 +84,7 @@ const Info = ({ handleEmail }) => {
           <div className={`mt-10 font-stretch-115% ${info3xl4}`}>
             <p>Software Engineer</p>
             <p>Los Angeles, California</p>
-            <div className={`flex justify-center gap-2 py-5 ${info3xl5}`}>
+            <div className={`flex justify-center gap-5 py-5 ${info3xl5}`}>
               <a
                 href={resume}
                 download="mark-resume.pdf"
