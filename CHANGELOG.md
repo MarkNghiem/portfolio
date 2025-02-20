@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.1.0](https://github.com/MarkNghiem/portfolio/compare/v1.0.0...v1.1.0) (2025-02-20)
+
+
+### Features
+
+* Added automated CHANGELOG.md generator ([66f924a](https://github.com/MarkNghiem/portfolio/commit/66f924acdcc15fd2b45946a325b211c78fbd7f6f))
+* Added mobile viewport for EndingContainer ([defd9ee](https://github.com/MarkNghiem/portfolio/commit/defd9ee11af42b1416f5ed529838b6bf2f4fc8c2))
+* Added mobile viewport for PublicationContainer ([1280c77](https://github.com/MarkNghiem/portfolio/commit/1280c77814723dd7639035daffd1b36b7219aa82))
+* Added mobile viewport for Publications ([982d053](https://github.com/MarkNghiem/portfolio/commit/982d053eb1a93e4a470e0dbeaf14f021b94a7579))
+* Added mobile viewport for Recommendations ([7a9178b](https://github.com/MarkNghiem/portfolio/commit/7a9178b61f8b8751ff29ce53368e976ca3601c4f))
+* Added moile viewport for Projects section ([9e7be4f](https://github.com/MarkNghiem/portfolio/commit/9e7be4fb7bd65cb166356e30bf2f051f8ef7bf2a))
+* Added wireframe ([dcca14a](https://github.com/MarkNghiem/portfolio/commit/dcca14a8c477e95cdc7bf1190f5f3ccf74a08d67))
+* Adding about-me ([79e0c50](https://github.com/MarkNghiem/portfolio/commit/79e0c5037e4d75f0f2d9273acf8631809847918e))
+* Adding mobile viewport; ([9a3d234](https://github.com/MarkNghiem/portfolio/commit/9a3d2345b91f51052efb9f37a39aefbbabbed65a))
+* Completed Ending Section ([cec82f4](https://github.com/MarkNghiem/portfolio/commit/cec82f46df33789eaca1018878ff8c495e0076a1))
+* Completed mobile viewport ([c78a7c9](https://github.com/MarkNghiem/portfolio/commit/c78a7c9712e1b2f9601a96a7442c7e2b1b66d88b))
+* Completed Portfolio ([972ad99](https://github.com/MarkNghiem/portfolio/commit/972ad994d4b3665c9395471623474ec0fdd60e06))
+* Completed Publications Section ([0e992dd](https://github.com/MarkNghiem/portfolio/commit/0e992ddf096efedc0fa3f29f0a476d23f3a0cd43))
+
+
+### Bug Fixes
+
+* Added GPG key for verified signatures ([2336a57](https://github.com/MarkNghiem/portfolio/commit/2336a57e4820521d4b787dcd035b3fd156c7d2c5))
+* Change Run Release Please job id so that Get Release Version can echo the current version ([7fb9363](https://github.com/MarkNghiem/portfolio/commit/7fb93638caf8a370dcfc8789772fa1b591a684b7))
+* Fix fade in timing for Recommendations Section ([9dc30fa](https://github.com/MarkNghiem/portfolio/commit/9dc30fad4fe5a5d46ba1f8d94590c85f0ac28c62))
+
 ## 1.0.0 (2025-02-20)
 
 
