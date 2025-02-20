@@ -79,3 +79,8 @@ export const publications3xl4 = "3xl:flex 3xl:items-end 3xl:justify-between";
 export const publications3xl5 = "3xl:text-xl";
 export const publications3xl6 = "3xl:text-end 3xl:pt-0";
 export const publications3xl7 = "3xl:pb-0";
+
+// Recommendations 3xl Stylings
+export const recommendations3xl1 = '3xl:col-span-5'
+export const recommendations3xl2 = '3xl:h-4/5 3xl:max-h-4/5'
+export const recommendations3xl3 = `3xl:py-10 ${ender3xl}`;
