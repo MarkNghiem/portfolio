@@ -33,7 +33,7 @@ const Recommendation = () => {
     >
       <div
         id="recommendations-content"
-        className={`h-full transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
+        className={`max-md:flex max-md:flex-col h-full transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
         <h1
           className={`py-8 text-3xl font-semibold font-stretch-115% ${title3xl}`}

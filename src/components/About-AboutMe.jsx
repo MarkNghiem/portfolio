@@ -8,7 +8,7 @@ import {
   about3xl3,
   about3xl4,
   flex3xl,
-  ender3xl
+  ender3xl,
 } from "../assets/styles";
 
 import chuchuLarge from "../../public/chuchu-large.jpeg";
@@ -82,17 +82,18 @@ const AboutMe = () => {
         >
           Meet My Partners!
         </h2>
-        <div id="pika" className={`mb-8 items-center gap-4 ${flex3xl}`}>
+        <div
+          id="pika"
+          className={`mb-8 items-center gap-4 max-md:flex max-md:flex-col ${flex3xl}`}
+        >
           <img
             src={pikaLarge}
             title="Pika"
             aria-label="Pika"
-            className={`mb-5 rounded-4xl border-2 size-60 place-self-center border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105`}
+            className={`mb-5 size-60 place-self-center rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105`}
           />
           <div id="pika-details">
-            <h4 className="mb-3 text-center text-3xl font-semibold">
-              Pika
-            </h4>
+            <h4 className="mb-3 text-center text-3xl font-semibold">Pika</h4>
             <p>
               My first ever kitty I adopted since 2016. He was 6 months old when
               I first met him at a local shelter. Since then he has been very
@@ -101,17 +102,18 @@ const AboutMe = () => {
             </p>
           </div>
         </div>
-        <div id="chuchu" className={`items-center gap-4 ${flex3xl}`}>
+        <div
+          id="chuchu"
+          className={`items-center gap-4 max-md:flex max-md:flex-col ${flex3xl}`}
+        >
           <img
             src={chuchuLarge}
             title="Chuchu"
             aria-label="Chuchu"
-            className={`mb-5 rounded-4xl border-2 size-60 place-self-center border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105 ${about3xl3}`}
+            className={`mb-5 size-60 place-self-center rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105 ${about3xl3}`}
           />
           <div id="chuchu-details" className={`${about3xl4}`}>
-            <h4 className="mb-3 text-center text-3xl font-semibold">
-              Chuchu
-            </h4>
+            <h4 className="mb-3 text-center text-3xl font-semibold">Chuchu</h4>
             <p className="text-start">
               Pika&apos;s little brother. Came home a few months after Pika.
               He&apos;s a lot more independent compared to his brother but
