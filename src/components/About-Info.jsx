@@ -16,7 +16,7 @@ import {
   info3xl6,
   info3xl7,
   info3xl8,
-  title3xl
+  title3xl,
 } from "../assets/styles";
 
 import me from "../../public/me.jpeg";
@@ -74,12 +74,14 @@ const Info = ({ handleEmail }) => {
         >
           Kiet (Mark) Nghiem
         </h1>
-        <div className={`my-10 items-center place-self-center ${info3xl2}`}>
+        <div
+          className={`my-10 items-center place-self-center max-xl:flex max-xl:flex-col ${info3xl2}`}
+        >
           <img
             src={me}
             aria-label="Avatar"
             title="Avatar"
-            className={`size-72 justify-self-center rounded-full border-2 border-slate-300 object-cover shadow-2xl shadow-slate-900 transition-transform duration-200 hover:scale-105 ${info3xl3}`}
+            className={`size-72 justify-self-center rounded-full border-2 border-slate-300 object-cover shadow-2xl shadow-slate-900 transition-transform duration-200 hover:scale-105 lg:max-xl:size-100 ${info3xl3}`}
           />
           <div className={`mt-10 font-stretch-115% ${info3xl4}`}>
             <p>Software Engineer</p>

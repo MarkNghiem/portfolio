@@ -206,7 +206,7 @@ const ProjectsContainer = () => {
           Projects
         </h1>
         <div
-          className={`mx-5 h-[70dvh] overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/30 to-amber-900/20 py-5 ${projects3xl11}`}
+          className={`mx-5 h-[70dvh] overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/30 to-amber-900/20 py-5 max-md:flex max-md:flex-col ${projects3xl11}`}
         >
           <div
             id="projects"
@@ -216,7 +216,7 @@ const ProjectsContainer = () => {
               return (
                 <div
                   key={index}
-                  className={`relative h-full rounded-2xl border border-slate-400 shadow-2xl shadow-black/80 transition duration-300 ${project.style} ${projects3xl13}`}
+                  className={`relative h-full w-full rounded-2xl border border-slate-400 shadow-2xl shadow-black/80 transition duration-300 ${project.style} ${projects3xl13}`}
                 >
                   <div
                     className="absolute inset-0 bg-cover bg-center"

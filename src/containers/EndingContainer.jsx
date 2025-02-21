@@ -2,7 +2,15 @@
 
 import { useState, useEffect } from "react";
 
-import { ending3xl1, ending3xl2, ending3xl3, ending3xl4, title3xl, subtitle3xl, ender3xl } from "../assets/styles";
+import {
+  ending3xl1,
+  ending3xl2,
+  ending3xl3,
+  ending3xl4,
+  title3xl,
+  subtitle3xl,
+  ender3xl,
+} from "../assets/styles";
 
 import PikaEnding from "../../public/pika-ending-small.jpg";
 import ChuchuEnding from "../../public/chuchu-ending-small.jpg";
@@ -38,7 +46,9 @@ const EndingContainer = () => {
         >
           Here&apos;s more cat pictures for your effort.
         </h2>
-        <div className={`group flex flex-col justify-center gap-10 place-self-center ${ending3xl3}`}>
+        <div
+          className={`group flex flex-col items-center justify-center gap-10 place-self-center ${ending3xl3}`}
+        >
           {endingPictures.map((picture, index) => {
             return (
               <img

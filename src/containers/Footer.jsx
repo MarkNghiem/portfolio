@@ -44,9 +44,9 @@ const Footer = ({ handleEmail, scrollTo }) => {
   return (
     <div
       id="footer"
-      className={`relative flex flex-col rounded-t-full bg-linear-to-br from-amber-400/80 to-red-400/80 ${footer3xl1}`}
+      className={`relative flex flex-col items-center rounded-t-full bg-linear-to-br from-amber-400/80 to-red-400/80 ${footer3xl1}`}
     >
-      <div className={`${footer3xl2}`}>
+      <div className={`max-md:flex max-md:flex-col ${footer3xl2}`}>
         <img
           src={MeFooter}
           title="My Portrait 2"
