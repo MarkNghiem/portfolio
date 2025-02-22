@@ -5,13 +5,11 @@ import AboutMe from "../components/About-AboutMe";
 import Info from "../components/About-Info";
 import TechStack from "../components/About-TechStack";
 
-import { aboutContainer3xl } from "../assets/styles";
-
 const AboutContainer = ({ handleEmail }) => {
   return (
     <div
       id="about"
-      className={`col-flex mobile-to-tablet-layout mt-10 place-self-center ${aboutContainer3xl}`}
+      className='col-flex mobile-to-tablet-layout mt-10 place-self-center desktop-layout about-container-desktop-layout'
     >
       <Info handleEmail={handleEmail} />
       <AboutMe />

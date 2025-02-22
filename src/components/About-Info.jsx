@@ -63,7 +63,7 @@ const Info = ({ handleEmail }) => {
   return (
     <div
       id="info-component"
-      className={`col-flex rounded-2xl bg-slate-900/20 text-2xl shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${info3xl1}`}
+      className={`col-flex about-info-desktop-layout div-background div-effect text-2xl ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
       <div
         id="info-content"
@@ -83,10 +83,14 @@ const Info = ({ handleEmail }) => {
             title="Avatar"
             className={`size-72 justify-self-center rounded-full border-2 border-slate-300 object-cover shadow-2xl shadow-slate-900 transition-transform duration-200 hover:scale-105 lg:col-span-2 ${info3xl3}`}
           />
-          <div className={`mt-10 font-stretch-115% ${info3xl4} lg:col-span-3 lg:justify-self-end lg:text-end lg:mt-0`}>
+          <div
+            className={`mt-10 font-stretch-115% ${info3xl4} lg:col-span-3 lg:mt-0 lg:justify-self-end lg:text-end`}
+          >
             <p>Software Engineer</p>
             <p>Los Angeles, California</p>
-            <div className={`flex justify-center gap-5 py-5 ${info3xl5} lg:justify-end lg:py-8`}>
+            <div
+              className={`flex justify-center gap-5 py-5 ${info3xl5} lg:justify-end lg:py-8`}
+            >
               <a
                 href={resume}
                 download="mark-resume.pdf"

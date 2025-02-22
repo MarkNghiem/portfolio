@@ -47,7 +47,7 @@ const App = () => {
       className="light-gradient-background global typography-global"
     >
       <h1
-        className={`fixed w-full absolute-centered opening-text opacity-0 transition-opacity duration-1000 ease-in-out ${visible ? "opacity-100" : ""}`}
+        className={`fixed w-full absolute-centered opening-text content-effect ${visible ? "opacity-100" : "opacity-0"}`}
       >
         Hey it&apos;s Mark! 🎉
       </h1>

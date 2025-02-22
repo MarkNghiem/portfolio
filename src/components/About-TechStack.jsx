@@ -274,7 +274,7 @@ const TechStack = () => {
   return (
     <div
       id="tech-stack"
-      className={`rounded-2xl pb-8 bg-slate-900/20 shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${techStack3xl1}`}
+      className={`rounded-2xl pb-8 bg-slate-900/20 scrollbar shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${techStack3xl1}`}
     >
       <div
         id="tech-stack-content"
@@ -286,7 +286,7 @@ const TechStack = () => {
           Tech Stacks
         </h1>
         <div
-          className={`mx-5 max-h-[70dvh] overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 p-3`}
+          className={`mx-5 max-h-[70dvh] overflow-y-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 p-3`}
         >
           <h3 className={`mb-4 text-3xl font-semibold font-stretch-115% ${subtitle3xl}`}>
             Programming Languages

@@ -56,7 +56,7 @@ const Publications = () => {
   return (
     <div
       id="releases"
-      className={`rounded-2xl bg-slate-900/20 pb-8 shadow-2xl shadow-slate-900/50 transition duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${publications3xl1}`}
+      className={`rounded-2xl scrollbar bg-slate-900/20 pb-8 shadow-2xl shadow-slate-900/50 transition duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${publications3xl1}`}
     >
       <div
         id="publications-content"
@@ -68,7 +68,7 @@ const Publications = () => {
           Publications
         </h1>
         <div
-          className={`flex h-[70dvh] w-[95%] flex-col gap-5 place-self-center overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/30 to-amber-900/20 px-3 py-5 ${publications3xl2}`}
+          className={`flex h-[70dvh] w-[95%] flex-col gap-5 place-self-center overflow-y-scroll rounded-2xl bg-linear-to-br from-slate-900/30 to-amber-900/20 px-3 py-5 ${publications3xl2}`}
         >
           {publications.map((publication, index) => {
             return (

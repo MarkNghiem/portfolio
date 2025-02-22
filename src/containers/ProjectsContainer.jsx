@@ -194,7 +194,7 @@ const ProjectsContainer = () => {
   return (
     <div
       id="projects"
-      className={`mt-20 w-9/10 place-self-center rounded-2xl bg-slate-900/20 pb-8 shadow-2xl shadow-slate-900/50 transition duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${projects3xl10}`}
+      className={`mt-20 w-9/10 place-self-center rounded-2xl bg-slate-900/20 pb-8 shadow-2xl shadow-slate-900/50 transition duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${projects3xl10} scrollbar`}
     >
       <div
         id="projects-content"
@@ -206,7 +206,7 @@ const ProjectsContainer = () => {
           Projects
         </h1>
         <div
-          className={`mx-5 h-[70dvh] overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/30 to-amber-900/20 py-5 max-md:flex max-md:flex-col ${projects3xl11}`}
+          className={`mx-5 h-[70dvh] overflow-y-scroll rounded-2xl bg-linear-to-br from-slate-900/30 to-amber-900/20 py-5 max-md:flex max-md:flex-col ${projects3xl11}`}
         >
           <div
             id="projects"
