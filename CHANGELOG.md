@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/MarkNghiem/portfolio/compare/v1.1.1...v1.1.2) (2025-02-22)
+
+
+### Bug Fixes
+
+* Actions will also trigger when pushing to dev ([e3ac074](https://github.com/MarkNghiem/portfolio/commit/e3ac074f05f1f0d04107579c3e217a67985881b1))
+
 ## [1.1.1](https://github.com/MarkNghiem/portfolio/compare/v1.1.0...v1.1.1) (2025-02-21)
 
 
