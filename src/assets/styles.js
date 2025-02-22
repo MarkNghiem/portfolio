@@ -8,14 +8,6 @@ export const subtitle3xl = "3xl:text-3xl 3xl:font-stretch-115%";
 export const ender3xl = "3xl:text-5xl 3xl:font-stretch-120%";
 export const displayBlock3xl = "3xl:block";
 
-// NavBar 3xl Styling
-export const navBar3xl = `3xl:text-xl ${flex3xl}`;
-export const navBarLeft3xl =
-  "3xl:w-1/3 3xl:rounded-r-4xl 3xl:rounded-bl-4xl 3xl:p-3.5";
-
-// AboutContainer 3xl Styling
-export const aboutContainer3xl = `3xl:grid-cols-5 3xl:grid-rows-6 3xl:w-4/5 3xl:mt-20 3xl:gap-10 3xl:max-w-[1920px] ${grid3xl}`;
-
 // Info 3xl Styling
 export const info3xl1 = "3xl:col-span-3 3xl:row-span-2 3xl:text-3xl";
 export const info3xl2 = `3xl:grid-cols-5 3xl:px-10 ${grid3xl}`;

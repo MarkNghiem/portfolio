@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-import { navBar3xl, navBarLeft3xl, flex3xl } from "../assets/styles";
-
 const NavBar = ({ scrollTo }) => {
   const [visible, setVisible] = useState(false);
   const [leftVisible, setLeftVisible] = useState(false);
