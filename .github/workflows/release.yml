@@ -14,14 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Run Release Please (Generating CHANGELOG.md)
         id: release
-        uses: google-github-actions/release-please-action@v3
+        uses: googleapis/release-please-action@v4
         with:
           release-type: node
-          version-file: package.json
-          
-      - name: Get Release Version
-        run: echo "Current Version - ${{ steps.release.outputs.release_tag }}"
