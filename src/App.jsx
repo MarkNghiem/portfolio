@@ -10,8 +10,6 @@ import PublicationsContainer from "./containers/PublicationContainer";
 import EndingContainer from "./containers/EndingContainer";
 import Footer from "./containers/Footer";
 
-import { app3xl, ender3xl } from "./assets/styles";
-
 const App = () => {
   const [visible, setVisible] = useState(false);
 
@@ -46,14 +44,14 @@ const App = () => {
   return (
     <div
       id="app"
-      className="m-0 box-border bg-gradient-to-br from-amber-300/30 from-10% via-slate-300/20 via-60% to-red-300/20 to-90% p-0 text-center text-slate-700 font-stretch-110%"
+      className="light-gradient-background global typography-global"
     >
       <h1
-        className={`fixed top-1/2 left-1/2 w-full -translate-1/2 text-3xl font-semibold opacity-0 transition-opacity duration-1000 ease-in-out ${visible ? "opacity-100" : ""} ${app3xl}`}
+        className={`fixed w-full absolute-centered opening-text opacity-0 transition-opacity duration-1000 ease-in-out ${visible ? "opacity-100" : ""}`}
       >
         Hey it&apos;s Mark! 🎉
       </h1>
-      <div id="main-container" className="max-xl:flex max max-xl:flex-col">
+      <div id="main-container" className="col-flex">
         <NavBar scrollTo={scrollTo} />
         <Navigator />
         <div id="about-navigate" className="h-1" />
@@ -63,7 +61,7 @@ const App = () => {
         <div id="publications-navigate" className="h-1" />
         <PublicationsContainer />
         <div
-          className={`animate-font-stretch flex h-[90dvh] flex-col items-center justify-end text-3xl font-semibold ${ender3xl}`}
+          className='animate-font-stretch h-[100vh] col-flex items-center justify-end opening-text'
         >
           <h3 className="mb-5">Is it over? Or is it not?</h3>
           <p className="animate-bounce">↓</p>

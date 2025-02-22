@@ -1,8 +1,5 @@
 // Custom Styling for various viewports
 
-// Global 3xl Styling
-export const app3xl = "3xl:text-9xl";
-
 // Common 3xl Styling
 export const flex3xl = "3xl:flex";
 export const grid3xl = "3xl:grid";

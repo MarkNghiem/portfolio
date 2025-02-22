@@ -288,7 +288,7 @@ const TechStack = () => {
         <div
           className={`mx-5 max-h-[70dvh] overflow-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 p-3`}
         >
-          <h3 className={`mb-4 text-xl font-semibold ${subtitle3xl}`}>
+          <h3 className={`mb-4 text-3xl font-semibold font-stretch-115% ${subtitle3xl}`}>
             Programming Languages
           </h3>
           <div

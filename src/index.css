@@ -15,3 +15,65 @@
     }
   }
 }
+
+@layer utilities {
+  .light-gradient-background {
+    @apply bg-gradient-to-br from-amber-300/30 from-10% via-slate-300/20 via-60% to-red-300/20 to-90%;
+  }
+
+  .global {
+    @apply m-0 box-border p-0;
+  }
+
+  .typography-global {
+    @apply text-center text-slate-700 font-stretch-110%;
+  }
+
+  .absolute-centered {
+    @apply top-1/2 left-1/2 -translate-1/2;
+  }
+
+  .opening-text{
+    @apply text-5xl font-semibold font-stretch-115%
+  }
+
+  .title {
+    @apply text-5xl/15 font-semibold font-stretch-115%;
+  }
+
+  .subtitle {
+    @apply text-3xl font-semibold font-stretch-115%;
+  }
+
+  .col-flex {
+    @apply flex flex-col
+  }
+  
+  .flex-centered {
+    @apply justify-center items-center
+  }
+
+  @media screen and (min-width: 375px) {
+    .mobile-to-tablet-layout {
+      @apply w-9/10 gap-20
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .opening-text {
+      @apply text-9xl font-semibold font-stretch-125%;
+    }
+
+    .title {
+      @apply text-7xl font-semibold font-stretch-125%;
+    }
+
+    .lg-subtitle {
+      @apply text-3xl font-semibold font-stretch-115%;
+    }
+
+    .lg-ender {
+      @apply text-5xl font-semibold font-stretch-120%;
+    }
+  }
+}

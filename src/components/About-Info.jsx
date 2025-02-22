@@ -46,47 +46,47 @@ const Info = ({ handleEmail }) => {
     {
       type: "LinkedIn",
       url: "https://www.linkedin.com/in/mark-nghiem/",
-      icon: <FaLinkedin className={`${info3xl7}`} />,
+      icon: <FaLinkedin className={`${info3xl7} lg:size-10`} />,
     },
     {
       type: "GitHub",
       url: "https://github.com/MarkNghiem",
-      icon: <FaGithub className={`${info3xl7}`} />,
+      icon: <FaGithub className={`${info3xl7} lg:size-10`} />,
     },
     {
       type: "WellFound",
       url: "https://wellfound.com/u/mark-nghiem",
-      icon: <SiWellfound className={`${info3xl7}`} />,
+      icon: <SiWellfound className={`${info3xl7} lg:size-10`} />,
     },
   ];
 
   return (
     <div
       id="info-component"
-      className={`flex flex-col rounded-2xl bg-slate-900/20 text-2xl shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${info3xl1}`}
+      className={`col-flex rounded-2xl bg-slate-900/20 text-2xl shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${info3xl1}`}
     >
       <div
         id="info-content"
         className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
         <h1
-          className={`pt-5 text-5xl/15 font-semibold font-stretch-115% ${title3xl}`}
+          className={`pt-5 text-5xl/15 font-semibold font-stretch-115% ${title3xl} title`}
         >
           Kiet (Mark) Nghiem
         </h1>
         <div
-          className={`my-10 items-center place-self-center max-xl:flex max-xl:flex-col ${info3xl2}`}
+          className={`my-10 items-center place-self-center max-xl:flex max-xl:flex-col ${info3xl2} lg:grid lg:grid-cols-5 lg:px-10`}
         >
           <img
             src={me}
             aria-label="Avatar"
             title="Avatar"
-            className={`size-72 justify-self-center rounded-full border-2 border-slate-300 object-cover shadow-2xl shadow-slate-900 transition-transform duration-200 hover:scale-105 lg:max-xl:size-100 ${info3xl3}`}
+            className={`size-72 justify-self-center rounded-full border-2 border-slate-300 object-cover shadow-2xl shadow-slate-900 transition-transform duration-200 hover:scale-105 lg:col-span-2 ${info3xl3}`}
           />
-          <div className={`mt-10 font-stretch-115% ${info3xl4}`}>
+          <div className={`mt-10 font-stretch-115% ${info3xl4} lg:col-span-3 lg:justify-self-end lg:text-end lg:mt-0`}>
             <p>Software Engineer</p>
             <p>Los Angeles, California</p>
-            <div className={`flex justify-center gap-5 py-5 ${info3xl5}`}>
+            <div className={`flex justify-center gap-5 py-5 ${info3xl5} lg:justify-end lg:py-8`}>
               <a
                 href={resume}
                 download="mark-resume.pdf"
@@ -94,9 +94,9 @@ const Info = ({ handleEmail }) => {
                 aria-label="My Resume"
               >
                 <button
-                  className={`cursor-pointer rounded-xl bg-slate-900/20 p-2 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150 ${info3xl6}`}
+                  className={`cursor-pointer rounded-xl bg-slate-900/20 p-2 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150 ${info3xl6} lg:p-3`}
                 >
-                  <FaFilePdf className={`${info3xl7}`} />
+                  <FaFilePdf className={`${info3xl7} lg:size-10`} />
                 </button>
               </a>
               {buttons.map((button, index) => {
@@ -108,7 +108,7 @@ const Info = ({ handleEmail }) => {
                     aria-label={button.type}
                   >
                     <button
-                      className={`cursor-pointer rounded-xl bg-slate-900/20 p-2 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150 ${info3xl6}`}
+                      className={`cursor-pointer rounded-xl bg-slate-900/20 p-2 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150 ${info3xl6} lg:p-3`}
                     >
                       {button.icon}
                     </button>
@@ -117,11 +117,11 @@ const Info = ({ handleEmail }) => {
               })}
               <button
                 onClick={handleEmail}
-                className={`cursor-pointer rounded-xl bg-slate-900/20 p-2 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150 ${info3xl6}`}
+                className={`cursor-pointer rounded-xl bg-slate-900/20 p-2 transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150 ${info3xl6} lg:p-3`}
                 title="Send me an Email"
                 aria-label="Send me an Email"
               >
-                <BiLogoGmail className={`${info3xl7}`} />
+                <BiLogoGmail className={`${info3xl7} lg:size-10`} />
               </button>
             </div>
             <h2 className={`text-4xl ${info3xl8}`}>Welcome to my Portfolio!</h2>
