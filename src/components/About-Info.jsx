@@ -52,7 +52,7 @@ const Info = ({ handleEmail }) => {
   return (
     <div
       id="info-component"
-      className={`col-flex about-info-desktop-layout div-background div-effect text-2xl p-5 ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      className={`col-flex about-info-desktop-layout div-background div-effect p-5 text-2xl ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
       <div
         id="info-content"
@@ -64,7 +64,7 @@ const Info = ({ handleEmail }) => {
             src={me}
             aria-label="Avatar"
             title="Avatar"
-            className="info-image content-border content-hover-effect"
+            className="info-image content-border content-hover-effect avatar-rounded-full"
           />
           <div className="info-subtitle">
             <p>Software Engineer</p>
