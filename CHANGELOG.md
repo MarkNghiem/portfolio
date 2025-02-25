@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.2](https://github.com/MarkNghiem/portfolio/compare/v1.1.1...v1.1.2) (2025-02-22)
+
+
+### Bug Fixes
+
+* Actions will also trigger when pushing to dev ([e3ac074](https://github.com/MarkNghiem/portfolio/commit/e3ac074f05f1f0d04107579c3e217a67985881b1))
+
+## [1.1.1](https://github.com/MarkNghiem/portfolio/compare/v1.1.0...v1.1.1) (2025-02-21)
+
+
+### Bug Fixes
+
+* Centered Components for actual mobile devices ([24420ef](https://github.com/MarkNghiem/portfolio/commit/24420ef1d8dee232e08d91de51b1a965f319275b))
+* Updated dependencies ([42fd6d2](https://github.com/MarkNghiem/portfolio/commit/42fd6d256e09a7d065fdea15f5f5d22bc2963977))
+
 ## [1.1.0](https://github.com/MarkNghiem/portfolio/compare/v1.0.0...v1.1.0) (2025-02-20)
 
 
