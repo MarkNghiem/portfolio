@@ -60,7 +60,7 @@
   }
 
   .div-background {
-    @apply rounded-2xl bg-slate-900/20 shadow-2xl shadow-slate-900/20;
+    @apply rounded-2xl bg-slate-900/20 px-5 py-8 shadow-2xl shadow-slate-900/20;
   }
 
   .content-border {
@@ -102,7 +102,7 @@
 
   /* About Section Styles */
   .info-content-layout {
-    @apply my-10 items-center place-self-center;
+    @apply mt-8 items-center place-self-center;
   }
 
   .info-image {
@@ -163,7 +163,7 @@
     }
 
     .info-image {
-      @apply col-span-2 size-80 justify-self-center rounded-full object-cover;
+      @apply col-span-2 size-80 rounded-full object-cover;
     }
 
     .info-icon-layout {
@@ -203,8 +203,19 @@
       @apply col-span-3 row-span-2 text-3xl;
     }
 
+    .about-about-desktop-layout {
+      @apply col-span-2 row-span-6 h-fit text-xl;
+    }
+
     .info-subtitle {
       @apply col-span-3 mt-0 justify-self-end text-end font-stretch-120%;
+    }
+  }
+
+  /* From Widescreens' Viewports */
+  @media screen and (min-width: 2560px) {
+     .info-content-layout {
+      @apply grid grid-cols-5 px-20;
     }
   }
 }

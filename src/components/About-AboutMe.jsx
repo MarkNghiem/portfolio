@@ -37,11 +37,11 @@ const AboutMe = () => {
   return (
     <div
       id="about-me"
-      className={`rounded-2xl bg-slate-900/20 p-5 text-start shadow-2xl shadow-slate-900/50 transition-all duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${about3xl1}`}
+      className={`div-background div-effect text-start ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${about3xl1}`}
     >
       <div
         id="about-me-content"
-        className={`transition-opacity duration-1000 ease-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
+        className={`content-effect ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
         <h2
           className={`mb-5 text-3xl font-semibold font-stretch-115% ${ender3xl}`}

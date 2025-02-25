@@ -52,13 +52,13 @@ const Info = ({ handleEmail }) => {
   return (
     <div
       id="info-component"
-      className={`col-flex about-info-desktop-layout div-background div-effect text-2xl ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      className={`col-flex about-info-desktop-layout div-background div-effect text-2xl p-5 ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
       <div
         id="info-content"
         className={`content-effect ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <h1 className="title pt-5">Kiet (Mark) Nghiem</h1>
+        <h1 className="title">Kiet (Mark) Nghiem</h1>
         <div className="col-flex info-content-layout">
           <img
             src={me}
