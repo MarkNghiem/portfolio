@@ -17,6 +17,8 @@
 }
 
 @layer utilities {
+  /* From Mobile's Viewports */
+  /* Global Styles */
   .light-gradient-background {
     @apply bg-gradient-to-br from-amber-300/30 from-10% via-slate-300/20 via-60% to-red-300/20 to-90%;
   }
@@ -38,7 +40,7 @@
   }
 
   .title {
-    @apply text-5xl/15 font-semibold font-stretch-115%;
+    @apply text-5xl/15 font-bold font-stretch-120%;
   }
 
   .subtitle {
@@ -57,24 +59,12 @@
     @apply w-9/10 gap-20;
   }
 
-  .navbar-style {
-    @apply sticky top-0 z-20 flex rounded-b-4xl border-b border-slate-200 bg-slate-100/95;
-  }
-
-  .navbar-left-style {
-    @apply sticky top-0 w-full rounded-b-4xl bg-slate-900/30 p-2;
-  }
-
-  .navbar-right-style {
-    @apply hidden
-  }
-
-  .navbar-right-items {
-    @apply rounded-3xl px-10 py-2 font-semibold transition-colors duration-200 hover:cursor-pointer hover:bg-slate-300 active:bg-slate-400
-  }
-
   .div-background {
     @apply rounded-2xl bg-slate-900/20 shadow-2xl shadow-slate-900/20;
+  }
+
+  .content-border {
+    @apply border-2 border-slate-400 shadow-2xl shadow-slate-900;
   }
 
   .div-effect {
@@ -85,7 +75,63 @@
     @apply transition-opacity duration-1000 ease-in-out;
   }
 
+  .content-hover-effect {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  .button-hover-effect {
+    @apply transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150;
+  }
+
+  /* Navbar Style */
+  .navbar-style {
+    @apply sticky top-0 z-20 flex rounded-b-4xl border-b border-slate-200 bg-slate-100/95;
+  }
+
+  .navbar-left-style {
+    @apply sticky top-0 w-full rounded-b-4xl bg-slate-900/30 p-2;
+  }
+
+  .navbar-right-style {
+    @apply hidden;
+  }
+
+  .navbar-right-items {
+    @apply rounded-3xl px-10 py-2 font-semibold transition-colors duration-200 hover:cursor-pointer hover:bg-slate-300 active:bg-slate-400;
+  }
+
+  /* About Section Styles */
+  .info-content-layout {
+    @apply my-10 items-center place-self-center;
+  }
+
+  .info-image {
+    @apply size-72 rounded-full object-cover;
+  }
+
+  .info-icon-layout {
+    @apply flex justify-center gap-5 py-5;
+  }
+
+  .info-button {
+    @apply cursor-pointer rounded-xl bg-slate-900/20 p-2;
+  }
+
+  .info-icon-size {
+    @apply size-7;
+  }
+
+  .info-subtitle {
+    @apply mt-10 font-stretch-115%;
+  }
+
+  .info-ending {
+    @apply text-4xl;
+  }
+
+  /* From Tablets' Viewports */
   @media screen and (min-width: 1024px) {
+    /* Global Styles */
     .typography-global {
       @apply text-center text-xl text-slate-700 font-stretch-110%;
     }
@@ -95,26 +141,60 @@
     }
 
     .title {
-      @apply text-7xl font-semibold font-stretch-125%;
+      @apply text-7xl font-bold font-stretch-125%;
     }
 
     .subtitle {
-      @apply text-3xl font-semibold font-stretch-115%;
+      @apply text-3xl font-semibold font-stretch-120%;
     }
+
+    /* Navbar Style */
     .navbar-left-style {
       @apply sticky top-0 w-1/3 rounded-r-4xl rounded-bl-4xl bg-slate-900/30 p-3.5;
     }
 
     .navbar-right-style {
-      @apply flex w-2/3 items-center justify-around
+      @apply flex w-2/3 items-center justify-around;
+    }
+
+    /* About Section Styles */
+    .info-content-layout {
+      @apply grid grid-cols-5 px-10;
+    }
+
+    .info-image {
+      @apply col-span-2 size-80 justify-self-center rounded-full object-cover;
+    }
+
+    .info-icon-layout {
+      @apply flex justify-end gap-5 py-8;
+    }
+
+    .info-button {
+      @apply cursor-pointer rounded-xl bg-slate-900/20 p-3;
+    }
+
+    .info-icon-size {
+      @apply size-10;
+    }
+
+    .info-subtitle {
+      @apply col-span-3 mt-0 justify-self-end text-end font-stretch-120%;
+    }
+
+    .info-ending {
+      @apply text-6xl;
     }
   }
 
+  /* From Desktops' Viewports */
   @media screen and (min-width: 1440px) {
+    /* Global Styles */
     .desktop-layout {
       @apply grid;
     }
 
+    /* About Section Styles */
     .about-container-desktop-layout {
       @apply mt-20 w-4/5 max-w-[120rem] grid-cols-5 grid-rows-6 gap-10;
     }
@@ -122,9 +202,14 @@
     .about-info-desktop-layout {
       @apply col-span-3 row-span-2 text-3xl;
     }
+
+    .info-subtitle {
+      @apply col-span-3 mt-0 justify-self-end text-end font-stretch-120%;
+    }
   }
 }
 
+/* Scrollbar Style for Chrome Windows */
 .scrollbar {
   ::-webkit-scrollbar {
     width: 12px;
