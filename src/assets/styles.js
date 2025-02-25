@@ -8,17 +8,6 @@ export const subtitle3xl = "3xl:text-3xl 3xl:font-stretch-115%";
 export const ender3xl = "3xl:text-5xl 3xl:font-stretch-120%";
 export const displayBlock3xl = "3xl:block";
 
-// Info 3xl Styling
-export const info3xl1 = "3xl:col-span-3 3xl:row-span-2 3xl:text-3xl";
-export const info3xl2 = `3xl:grid-cols-5 3xl:px-10 ${grid3xl}`;
-export const info3xl3 = "3xl:col-span-2 3xl:size-80";
-export const info3xl4 =
-  "3xl:col-span-3 3xl:justify-self-end 3xl:text-end 3xl:font-stretch-120% 3xl:mt-0";
-export const info3xl5 = "3xl:justify-end 3xl:py-8";
-export const info3xl6 = "3xl:p-3";
-export const info3xl7 = "3xl:size-10";
-export const info3xl8 = "3xl:text-5xl";
-
 // About 3xl Styling
 export const about3xl1 =
   "3xl:col-span-2 3xl:row-span-6 3xl:p-8 3xl:text-xl 3xl:h-fit";
