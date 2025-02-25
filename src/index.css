@@ -48,7 +48,11 @@
   }
 
   .avatar-rounded-full {
-    @apply rounded-full object-cover
+    @apply rounded-full object-cover;
+  }
+
+  .avatar-rounded-4xl {
+    @apply rounded-4xl object-cover
   }
 
   .col-flex {
@@ -64,11 +68,11 @@
   }
 
   .div-background {
-    @apply rounded-2xl bg-slate-900/20 px-5 py-8 shadow-2xl shadow-slate-900/20;
+    @apply rounded-2xl bg-slate-900/20 px-5 py-8 shadow-2xl shadow-slate-900/50;
   }
 
   .content-border {
-    @apply border-2 border-slate-400 shadow-2xl shadow-slate-900;
+    @apply border-2 border-slate-400 shadow-2xl shadow-slate-900/70;
   }
 
   .div-effect {
@@ -110,11 +114,11 @@
   }
 
   .info-image {
-    @apply size-72
+    @apply size-72;
   }
 
   .info-icon-layout {
-    @apply justify-center py-5 flex gap-5;
+    @apply flex justify-center gap-5 py-5;
   }
 
   .info-button {
@@ -133,11 +137,28 @@
     @apply text-4xl;
   }
 
+  /* About Me Stylings */
+  .partner-container {
+    @apply items-center;
+  }
+
+  .partner-image {
+    @apply mb-5 size-80 place-self-center transition-transform duration-200 hover:scale-105
+  }
+
+  .pika-bio {
+    @apply mb-3 text-center
+  }
+
+  .chuchu-bio {
+    @apply mb-3 text-center
+  }
+
   /* From Tablets' Viewports */
   @media screen and (min-width: 1024px) {
     /* Global Styles */
     .typography-global {
-      @apply text-center text-xl text-slate-700 font-stretch-110%;
+      @apply text-xl;
     }
 
     .opening-text {
@@ -149,7 +170,7 @@
     }
 
     .subtitle {
-      @apply text-3xl font-semibold font-stretch-120%;
+      @apply text-5xl font-semibold font-stretch-120%;
     }
 
     /* Navbar Style */
@@ -167,7 +188,7 @@
     }
 
     .info-image {
-      @apply col-span-2 size-80
+      @apply col-span-2 size-80;
     }
 
     .info-icon-layout {
@@ -189,6 +210,18 @@
     .info-ending {
       @apply text-6xl;
     }
+
+    .partner-container {
+      @apply flex-row gap-5;
+    }
+
+    .pika-bio {
+      @apply text-start text-4xl
+    }
+    
+    .chuchu-bio {
+      @apply text-end text-4xl
+    }
   }
 
   /* From Desktops' Viewports */
@@ -208,18 +241,26 @@
     }
 
     .about-about-desktop-layout {
-      @apply col-span-2 row-span-6 h-fit text-xl;
+      @apply col-span-2 row-span-6 h-fit;
     }
 
     .info-subtitle {
       @apply col-span-3 mt-0 justify-self-end text-end font-stretch-120%;
     }
+
+    .partner-image {
+      @apply size-60
+    }
   }
 
   /* From Widescreens' Viewports */
   @media screen and (min-width: 2560px) {
-     .info-content-layout {
+    .info-content-layout {
       @apply grid grid-cols-5 px-20;
+    }
+
+    .partner-image {
+      @apply size-80
     }
   }
 }
