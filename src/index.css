@@ -311,6 +311,19 @@
     @apply h-[70vh] max-h-[70vh] w-[99%] place-content-center place-self-center;
   }
 
+  /* Ending Section Styles */
+  .ending-div {
+    @apply mt-[90vh] mb-20 w-9/10 place-self-center rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 pb-8 shadow-2xl shadow-slate-900/50;
+  }
+
+  .ending-group {
+    @apply flex flex-col items-center justify-center gap-10 place-self-center;
+  }
+
+  .ending-pictures {
+    @apply size-60 rounded-4xl transition-transform duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:opacity-100;
+  }
+
   /* From Tablets' Viewports */
   @media screen and (min-width: 1024px) {
     /* Global Styles */
@@ -436,6 +449,11 @@
     .publications-hosts {
       @apply pb-0;
     }
+
+    /* Ending Section Styles */
+    .ending-group {
+      @apply flex-row;
+    }
   }
 
   /* From Small Desktops' Viewports */
@@ -530,6 +548,11 @@
     .publications-learnmore {
       @apply transition-colors duration-300 hover:text-amber-700;
     }
+
+    /* Ending Section Styles */
+    .ending-pictures {
+      @apply size-80;
+    }
   }
 
   /* From Desktops' Viewports */
@@ -605,6 +628,11 @@
 
     .rec-inner {
       @apply h-5/6 max-h-5/6;
+    }
+
+    /* Ending Section Styles */
+    .ending-div {
+      @apply w-4/5 max-w-[120rem];
     }
   }
 

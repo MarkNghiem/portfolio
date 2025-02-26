@@ -64,7 +64,7 @@ const Info = ({ handleEmail }) => {
             src={me}
             aria-label="Avatar"
             title="Avatar"
-            className="info-image content-border content-hover-effect avatar-rounded-full"
+            className="info-image content-border content-shadow content-hover-effect avatar-rounded-full"
           />
           <div className="info-subtitle">
             <p>Software Engineer</p>

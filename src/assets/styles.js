@@ -8,11 +8,6 @@ export const subtitle3xl = "3xl:text-3xl 3xl:font-stretch-115%";
 export const ender3xl = "3xl:text-5xl 3xl:font-stretch-120%";
 export const displayBlock3xl = "3xl:block";
 
-// Recommendations 3xl Stylings
-export const recommendations3xl1 = "3xl:col-span-5";
-export const recommendations3xl2 = "3xl:h-4/5 3xl:max-h-4/5";
-export const recommendations3xl3 = `3xl:py-10 ${ender3xl}`;
-
 // EndingCOntainer 3xl Styling
 export const ending3xl1 = "3xl:w-4/5 3xl:max-w-[1920px]";
 export const ending3xl2 = "3xl:mx-0";

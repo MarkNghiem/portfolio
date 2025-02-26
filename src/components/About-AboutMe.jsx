@@ -70,7 +70,7 @@ const AboutMe = () => {
             src={pikaLarge}
             title="Pika"
             aria-label="Pika"
-            className="partner-image content-border avatar-rounded-4xl content-hover-effect"
+            className="partner-image content-border content-shadow avatar-rounded-4xl content-hover-effect"
           />
           <div id="pika-details">
             <h4 className="pika-bio subtitle">Pika</h4>
@@ -87,7 +87,7 @@ const AboutMe = () => {
             src={chuchuLarge}
             title="Chuchu"
             aria-label="Chuchu"
-            className="partner-image content-border avatar-rounded-4xl content-hover-effect lg:order-2"
+            className="partner-image content-border content-shadow avatar-rounded-4xl content-hover-effect lg:order-2"
           />
           <div id="chuchu-details" className="order-1">
             <h4 className="chuchu-bio subtitle">Chuchu</h4>

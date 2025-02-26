@@ -1,10 +1,4 @@
 import { useState, useEffect } from "react";
-import {
-  recommendations3xl1,
-  recommendations3xl2,
-  recommendations3xl3,
-  title3xl,
-} from "../assets/styles";
 
 const Recommendation = () => {
   const [divVisible, setDivVisible] = useState(false);
@@ -29,7 +23,7 @@ const Recommendation = () => {
   return (
     <div
       id="recommendations"
-      className={`div-background div-effect rec-desktop-layout ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      className={`scrollbar div-background div-effect rec-desktop-layout ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
       <div
         id="recommendations-content"
