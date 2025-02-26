@@ -137,7 +137,7 @@ const TechStack = () => {
             })}
           </div>
           <h2
-            className='my-8 subtitle'
+            className='mt-8 subtitle'
           >
             And more to come...
           </h2>

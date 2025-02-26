@@ -8,31 +8,6 @@ export const subtitle3xl = "3xl:text-3xl 3xl:font-stretch-115%";
 export const ender3xl = "3xl:text-5xl 3xl:font-stretch-120%";
 export const displayBlock3xl = "3xl:block";
 
-// ProjectsContainer 3xl Styling
-export const projects3xl1 = "3xl:size-6";
-export const projects3xl2 = "3xl:col-span-3 3xl:row-span-4";
-export const projects3xl3 = "3xl:col-start-4 3xl:col-span-2 3xl:row-span-3";
-export const projects3xl4 =
-  "3xl:col-start-4 3xl:col-span-2 3xl:row-start-4 3xl:row-span-2";
-export const projects3xl5 = "3xl:col-span-2 3xl:row-start-5 3xl:row-span-2";
-export const projects3xl6 = "3xl:col-start-3 3xl:col-span-3 3xl:row-start-6";
-export const projects3xl7 = "3xl:col-span-3 3xl:row-start-7";
-export const projects3xl8 = `3xl:row-start-7 ${projects3xl3}`;
-export const projects3xl9 = "3xl:col-start-3 3xl:row-start-5 3xl:block";
-export const projects3xl10 = "3xl:mt-40 3xl:w-4/5 3xl:max-w-[1920px]";
-export const projects3xl11 = "3xl:h-[80dvh] 3xl:py-10";
-export const projects3xl12 =
-  "3xl:grid 3xl:grid-cols-5 3xl:grid-rows-7 3xl:gap-2";
-export const projects3xl13 =
-  "3xl:group-hover:scale-90 3xl:group-hover:opacity-70 3xl:hover:z-10 3xl:hover:scale-105 3xl:hover:opacity-100";
-export const projects3xl14 = "3xl:py-10 3xl:h-full 3xl:group-hover:opacity-0";
-export const projects3xl15 = "3xl:text-3xl 3xl:font-stretch-125% 3xl:pt-0";
-export const projects3xl16 = "3xl:pb-0";
-export const projects3xl17 = "3xl:text-xl";
-export const projects3xl18 = "3xl:text-2xl 3xl:hover:opacity-100";
-export const projects3xl19 = "3xl:m-3 3xl:gap-3";
-export const projects3xl20 = "3xl:hover:scale-125";
-
 // PublicationsContainer 3xl Styling
 export const publicationsContainer3xl =
   "3xl:mt-40 3xl:grid 3xl:w-4/5 3xl:max-w-[1920px] 3xl:grid-cols-9 3xl:gap-10";

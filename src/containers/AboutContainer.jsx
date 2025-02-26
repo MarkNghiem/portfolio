@@ -9,7 +9,7 @@ const AboutContainer = ({ handleEmail }) => {
   return (
     <div
       id="about"
-      className='col-flex mobile-to-tablet-layout mt-10 place-self-center desktop-layout about-container-desktop-layout'
+      className='col-flex mobile-to-tablet-layout mt-10 desktop-layout about-container-desktop-layout'
     >
       <Info handleEmail={handleEmail} />
       <AboutMe />
