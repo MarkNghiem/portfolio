@@ -8,11 +8,6 @@ export const subtitle3xl = "3xl:text-3xl 3xl:font-stretch-115%";
 export const ender3xl = "3xl:text-5xl 3xl:font-stretch-120%";
 export const displayBlock3xl = "3xl:block";
 
-// Tech Stack 3xl Styling
-export const techStack3xl1 = "3xl:col-span-3 3xl:row-span-4 3xl:h-fit";
-export const techStack3xl2 = "3xl:px-4 3xl:py-2";
-export const techStack3xl3 = "3xl:mr-3 3xl:p-1";
-
 // ProjectsContainer 3xl Styling
 export const projects3xl1 = "3xl:size-6";
 export const projects3xl2 = "3xl:col-span-3 3xl:row-span-4";

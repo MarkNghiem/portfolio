@@ -4,15 +4,6 @@ import { useEffect, useState } from "react";
 
 import { langs, techs, others } from '../assets/techStack';
 import ExternalLink from '../../public/svg/external-link.svg';
-import {
-  techStack3xl1,
-  techStack3xl2,
-  techStack3xl3,
-  displayBlock3xl,
-  title3xl,
-  subtitle3xl,
-  ender3xl,
-} from "../assets/styles";
 
 const TechStack = () => {
   const [divVisible, setDivVisible] = useState(false);
@@ -69,24 +60,24 @@ const TechStack = () => {
                   >
                     <img
                       src={lang.icon}
-                      className={`size-10 rounded-lg ${techStack3xl3}`}
+                      className='tech-button-image'
                     />
-                    <p className={`hidden ${displayBlock3xl}`}>{lang.name}</p>
+                    <p className='tech-button-description'>{lang.name}</p>
                     <img
                       src={ExternalLink}
-                      className="absolute top-0 right-0 m-0.5 size-4"
+                      className="tech-button-external"
                     />
                   </button>
                 </a>
               );
             })}
           </div>
-          <h3 className={`mt-8 mb-4 text-xl font-semibold ${subtitle3xl}`}>
+          <h3 className='mt-8 mb-5 subtitle'>
             Frameworks and Technologies
           </h3>
           <div
             id="tech-button"
-            className="group flex flex-wrap justify-center gap-2 place-self-center"
+            className="group tech-button-group"
           >
             {techs.map((tech) => {
               return (
@@ -97,28 +88,28 @@ const TechStack = () => {
                   aria-label={tech.label}
                 >
                   <button
-                    className={`relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 p-4.5 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40 ${techStack3xl2}`}
+                    className='tech-button'
                   >
                     <img
                       src={tech.icon}
-                      className={`size-10 ${techStack3xl3}`}
+                      className='tech-button-image'
                     />
-                    <p className={`hidden ${displayBlock3xl}`}>{tech.name}</p>
+                    <p className='tech-button-description'>{tech.name}</p>
                     <img
                       src={ExternalLink}
-                      className="absolute top-0 right-0 m-0.5 size-4"
+                      className="tech-button-external"
                     />
                   </button>
                 </a>
               );
             })}
           </div>
-          <h3 className={`mt-8 mb-4 text-xl font-semibold ${subtitle3xl}`}>
+          <h3 className='mt-8 mb-4 subtitle'>
             Others
           </h3>
           <div
             id="other-button"
-            className="group flex flex-wrap justify-center gap-2 place-self-center"
+            className="group tech-button-group"
           >
             {others.map((other) => {
               return (
@@ -129,16 +120,16 @@ const TechStack = () => {
                   aria-label={other.label}
                 >
                   <button
-                    className={`relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 p-4.5 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40 ${techStack3xl2}`}
+                    className='tech-button'
                   >
                     <img
                       src={other.icon}
-                      className={`size-10 ${techStack3xl3}`}
+                      className='tech-button-image'
                     />
-                    <p className={`hidden ${displayBlock3xl}`}>{other.name}</p>
+                    <p className='tech-button-description'>{other.name}</p>
                     <img
                       src={ExternalLink}
-                      className="absolute top-0 right-0 m-0.5 size-4"
+                      className="tech-button-external"
                     />
                   </button>
                 </a>
@@ -146,7 +137,7 @@ const TechStack = () => {
             })}
           </div>
           <h2
-            className={`my-8 text-3xl font-semibold font-stretch-115% ${ender3xl}`}
+            className='my-8 subtitle'
           >
             And more to come...
           </h2>
