@@ -28,7 +28,7 @@ const AboutMe = () => {
   return (
     <div
       id="about-me"
-      className={`div-background div-effect about-about-desktop-layout text-start ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      className={`div-background div-effect about-desktop-layout text-start ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
       <div
         id="about-me-content"

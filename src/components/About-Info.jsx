@@ -51,8 +51,8 @@ const Info = ({ handleEmail }) => {
 
   return (
     <div
-      id="info-component"
-      className={`col-flex about-info-desktop-layout div-background div-effect p-5 text-2xl ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      id="info"
+      className={`col-flex info-desktop-layout div-background div-effect p-5 text-2xl ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
       <div
         id="info-content"

@@ -52,7 +52,7 @@
   }
 
   .avatar-rounded-4xl {
-    @apply rounded-4xl object-cover
+    @apply rounded-4xl object-cover;
   }
 
   .col-flex {
@@ -69,6 +69,10 @@
 
   .div-background {
     @apply rounded-2xl bg-slate-900/20 px-5 py-8 shadow-2xl shadow-slate-900/50;
+  }
+
+  .inner-div {
+    @apply overflow-y-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 p-3
   }
 
   .content-border {
@@ -109,6 +113,7 @@
   }
 
   /* About Section Styles */
+  /* Info Section Styles */
   .info-content-layout {
     @apply mt-8 items-center place-self-center;
   }
@@ -137,21 +142,30 @@
     @apply text-4xl;
   }
 
-  /* About Me Stylings */
+  /* About Me Section Styles */
   .partner-container {
-    @apply items-center;
+    @apply mx-10 items-center;
   }
 
   .partner-image {
-    @apply mb-5 size-80 place-self-center transition-transform duration-200 hover:scale-105
+    @apply mb-5 size-68 place-self-center transition-transform duration-200 hover:scale-105;
   }
 
   .pika-bio {
-    @apply mb-3 text-center
+    @apply mb-3 text-center;
   }
 
   .chuchu-bio {
-    @apply mb-3 text-center
+    @apply mb-3 text-center;
+  }
+
+  /* Tech Stack Section Styles */
+  .tech-button-group {
+    @apply flex justify-center gap-2
+  }
+
+  .tech-button {
+    @apply relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 p-4.5 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40
   }
 
   /* From Tablets' Viewports */
@@ -183,6 +197,7 @@
     }
 
     /* About Section Styles */
+    /* Info Section Styles */
     .info-content-layout {
       @apply grid grid-cols-5 px-10;
     }
@@ -211,21 +226,39 @@
       @apply text-6xl;
     }
 
+    /* About Me Section Stylings */
     .partner-container {
-      @apply flex-row gap-5;
+      @apply flex-row gap-10;
+    }
+
+    .partner-image {
+      @apply size-80;
     }
 
     .pika-bio {
-      @apply text-start text-4xl
+      @apply text-start text-4xl;
     }
-    
+
     .chuchu-bio {
-      @apply text-end text-4xl
+      @apply text-end text-4xl;
+    }
+
+    /* Tech Stack Section Styles */
+    .tech-button {
+      @apply px-4 py-2
+    }
+  }
+
+  /* From Small Desktops' Viewports */
+  @media screen and (min-width: 1440px) {
+    /* Global Styles */
+    .mobile-to-tablet-layout {
+      @apply w-4/5;
     }
   }
 
   /* From Desktops' Viewports */
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1920px) {
     /* Global Styles */
     .desktop-layout {
       @apply grid;
@@ -236,20 +269,31 @@
       @apply mt-20 w-4/5 max-w-[120rem] grid-cols-5 grid-rows-6 gap-10;
     }
 
-    .about-info-desktop-layout {
+    /* Info Section Styles */
+    .info-desktop-layout {
       @apply col-span-3 row-span-2 text-3xl;
-    }
-
-    .about-about-desktop-layout {
-      @apply col-span-2 row-span-6 h-fit;
     }
 
     .info-subtitle {
       @apply col-span-3 mt-0 justify-self-end text-end font-stretch-120%;
     }
 
+    /* About Me Section Styles */
+    .about-desktop-layout {
+      @apply col-span-2 row-span-6;
+    }
+
+    .partner-container {
+      @apply mx-0 gap-5;
+    }
+
     .partner-image {
-      @apply size-60
+      @apply size-60;
+    }
+
+    /* Tech Stacks Section Styles */
+    .tech-desktop-layout {
+      @apply col-span-3 row-span-4;
     }
   }
 
@@ -260,7 +304,7 @@
     }
 
     .partner-image {
-      @apply size-80
+      @apply size-80;
     }
   }
 }
