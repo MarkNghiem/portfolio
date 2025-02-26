@@ -203,7 +203,7 @@ const ProjectsContainer = () => {
                       >
                         {project.name}
                       </h2>
-                      <p className='project-slogan'>{project.slogan}</p>
+                      <p className='body'>{project.slogan}</p>
                     </div>
                   </div>
                   <div
@@ -234,7 +234,7 @@ const ProjectsContainer = () => {
                     >
                       {project.name}
                     </p>
-                    <p className="project-description project-slogan">
+                    <p className="project-description body">
                       {project.description}
                     </p>
                   </div>

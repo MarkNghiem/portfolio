@@ -47,6 +47,10 @@
     @apply text-3xl font-semibold font-stretch-115%;
   }
 
+  .body {
+    @apply text-base;
+  }
+
   .avatar-rounded-full {
     @apply rounded-full object-cover;
   }
@@ -76,7 +80,11 @@
   }
 
   .content-border {
-    @apply border-2 border-slate-400 shadow-2xl shadow-slate-900/70;
+    @apply border-2 border-slate-400;
+  }
+
+  .content-shadow {
+    @apply shadow-2xl shadow-slate-900/70;
   }
 
   .div-effect {
@@ -249,10 +257,6 @@
     @apply text-4xl font-bold font-stretch-120%;
   }
 
-  .project-slogan {
-    @apply text-base;
-  }
-
   .project-hover {
     @apply absolute inset-0 z-20 flex flex-col items-center justify-center p-10 opacity-100;
   }
@@ -270,7 +274,32 @@
   }
 
   .project-description {
-    @apply hidden
+    @apply hidden;
+  }
+
+  /* Publications Section Styles */
+  .publication-inner-layout {
+    @apply max-h-[70vh] w-[99%] gap-5 place-self-center;
+  }
+
+  .publications-individual {
+    @apply relative w-[99%] place-self-center rounded-2xl border border-slate-300 bg-slate-300/20;
+  }
+
+  .publications-collab {
+    @apply px-5 pt-5 pb-2 text-sm
+  }
+
+  .publications-learnmore {
+    @apply text-lg font-semibold
+  }
+
+  .publications-ending {
+    @apply pt-5 text-end italic
+  }
+
+  .publications-hosts {
+    @apply pb-2
   }
 
   /* From Tablets' Viewports */
@@ -290,6 +319,10 @@
 
     .subtitle {
       @apply text-5xl font-semibold font-stretch-120%;
+    }
+
+    .body {
+      @apply text-xl;
     }
 
     /* Navbar Style */
@@ -374,8 +407,21 @@
       @apply text-5xl;
     }
 
-    .project-slogan {
-      @apply text-xl;
+    /* Publications Section Styles */
+    .publication-inner-layout {
+      @apply py-10;
+    }
+
+    .publications-collab {
+      @apply flex items-end justify-between
+    }
+
+    .publications-learnmore {
+      @apply text-xl
+    }
+
+    .publications-hosts {
+      @apply pb-0
     }
   }
 
@@ -460,11 +506,16 @@
     }
 
     .project-title-hover {
-      @apply pointer-events-auto opacity-100
+      @apply pointer-events-auto opacity-100;
     }
 
     .project-description {
-      @apply block
+      @apply block;
+    }
+
+    /* Publications Section Styles */
+    .publications-learnmore {
+      @apply transition-colors duration-300 hover:text-amber-700
     }
   }
 
@@ -473,6 +524,10 @@
     /* Global Styles */
     .desktop-layout {
       @apply grid;
+    }
+
+    .body {
+      @apply text-2xl;
     }
 
     /* About Section Styles */
@@ -520,12 +575,14 @@
       @apply text-7xl;
     }
 
-    .project-slogan {
-      @apply text-2xl;
+    /* Publications Container Styles */
+    .publication-container-desktop-layout {
+      @apply mt-40 w-4/5 max-w-[120rem] grid-cols-9 gap-10;
     }
 
-    .publication-container-desktop-layout {
-      @apply mt-40 w-4/5 max-w-[120rem] grid-cols-9 gap-10
+    /* Publications Section Styles */
+    .publication-desktop-layout {
+      @apply col-span-4;
     }
   }
 

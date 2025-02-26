@@ -10,11 +10,11 @@ export const displayBlock3xl = "3xl:block";
 
 // Publications 3xl Styling
 export const publications3xl1 = "3xl:col-span-4";
-export const publications3xl2 = "3xl:py-10 3xl:h-fit";
+export const publications3xl2 = "3xl:py-10";
 export const publications3xl3 = "3xl:py-5 3xl:text-xl";
 export const publications3xl4 = "3xl:flex 3xl:items-end 3xl:justify-between";
 export const publications3xl5 = "3xl:text-xl";
-export const publications3xl6 = "3xl:text-end 3xl:pt-0";
+export const publications3xl6 = "3xl:pt-0";
 export const publications3xl7 = "3xl:pb-0";
 
 // Recommendations 3xl Stylings
