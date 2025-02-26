@@ -287,19 +287,28 @@
   }
 
   .publications-collab {
-    @apply px-5 pt-5 pb-2 text-sm
+    @apply px-5 pt-5 pb-2 text-sm;
   }
 
   .publications-learnmore {
-    @apply text-lg font-semibold
+    @apply text-lg font-semibold;
   }
 
   .publications-ending {
-    @apply pt-5 text-end italic
+    @apply pt-5 text-end italic;
   }
 
   .publications-hosts {
-    @apply pb-2
+    @apply pb-2;
+  }
+
+  /* Reccommendations Section Styles */
+  .rec-title {
+    @apply text-4xl/15 font-bold font-stretch-120%;
+  }
+
+  .rec-inner {
+    @apply h-[70vh] max-h-[70vh] w-[99%] place-content-center place-self-center;
   }
 
   /* From Tablets' Viewports */
@@ -310,15 +319,19 @@
     }
 
     .opening-text {
-      @apply text-9xl font-semibold font-stretch-125%;
+      @apply text-9xl font-stretch-125%;
     }
 
     .title {
-      @apply text-7xl font-bold font-stretch-125%;
+      @apply text-7xl font-stretch-125%;
+    }
+
+    .rec-title {
+      @apply text-7xl font-stretch-125%;
     }
 
     .subtitle {
-      @apply text-5xl font-semibold font-stretch-120%;
+      @apply text-5xl font-stretch-120%;
     }
 
     .body {
@@ -413,15 +426,15 @@
     }
 
     .publications-collab {
-      @apply flex items-end justify-between
+      @apply flex items-end justify-between;
     }
 
     .publications-learnmore {
-      @apply text-xl
+      @apply text-xl;
     }
 
     .publications-hosts {
-      @apply pb-0
+      @apply pb-0;
     }
   }
 
@@ -515,7 +528,7 @@
 
     /* Publications Section Styles */
     .publications-learnmore {
-      @apply transition-colors duration-300 hover:text-amber-700
+      @apply transition-colors duration-300 hover:text-amber-700;
     }
   }
 
@@ -583,6 +596,15 @@
     /* Publications Section Styles */
     .publication-desktop-layout {
       @apply col-span-4;
+    }
+
+    /* Recommendations Section Styles */
+    .rec-desktop-layout {
+      @apply col-span-5;
+    }
+
+    .rec-inner {
+      @apply h-5/6 max-h-5/6;
     }
   }
 
