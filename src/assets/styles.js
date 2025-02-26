@@ -8,10 +8,6 @@ export const subtitle3xl = "3xl:text-3xl 3xl:font-stretch-115%";
 export const ender3xl = "3xl:text-5xl 3xl:font-stretch-120%";
 export const displayBlock3xl = "3xl:block";
 
-// PublicationsContainer 3xl Styling
-export const publicationsContainer3xl =
-  "3xl:mt-40 3xl:grid 3xl:w-4/5 3xl:max-w-[1920px] 3xl:grid-cols-9 3xl:gap-10";
-
 // Publications 3xl Styling
 export const publications3xl1 = "3xl:col-span-4";
 export const publications3xl2 = "3xl:py-10 3xl:h-fit";

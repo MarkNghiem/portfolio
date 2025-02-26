@@ -523,6 +523,10 @@
     .project-slogan {
       @apply text-2xl;
     }
+
+    .publication-container-desktop-layout {
+      @apply mt-40 w-4/5 max-w-[120rem] grid-cols-9 gap-10
+    }
   }
 
   /* From Widescreens' Viewports */
