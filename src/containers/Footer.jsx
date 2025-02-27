@@ -8,18 +8,7 @@
 
 import PropTypes from "prop-types";
 
-import {
-  footer3xl1,
-  footer3xl2,
-  footer3xl3,
-  footer3xl4,
-  footer3xl5,
-  footer3xl6,
-  footer3xl7,
-  title3xl,
-  subtitle3xl,
-  displayBlock3xl,
-} from "../assets/styles";
+import "../assets/stylesheets/footer.css";
 
 import MeFooter from "../../public/me-footer.jpg";
 import JavaScriptIcon from "../../public/svg/javascript.svg";
@@ -42,26 +31,19 @@ const Footer = ({ handleEmail, scrollTo }) => {
   ];
 
   return (
-    <div
-      id="footer"
-      className={`relative flex flex-col items-center rounded-t-full bg-linear-to-br from-amber-400/80 to-red-400/80 ${footer3xl1}`}
-    >
-      <div className={`max-md:flex max-md:flex-col ${footer3xl2}`}>
+    <div id="footer" className="footer">
+      <div className="footer-inner">
         <img
           src={MeFooter}
           title="My Portrait 2"
           aria-label="My Portrait 2"
-          className={`my-8 size-72 rounded-full border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 hover:scale-105 max-sm:place-self-center ${footer3xl3}`}
+          className="content-border avatar-rounded-full content-shadow content-hover-effect footer-picture"
         />
-        <div className={`mb-8 ${footer3xl4}`}>
-          <h3
-            className={`mb-5 text-5xl font-semibold font-stretch-115% ${title3xl} ${footer3xl5}`}
-          >
-            Mark Nghiem
-          </h3>
-          <ul className={`ml-6 list-disc text-start text-lg ${subtitle3xl}`}>
+        <div className="footer-info col-flex">
+          <h3 className="title mb-8">Mark Nghiem</h3>
+          <ul className="footer-contact subtitle">
             Contact Me via:
-            <li className="first:mt-2">
+            <li className="body font-normal first:mt-2">
               Email:{" "}
               <span
                 onClick={handleEmail}
@@ -70,7 +52,7 @@ const Footer = ({ handleEmail, scrollTo }) => {
                 mark.kietnghiem@gmail.com
               </span>
             </li>
-            <li>
+            <li className="body font-normal">
               LinkedIn:{" "}
               <a
                 href="https://www.linkedin.com/in/mark-nghiem/"
@@ -84,34 +66,20 @@ const Footer = ({ handleEmail, scrollTo }) => {
           </ul>
         </div>
       </div>
-      <div
-        className={`relative col-span-1 place-self-end rounded-t-full bg-linear-to-br from-slate-100 to-slate-400 ${footer3xl6}`}
-      >
-        <h5 className="my-8 text-2xl font-semibold font-stretch-120%">
-          Built With
-        </h5>
-        <div
-          className={`mx-10 mb-15 flex flex-wrap items-center justify-center gap-x-10 gap-y-2 ${footer3xl7}`}
-        >
+      <div className="footer-right">
+        <h5 className="subtitle mt-5">Built With</h5>
+        <div className="footer-right-icon-container">
           {builtWithIcons.map((icon, index) => {
-            return (
-              <img
-                src={icon}
-                key={index}
-                className="size-12 rounded-xl bg-slate-400 p-2 transition-transform duration-200 hover:scale-110"
-              />
-            );
+            return <img src={icon} key={index} className="footer-icon" />;
           })}
         </div>
-        <p className="absolute bottom-2 left-1/2 -translate-x-1/2 text-xl">
-          Changelog
-        </p>
+        <p className="body">Changelog</p>
       </div>
       <div
         onClick={() => scrollTo("about-navigate")}
-        className={`absolute bottom-0 left-1/2 hidden -translate-x-1/2 rounded-t-full bg-slate-900/10 px-3 pt-3 pb-1 transition-colors duration-200 hover:cursor-pointer hover:bg-slate-900/20 active:bg-slate-900/30 ${displayBlock3xl}`}
+        className='footer-back-to-top'
       >
-        <p className="animate-bounce text-xl">↑</p>
+        <p className="animate-bounce text-lg">↑</p>
         <p>Back to top</p>
       </div>
     </div>

@@ -279,7 +279,7 @@
 
   /* Publications Section Styles */
   .publication-inner-layout {
-    @apply max-h-[70vh] w-[99%] gap-5 place-self-center;
+    @apply max-h-[70svh] w-[99%] gap-5 place-self-center;
   }
 
   .publications-individual {
@@ -308,12 +308,12 @@
   }
 
   .rec-inner {
-    @apply h-[70vh] max-h-[70vh] w-[99%] place-content-center place-self-center;
+    @apply h-[70svh] max-h-[70svh] w-[99%] place-content-center place-self-center;
   }
 
   /* Ending Section Styles */
   .ending-div {
-    @apply mt-[90vh] mb-20 w-9/10 place-self-center rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 pb-8 shadow-2xl shadow-slate-900/50;
+    @apply mt-[90svh] mb-20 w-9/10 place-self-center rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 pb-8 shadow-2xl shadow-slate-900/50;
   }
 
   .ending-group {
@@ -497,7 +497,7 @@
     }
 
     .project-inner-div {
-      @apply h-[80vh] py-10;
+      @apply h-[80svh] py-10;
     }
 
     .project-group {

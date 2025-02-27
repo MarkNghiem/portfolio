@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-import { publications } from "../assets/publications";
+import { publications } from "../assets/data/publications";
 
 const Publications = () => {
   const [divVisible, setDivVisible] = useState(false);
@@ -33,14 +33,8 @@ const Publications = () => {
         id="publications-content"
         className={`col-flex content-effect ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <h1
-          className='pb-8 title'
-        >
-          Publications
-        </h1>
-        <div
-          className='publication-inner-layout inner-div'
-        >
+        <h1 className="title pb-8">Publications</h1>
+        <div className="publication-inner-layout inner-div">
           {publications.map((publication, index) => {
             return (
               <div
@@ -48,25 +42,21 @@ const Publications = () => {
                 id="title"
                 className="publications-individual content-shadow"
               >
-                <h4 className='my-5 mx-3 subtitle'>
-                  {publication.type}
-                </h4>
-                <p className='px-5 text-start body'>
+                <h4 className="subtitle mx-3 my-5">{publication.type}</h4>
+                <p className="body px-5 text-start">
                   {publication.description}
                 </p>
-                <div className='publications-collab'>
+                <div className="publications-collab">
                   <a
                     href={publication.url}
                     title={publication.type}
                     aria-label={publication.type}
-                    className='publications-learnmore'
+                    className="publications-learnmore"
                   >
                     Learn More
                   </a>
-                  <div className='publications-ending'>
-                    <p className='publications-hosts'>
-                      {publication.host}
-                    </p>
+                  <div className="publications-ending">
+                    <p className="publications-hosts">{publication.host}</p>
                     <p>{publication.collaboratedWith}</p>
                   </div>
                 </div>

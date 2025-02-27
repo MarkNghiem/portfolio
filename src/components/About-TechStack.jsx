@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 
-import { langs, techs, others } from '../assets/techStack';
-import ExternalLink from '../../public/svg/external-link.svg';
+import { langs, techs, others } from "../assets/data/techStack";
+import ExternalLink from "../../public/svg/external-link.svg";
 
 const TechStack = () => {
   const [divVisible, setDivVisible] = useState(false);
@@ -35,18 +35,9 @@ const TechStack = () => {
         className={`content-effect ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
         <h1 className="title pb-8">Tech Stacks</h1>
-        <div
-          className='max-h-[70vh] inner-div'
-        >
-          <h3
-            className='subtitle mb-5'
-          >
-            Programming Languages
-          </h3>
-          <div
-            id="lang-button"
-            className="tech-button-group group"
-          >
+        <div className="inner-div max-h-[70svh]">
+          <h3 className="subtitle mb-5">Programming Languages</h3>
+          <div id="lang-button" className="tech-button-group group">
             {langs.map((lang) => {
               return (
                 <a
@@ -55,30 +46,17 @@ const TechStack = () => {
                   title={lang.label}
                   aria-label={lang.label}
                 >
-                  <button
-                    className='tech-button'
-                  >
-                    <img
-                      src={lang.icon}
-                      className='tech-button-image'
-                    />
-                    <p className='tech-button-description'>{lang.name}</p>
-                    <img
-                      src={ExternalLink}
-                      className="tech-button-external"
-                    />
+                  <button className="tech-button">
+                    <img src={lang.icon} className="tech-button-image" />
+                    <p className="tech-button-description">{lang.name}</p>
+                    <img src={ExternalLink} className="tech-button-external" />
                   </button>
                 </a>
               );
             })}
           </div>
-          <h3 className='mt-8 mb-5 subtitle'>
-            Frameworks and Technologies
-          </h3>
-          <div
-            id="tech-button"
-            className="group tech-button-group"
-          >
+          <h3 className="subtitle mt-8 mb-5">Frameworks and Technologies</h3>
+          <div id="tech-button" className="group tech-button-group">
             {techs.map((tech) => {
               return (
                 <a
@@ -87,30 +65,17 @@ const TechStack = () => {
                   title={tech.label}
                   aria-label={tech.label}
                 >
-                  <button
-                    className='tech-button'
-                  >
-                    <img
-                      src={tech.icon}
-                      className='tech-button-image'
-                    />
-                    <p className='tech-button-description'>{tech.name}</p>
-                    <img
-                      src={ExternalLink}
-                      className="tech-button-external"
-                    />
+                  <button className="tech-button">
+                    <img src={tech.icon} className="tech-button-image" />
+                    <p className="tech-button-description">{tech.name}</p>
+                    <img src={ExternalLink} className="tech-button-external" />
                   </button>
                 </a>
               );
             })}
           </div>
-          <h3 className='mt-8 mb-4 subtitle'>
-            Others
-          </h3>
-          <div
-            id="other-button"
-            className="group tech-button-group"
-          >
+          <h3 className="subtitle mt-8 mb-4">Others</h3>
+          <div id="other-button" className="group tech-button-group">
             {others.map((other) => {
               return (
                 <a
@@ -119,28 +84,16 @@ const TechStack = () => {
                   title={other.label}
                   aria-label={other.label}
                 >
-                  <button
-                    className='tech-button'
-                  >
-                    <img
-                      src={other.icon}
-                      className='tech-button-image'
-                    />
-                    <p className='tech-button-description'>{other.name}</p>
-                    <img
-                      src={ExternalLink}
-                      className="tech-button-external"
-                    />
+                  <button className="tech-button">
+                    <img src={other.icon} className="tech-button-image" />
+                    <p className="tech-button-description">{other.name}</p>
+                    <img src={ExternalLink} className="tech-button-external" />
                   </button>
                 </a>
               );
             })}
           </div>
-          <h2
-            className='mt-8 subtitle'
-          >
-            And more to come...
-          </h2>
+          <h2 className="subtitle mt-8">And more to come...</h2>
         </div>
       </div>
     </div>
