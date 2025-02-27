@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* From Mobile's Viewports */
+  .navigator {
+    @apply hidden pointer-events-none;
+  }
+
+  .navigator-list-items {
+    @apply flex justify-end transition duration-300;
+  }
+
+  .navigator-text {
+    @apply font-semibold transition duration-300;
+  }
+
+  /* From Desktops' Viewports */
+  @media screen and (min-width: 1920px) {
+    .navigator {
+      @apply fixed top-40 right-2 block text-end;
+    }
+  }
+}
