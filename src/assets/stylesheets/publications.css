@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* From Mobile's Viewports */
+  /* Publications Section Styles */
+  .publication-layout {
+    @apply mt-20;
+  }
+
+  .publication-inner-layout {
+    @apply max-h-[70svh] w-[99%] gap-5 place-self-center;
+  }
+
+  .publications-individual {
+    @apply relative w-[99%] place-self-center rounded-2xl border border-slate-300 bg-slate-300/20;
+  }
+
+  .publications-collab {
+    @apply px-5 pt-5 pb-2 text-sm;
+  }
+
+  .publications-learnmore {
+    @apply text-lg font-semibold;
+  }
+
+  .publications-ending {
+    @apply pt-5 text-end italic;
+  }
+
+  .publications-hosts {
+    @apply pb-2;
+  }
+
+  /* Recommendations Section Styles */
+  .rec-title {
+    @apply text-4xl/15 font-bold font-stretch-120%;
+  }
+
+  .rec-inner {
+    @apply h-[70svh] max-h-[70svh] w-[99%] place-content-center place-self-center;
+  }
+
+  /* From Tablets' Viewports */
+  @media screen and (min-width: 1024px) {
+    /* Publications Section Styles */
+    .publication-inner-layout {
+      @apply py-10;
+    }
+
+    .publications-collab {
+      @apply flex items-end justify-between;
+    }
+
+    .publications-learnmore {
+      @apply text-xl;
+    }
+
+    .publications-hosts {
+      @apply pb-0;
+    }
+
+    /* Recommendations Section Styles */
+    .rec-title {
+      @apply text-7xl font-stretch-125%;
+    }
+  }
+
+  /* From Small Desktops' Viewports */
+  @media screen and (min-width: 1440px) {
+    /* Publications Section Styles */
+    .publications-learnmore {
+      @apply transition-colors duration-300 hover:text-amber-700;
+    }
+  }
+
+  /* From Desktops' Viewports */
+  @media screen and (min-width: 1920px) {
+    /* Publications Container Styles */
+    .publication-layout {
+      @apply mt-40
+    }
+
+    .publication-container-desktop-layout {
+      @apply w-4/5 max-w-[120rem] grid-cols-9 gap-10;
+    }
+
+    /* Publications Section Styles */
+    .publication-desktop-layout {
+      @apply col-span-4;
+    }
+
+    /* Recommendations Section Styles */
+    .rec-desktop-layout {
+      @apply col-span-5;
+    }
+
+    .rec-inner {
+      @apply h-5/6 max-h-5/6;
+    }
+  }
+}

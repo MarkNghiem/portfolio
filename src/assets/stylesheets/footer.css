@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* From Mobile's Viewports */
+  .footer {
+    @apply relative items-center rounded-t-full bg-linear-to-br from-amber-400/80 to-red-400/80;
+  }
+
+  .footer-inner {
+    @apply flex flex-col;
+  }
+
+  .footer-picture {
+    @apply my-10 size-72 place-self-center;
+  }
+
+  .footer-info {
+    @apply mb-8 items-center text-center;
+  }
+
+  .footer-contact {
+    @apply list-disc text-start;
+  }
+
+  .footer-right {
+    @apply place-self-end flex flex-col gap-8 pt-8 pb-5 rounded-t-full bg-linear-to-br from-slate-100 to-slate-400;
+  }
+
+  .footer-right-icon-container {
+    @apply mx-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-2;
+  }
+
+  .footer-icon {
+    @apply size-12 rounded-xl bg-slate-400 p-2 transition-transform duration-200 hover:scale-110
+  }
+
+  .footer-back-to-top {
+    @apply absolute bottom-0 left-1/2 hidden -translate-x-1/2 rounded-t-full bg-slate-900/10 px-3 pt-3 pb-1 transition-colors duration-200 hover:cursor-pointer hover:bg-slate-900/20 active:bg-slate-900/30
+  }
+
+  /* From Tablets' Viewports */
+  @media screen and (min-width: 1024px) {
+    .footer {
+      @apply grid grid-cols-5;
+    }
+
+    .footer-inner {
+      @apply flex col-span-3 ml-20 py-5;
+    }
+
+    .footer-info {
+      @apply mb-0
+    }
+
+    .footer-right {
+      @apply col-span-2
+    }
+
+    .footer-right-icon-container {
+      @apply w-4/5 place-self-center;
+    }
+  }
+
+  /* From Small Desktops' Viewports */
+  @media screen and (min-width: 1440px) {
+    .footer {
+      @apply grid-cols-4;
+    }
+
+    .footer-inner {
+      @apply flex-row col-span-3 items-center justify-evenly;
+    }
+
+    .footer-picture {
+      @apply my-0 size-70;
+    }
+
+    .footer-info {
+      @apply pb-15
+    }
+
+    .footer-right {
+      @apply col-span-1 gap-5 pb-2;
+    }
+
+    .footer-right-icon-container {
+      @apply w-9/10 place-self-center;
+    }
+
+    .footer-back-to-top {
+      @apply block
+    }
+  }
+
+  /* From Desktops' Viewports */
+  @media screen and (min-width: 1920px) {
+    .footer-picture {
+      @apply size-72;
+    }
+  }
+}

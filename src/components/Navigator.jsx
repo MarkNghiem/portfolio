@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+import "../assets/stylesheets/navigator.css";
+
 const Navigator = () => {
   const [activeDiv, setActiveDiv] = useState(null);
   const [divVisible, setDivVisible] = useState(false);
@@ -73,17 +75,17 @@ const Navigator = () => {
   return (
     <div
       id="navigator"
-      className={`hidden 3xl:block 3xl:fixed top-40 right-2 text-end text-md transition duration-1000 ease-out ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      className={`navigator div-effect ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
       <ul>
         {navItems.map((navItem, index) => {
           return (
             <li
               key={index}
-              className={`mb-1 flex justify-end transition duration-300 ${index === activeDiv ? "scale-105 text-orange-400" : ""}`}
+              className={`navigator-list-items mb-1 ${index === activeDiv ? "scale-105 text-orange-400" : ""}`}
             >
               <p
-                className={`font-semibold text-orange-400 transition duration-300 ${index === activeDiv ? "opacity-100" : "opacity-0"}`}
+                className={`navigator-text text-orange-400 ${index === activeDiv ? "opacity-100" : "opacity-0"}`}
               >
                 {navItem}
               </p>
@@ -92,15 +94,18 @@ const Navigator = () => {
           );
         })}
         <li
-          className=
-          {`flex justify-end transition duration-300 ${activeDiv === 3 ? "scale-105 text-red-500" : ""}`}
-          >
+          className={`navigator-list-items ${activeDiv === 3 ? "scale-105 text-red-500" : ""}`}
+        >
           <p
-            className={`font-semibold text-red-500 transition duration-300 ${activeDiv === 3 ? "opacity-100" : "opacity-0"}`}
+            className={`navigator-text text-red-500 ${activeDiv === 3 ? "opacity-100" : "opacity-0"}`}
           >
             SURPRISED!!!
           </p>
-          <span className={`ml-1 opacity-0 ${activeDiv === 3 ? 'opacity-100' : ''}`}>★</span>
+          <span
+            className={`ml-1 opacity-0 ${activeDiv === 3 ? "opacity-100" : ""}`}
+          >
+            ★
+          </span>
         </li>
       </ul>
     </div>

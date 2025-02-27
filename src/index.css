@@ -15,3 +15,153 @@
     }
   }
 }
+
+@layer utilities {
+  /* From Mobile's Viewports */
+  /* Global Styles */
+  .light-gradient-background {
+    @apply bg-gradient-to-br from-amber-300/30 from-10% via-slate-300/20 via-60% to-red-300/20 to-90%;
+  }
+
+  .global {
+    @apply m-0 box-border p-0;
+  }
+
+  .absolute-centered {
+    @apply top-1/2 left-1/2 -translate-1/2;
+  }
+
+  .typography-global {
+    @apply text-center text-slate-700 font-stretch-110%;
+  }
+
+  .opening-text {
+    @apply text-5xl font-semibold font-stretch-115%;
+  }
+
+  .title {
+    @apply text-5xl/15 font-bold font-stretch-120%;
+  }
+
+  .subtitle {
+    @apply text-3xl font-semibold font-stretch-115%;
+  }
+
+  .body {
+    @apply text-base;
+  }
+
+  .avatar-rounded-full {
+    @apply rounded-full object-cover;
+  }
+
+  .avatar-rounded-4xl {
+    @apply rounded-4xl object-cover;
+  }
+
+  .col-flex {
+    @apply flex flex-col;
+  }
+
+  .flex-centered {
+    @apply items-center justify-center;
+  }
+
+  .mobile-to-tablet-layout {
+    @apply w-9/10 gap-20 place-self-center;
+  }
+
+  .div-background {
+    @apply rounded-2xl bg-slate-900/20 px-5 py-8 shadow-2xl shadow-slate-900/50;
+  }
+
+  .inner-div {
+    @apply flex flex-col overflow-y-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 px-3 py-8;
+  }
+
+  .content-border {
+    @apply border-2 border-slate-400;
+  }
+
+  .content-shadow {
+    @apply shadow-2xl shadow-slate-900/70;
+  }
+
+  .div-effect {
+    @apply transition-all duration-1000 ease-in-out;
+  }
+
+  .content-effect {
+    @apply transition-opacity duration-1000 ease-in-out;
+  }
+
+  .content-hover-effect {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  .button-hover-effect {
+    @apply transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150;
+  }
+
+  /* From Tablets' Viewports */
+  @media screen and (min-width: 1024px) {
+    /* Global Styles */
+    .typography-global {
+      @apply text-xl;
+    }
+
+    .opening-text {
+      @apply text-9xl font-stretch-125%;
+    }
+
+    .title {
+      @apply text-7xl font-stretch-125%;
+    }
+
+    .subtitle {
+      @apply text-5xl font-stretch-120%;
+    }
+
+    .body {
+      @apply text-xl;
+    }
+  }
+
+  /* From Small Desktops' Viewports */
+  @media screen and (min-width: 1440px) {
+    /* Global Styles */
+    .mobile-to-tablet-layout {
+      @apply w-5/6;
+    }
+  }
+
+  /* From Desktops' Viewports */
+  @media screen and (min-width: 1920px) {
+    /* Global Styles */
+    .desktop-layout {
+      @apply grid;
+    }
+
+    .body {
+      @apply text-2xl;
+    }
+  }
+}
+
+/* Scrollbar Style for Chrome Windows */
+.scrollbar {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+  }
+}

@@ -1,15 +1,15 @@
 // Publications Container
 
-import { publicationsContainer3xl } from '../assets/styles';
-
 import Publications from "../components/Publication-Publication";
 import Recommendation from "../components/Publication-Recommendation";
+
+import '../assets/stylesheets/publications.css';
 
 const PublicationsContainer = () => {
   return (
     <div
       id="publications"
-      className={`mt-20 flex w-9/10 flex-col gap-20 place-self-center ${publicationsContainer3xl}`}
+      className="publication-container-desktop-layout desktop-layout col-flex mobile-to-tablet-layout publication-layout"
     >
       <Publications />
       <Recommendation />

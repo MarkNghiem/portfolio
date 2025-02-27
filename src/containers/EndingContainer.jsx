@@ -2,15 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-import {
-  ending3xl1,
-  ending3xl2,
-  ending3xl3,
-  ending3xl4,
-  title3xl,
-  subtitle3xl,
-  ender3xl,
-} from "../assets/styles";
+import '../assets/stylesheets/ending.css';
 
 import PikaEnding from "../../public/pika-ending-small.jpg";
 import ChuchuEnding from "../../public/chuchu-ending-small.jpg";
@@ -33,22 +25,14 @@ const EndingContainer = () => {
   return (
     <div
       id="ending"
-      className={`mt-[90dvh] mb-20 w-9/10 place-self-center rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 pb-8 shadow-2xl shadow-slate-900/50 transition duration-1000 ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} ${ending3xl1}`}
+      className={`mobile-to-tablet-layout ending-div div-effect ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
       <div id="ending-content">
-        <h1
-          className={`mx-2 py-8 text-3xl font-semibold font-stretch-115% ${title3xl} ${ending3xl2}`}
-        >
-          You have reached the end!
-        </h1>
-        <h2
-          className={`mx-2 pb-10 text-xl font-semibold font-stretch-115% ${ender3xl} ${ending3xl2}`}
-        >
+        <h1 className="title mx-3 py-8">You have reached the end!</h1>
+        <h2 className="subtitle mx-10 pb-10">
           Here&apos;s more cat pictures for your effort.
         </h2>
-        <div
-          className={`group flex flex-col items-center justify-center gap-10 place-self-center ${ending3xl3}`}
-        >
+        <div className="group ending-group">
           {endingPictures.map((picture, index) => {
             return (
               <img
@@ -56,12 +40,12 @@ const EndingContainer = () => {
                 src={picture}
                 title={`Cat Picture ${index + 1}`}
                 aria-label={`Cat Picture ${index + 1}`}
-                className={`size-60 rounded-4xl border-2 border-slate-400 object-cover shadow-xl shadow-slate-900/40 transition-transform duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-105 hover:opacity-100 ${ending3xl4}`}
+                className="ending-pictures content-border content-shadow"
               />
             );
           })}
         </div>
-        <h3 className={`mx-2 pt-10 font-semibold ${subtitle3xl} ${ending3xl2}`}>
+        <h3 className='mx-10 pt-10 font-semibold subtitle'>
           Thank you for checking out my website!
         </h3>
       </div>
