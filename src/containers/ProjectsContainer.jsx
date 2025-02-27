@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import '../assets/stylesheets/projects.css'
+import "../assets/stylesheets/projects.css";
 
 import { CgWebsite } from "react-icons/cg";
 import { SiMedium } from "react-icons/si";
@@ -172,7 +172,7 @@ const ProjectsContainer = () => {
   return (
     <div
       id="projects"
-      className={`scrollbar projects-desktop-layout mobile-to-tablet-layout div-background div-effect mt-20 ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      className={`scrollbar projects-desktop-layout mobile-to-tablet-layout div-background div-effect project-layout ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
     >
       <div
         id="projects-content"
@@ -191,29 +191,15 @@ const ProjectsContainer = () => {
                       opacity: 0.05,
                     }}
                   />
-                  <div
-                    className='project-card-inner'
-                  >
-                    <h4 className='project-type'>
-                      {project.type}
-                    </h4>
-                    <div
-                      className='project-description-field'
-                    >
-                      <h2
-                        className='project-title'
-                      >
-                        {project.name}
-                      </h2>
-                      <p className='body'>{project.slogan}</p>
+                  <div className="project-card-inner">
+                    <h4 className="project-type">{project.type}</h4>
+                    <div className="project-description-field">
+                      <h2 className="project-title">{project.name}</h2>
+                      <p className="body">{project.slogan}</p>
                     </div>
                   </div>
-                  <div
-                    className='project-hover'
-                  >
-                    <div
-                      className='project-icon-container'
-                    >
+                  <div className="project-hover">
+                    <div className="project-icon-container">
                       {project.resources?.map((resource, index) => {
                         return (
                           <a
@@ -222,18 +208,14 @@ const ProjectsContainer = () => {
                             title={resource.type}
                             aria-label={resource.type}
                           >
-                            <button
-                              className='project-button'
-                            >
+                            <button className="project-button">
                               {resource.icon}
                             </button>
                           </a>
                         );
                       })}
                     </div>
-                    <p
-                      className='project-title project-title-hover'
-                    >
+                    <p className="project-title project-title-hover">
                       {project.name}
                     </p>
                     <p className="project-description body">

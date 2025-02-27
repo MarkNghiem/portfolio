@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@layer utilities {
+  /* From Mobile's Viewports */
+  /* Ending Section Styles */
+  .ending-div {
+    @apply mt-[90svh] mb-40 w-9/10 place-self-center rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 pb-8 shadow-2xl shadow-slate-900/50;
+  }
+
+  .ending-group {
+    @apply flex flex-col items-center justify-center gap-10 place-self-center;
+  }
+
+  .ending-pictures {
+    @apply size-60 rounded-4xl transition-transform duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:opacity-100;
+  }
+
+  /* From Tablets' Viewports */
+  @media screen and (min-width: 1024px) {
+    /* Ending Section Styles */
+    .ending-group {
+      @apply flex-row;
+    }
+  }
+
+   /* From Small Desktops' Viewports */
+  @media screen and (min-width: 1440px) {
+    /* Ending Section Styles */
+    .ending-pictures {
+      @apply size-80;
+    }
+  }
+
+  /* From Desktops' Viewports */
+  @media screen and (min-width: 1920px) {
+    /* Ending Section Styles */
+    .ending-div {
+      @apply w-4/5 max-w-[120rem];
+    }
+  }
+}

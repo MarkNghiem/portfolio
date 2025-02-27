@@ -3,6 +3,9 @@
 @layer utilities {
   /* From Mobile's Viewports */
   /* Projects Section Styles */
+  .project-layout {
+    @apply mt-20;
+  }
   .project-icon {
     @apply size-4.5;
   }
@@ -193,9 +196,12 @@
 
   /* From Desktops' Viewports */
   @media screen and (min-width: 1920px) {
-     /* Projects Section Styles */
+    /* Projects Section Styles */
+    .project-layout {
+      @apply mt-40;
+    }
     .projects-desktop-layout {
-      @apply mt-40 w-4/5 max-w-[120rem];
+      @apply w-4/5 max-w-[120rem];
     }
 
     .project-group {
