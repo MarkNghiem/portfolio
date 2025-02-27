@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* About Section Styles */
+  /* Info Section Styles */
+  .info-content-layout {
+    @apply mt-8 items-center place-self-center;
+  }
+
+  .info-image {
+    @apply size-72;
+  }
+
+  .info-icon-layout {
+    @apply flex justify-center gap-5 py-5;
+  }
+
+  .info-button {
+    @apply cursor-pointer rounded-xl bg-slate-900/20 p-2;
+  }
+
+  .info-icon-size {
+    @apply size-7;
+  }
+
+  .info-subtitle {
+    @apply mt-10 font-stretch-115%;
+  }
+
+  .info-ending {
+    @apply text-4xl;
+  }
+
+  /* From Tablets' Viewports */
+  @media screen and (min-width: 1024px) {
+    /* About Section Styles */
+    /* Info Section Styles */
+    .info-content-layout {
+      @apply grid grid-cols-5 px-10;
+    }
+
+    .info-image {
+      @apply col-span-2 size-80;
+    }
+
+    .info-icon-layout {
+      @apply justify-end py-8;
+    }
+
+    .info-button {
+      @apply p-3;
+    }
+
+    .info-icon-size {
+      @apply size-10;
+    }
+
+    .info-subtitle {
+      @apply col-span-3 mt-0 justify-self-end text-end font-stretch-120%;
+    }
+
+    .info-ending {
+      @apply text-6xl;
+    }
+  }
+
+  /* From Desktops' Viewports */
+  @media screen and (min-width: 1920px) {
+    /* About Section Styles */
+    .about-container-desktop-layout {
+      @apply mt-20 w-4/5 max-w-[120rem] grid-cols-5 grid-rows-6 gap-10;
+    }
+
+    /* Info Section Styles */
+    .info-desktop-layout {
+      @apply col-span-3 row-span-2 text-3xl;
+    }
+
+    .info-subtitle {
+      @apply col-span-3 mt-0 justify-self-end text-end font-stretch-120%;
+    }
+  }
+
+  /* From Widescreens' Viewports */
+  @media screen and (min-width: 2560px) {
+    .info-content-layout {
+      @apply grid grid-cols-5 px-20;
+    }
+  }
+}

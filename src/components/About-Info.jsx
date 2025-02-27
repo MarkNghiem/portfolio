@@ -8,6 +8,8 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiWellfound } from "react-icons/si";
 import { BiLogoGmail } from "react-icons/bi";
 
+import '../assets/stylesheets/aboutContainer.css';
+
 import me from "../../public/me.jpeg";
 import resume from "../../public/my-resume.pdf";
 

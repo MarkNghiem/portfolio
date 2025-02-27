@@ -1,6 +1,7 @@
 // About Container - First Section
 import PropTypes from "prop-types";
 
+import '../assets/stylesheets/aboutContainer.css';
 import AboutMe from "../components/About-AboutMe";
 import Info from "../components/About-Info";
 import TechStack from "../components/About-TechStack";

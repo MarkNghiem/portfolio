@@ -6,13 +6,11 @@ import "./index.css";
 
 import App from "./App.jsx";
 import ErrorBoundary from "./containers/ErrorBoundary.jsx";
-import ErrorDisplay from './components/ErrorDisplay.jsx';
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ErrorBoundary>
-      {/* <App /> */}
-      <ErrorDisplay />
+      <App />
     </ErrorBoundary>
   </StrictMode>,
 );
