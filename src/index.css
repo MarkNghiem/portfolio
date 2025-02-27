@@ -106,94 +106,7 @@
   
 
   
-  /* Projects Section Styles */
-  .project-icon {
-    @apply size-4.5;
-  }
-
-  .project-grids {
-    @apply bg-linear-to-br from-slate-400 from-40%;
-  }
-
-  .project-group {
-    @apply flex w-[99%] flex-col gap-3 place-self-center;
-  }
-
-  .project-1 {
-    @apply to-cyan-900;
-  }
-
-  .project-2 {
-    @apply to-violet-900;
-  }
-
-  .project-3 {
-    @apply to-teal-900;
-  }
-
-  .project-4 {
-    @apply to-pink-900;
-  }
-
-  .project-5 {
-    @apply to-sky-900;
-  }
-
-  .project-6 {
-    @apply to-amber-900;
-  }
-
-  .project-7 {
-    @apply to-slate-700;
-  }
-
-  .project-blank {
-    @apply hidden;
-  }
-
-  .project-card {
-    @apply relative h-full w-full rounded-2xl border border-slate-400 shadow-2xl shadow-slate-900/80 transition duration-300;
-  }
-
-  .project-background {
-    @apply absolute inset-0 bg-cover bg-center;
-  }
-
-  .project-card-inner {
-    @apply mx-2 flex h-80 flex-col transition-opacity duration-200;
-  }
-
-  .project-type {
-    @apply z-10 mt-10 text-xl font-semibold font-stretch-120%;
-  }
-
-  .project-description-field {
-    @apply z-10 h-full place-content-center pb-10;
-  }
-
-  .project-title {
-    @apply text-4xl font-bold font-stretch-120%;
-  }
-
-  .project-hover {
-    @apply absolute inset-0 z-20 flex flex-col items-center justify-center p-10 opacity-100;
-  }
-
-  .project-icon-container {
-    @apply absolute top-0 left-0 z-30 m-2 flex gap-3;
-  }
-
-  .project-button {
-    @apply cursor-pointer;
-  }
-
-  .project-title-hover {
-    @apply pointer-events-none pb-3 opacity-0;
-  }
-
-  .project-description {
-    @apply hidden;
-  }
+  
 
   /* Publications Section Styles */
   .publication-inner-layout {
@@ -269,21 +182,7 @@
       @apply text-xl;
     }
 
-    
-
-   
-    /* Projects Section Styles */
-    .project-icon {
-      @apply size-6;
-    }
-
-    .project-type {
-      @apply text-2xl;
-    }
-
-    .project-title {
-      @apply text-5xl;
-    }
+  
 
     /* Publications Section Styles */
     .publication-inner-layout {
@@ -315,86 +214,7 @@
       @apply w-5/6;
     }
 
-    /* Projects Section Styles */
-    .project-1 {
-      @apply col-span-3 row-span-4;
-    }
-
-    .project-2 {
-      @apply col-span-2 col-start-4 row-span-3;
-    }
-
-    .project-3 {
-      @apply col-span-2 col-start-4 row-span-2 row-start-4;
-    }
-
-    .project-4 {
-      @apply col-span-2 row-span-2 row-start-5;
-    }
-
-    .project-5 {
-      @apply col-span-3 col-start-3 row-start-6;
-    }
-
-    .project-6 {
-      @apply col-span-3 row-start-7;
-    }
-
-    .project-7 {
-      @apply col-span-2 row-start-7;
-    }
-
-    .project-blank {
-      @apply col-start-3 row-start-5 block h-full w-full;
-    }
-
-    .project-inner-div {
-      @apply h-[80svh] py-10;
-    }
-
-    .project-group {
-      @apply grid grid-cols-5 grid-rows-7;
-    }
-
-    .project-card {
-      @apply group-hover:scale-90 group-hover:opacity-70 hover:z-10 hover:scale-105 hover:opacity-100;
-    }
-
-    .project-card-inner {
-      @apply h-full py-5 group-hover:opacity-0;
-    }
-
-    .project-type {
-      @apply mt-0 text-3xl;
-    }
-
-    .project-title {
-      @apply text-6xl font-stretch-125%;
-    }
-
-    .project-description-field {
-      @apply pb-0;
-    }
-
-    .project-hover {
-      @apply opacity-0 transition-opacity duration-200 hover:opacity-100 active:opacity-100;
-    }
-
-    .project-icon-container {
-      @apply m-3;
-    }
-
-    .project-button {
-      @apply transition-transform duration-300 hover:scale-125;
-    }
-
-    .project-title-hover {
-      @apply pointer-events-auto opacity-100;
-    }
-
-    .project-description {
-      @apply block;
-    }
+    
 
     /* Publications Section Styles */
     .publications-learnmore {
@@ -420,19 +240,7 @@
 
     
 
-    /* Projects Section Styles */
-    .projects-desktop-layout {
-      @apply mt-40 w-4/5 max-w-[120rem];
-    }
-
-    .project-group {
-      @apply w-[95%];
-    }
-
-    .project-title {
-      @apply text-7xl;
-    }
-
+   
     /* Publications Container Styles */
     .publication-container-desktop-layout {
       @apply mt-40 w-4/5 max-w-[120rem] grid-cols-9 gap-10;

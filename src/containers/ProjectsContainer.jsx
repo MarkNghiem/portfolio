@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+import '../assets/stylesheets/projects.css'
+
 import { CgWebsite } from "react-icons/cg";
 import { SiMedium } from "react-icons/si";
 import { FaGithub, FaLinkedin, FaProductHunt } from "react-icons/fa";
