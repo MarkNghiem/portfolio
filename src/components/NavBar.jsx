@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
+import "../assets/stylesheets/navBar.css";
+
 const NavBar = ({ scrollTo }) => {
   const [visible, setVisible] = useState(false);
   const [leftVisible, setLeftVisible] = useState(false);
