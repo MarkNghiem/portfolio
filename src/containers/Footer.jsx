@@ -45,10 +45,7 @@ const Footer = ({ handleEmail, scrollTo }) => {
             Contact Me via:
             <li className="body font-normal first:mt-2">
               Email:{" "}
-              <span
-                onClick={handleEmail}
-                className="transition-colors duration-300 hover:cursor-pointer hover:text-amber-800"
-              >
+              <span onClick={handleEmail} className="footer-link">
                 mark.kietnghiem@gmail.com
               </span>
             </li>
@@ -58,7 +55,7 @@ const Footer = ({ handleEmail, scrollTo }) => {
                 href="https://www.linkedin.com/in/mark-nghiem/"
                 title="LinkedIn"
                 aria-label="LinkedIn"
-                className="transition-colors duration-300 hover:text-amber-800"
+                className="footer-link"
               >
                 Visit me <span className="font-semibold">here</span>
               </a>
@@ -73,11 +70,29 @@ const Footer = ({ handleEmail, scrollTo }) => {
             return <img src={icon} key={index} className="footer-icon" />;
           })}
         </div>
-        <p className="body">Changelog</p>
+        <div className="body flex justify-center">
+          <a
+            href="https://github.com/MarkNghiem/portfolio/blob/main/CHANGELOG.md"
+            title="Changelog"
+            aria-label="Changelog"
+            className="footer-link"
+          >
+            Changelog
+          </a>
+          <p className="mx-5">|</p>
+          <a
+            href="https://github.com/MarkNghiem/portfolio/issues/new"
+            title="Report Issue"
+            aria-label="Report Issue"
+            className="footer-link"
+          >
+            Report Issue
+          </a>
+        </div>
       </div>
       <div
         onClick={() => scrollTo("about-navigate")}
-        className='footer-back-to-top'
+        className="footer-back-to-top"
       >
         <p className="animate-bounce text-lg">↑</p>
         <p>Back to top</p>
