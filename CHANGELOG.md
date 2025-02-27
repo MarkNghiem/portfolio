@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/MarkNghiem/portfolio/compare/v1.1.2...v1.2.0) (2025-02-27)
+
+
+### Features
+
+* Added link to CHANGELOG and NEW ISSUE. Modularized code ([0bd6f4f](https://github.com/MarkNghiem/portfolio/commit/0bd6f4f81af70167e9092b5f62e3f4de2781069c))
+
 ## [1.1.2](https://github.com/MarkNghiem/portfolio/compare/v1.1.1...v1.1.2) (2025-02-22)
 
 
