@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer utilities {
   /* From Mobile's Viewports */
   /* Projects Section Styles */
@@ -11,7 +13,7 @@
   }
 
   .project-grids {
-    @apply bg-linear-to-br from-slate-400 from-40%;
+    @apply bg-linear-to-br from-slate-400 from-40% dark:from-slate-900;
   }
 
   .project-group {
@@ -19,27 +21,27 @@
   }
 
   .project-1 {
-    @apply to-cyan-900;
+    @apply to-cyan-900 dark:to-cyan-950;
   }
 
   .project-2 {
-    @apply to-violet-900;
+    @apply to-violet-900 dark:to-violet-950;
   }
 
   .project-3 {
-    @apply to-teal-900;
+    @apply to-teal-900 dark:to-teal-950;
   }
 
   .project-4 {
-    @apply to-pink-900;
+    @apply to-pink-900 dark:to-pink-950;
   }
 
   .project-5 {
-    @apply to-sky-900;
+    @apply to-sky-900 dark:to-sky-950;
   }
 
   .project-6 {
-    @apply to-amber-900;
+    @apply to-amber-900 dark:to-amber-950;
   }
 
   .project-7 {
@@ -51,7 +53,7 @@
   }
 
   .project-card {
-    @apply relative h-full w-full rounded-2xl border border-slate-400 shadow-2xl shadow-slate-900/80 transition duration-300;
+    @apply relative h-full w-full rounded-2xl border border-slate-400 shadow-2xl shadow-slate-900/80 transition duration-300 dark:border-slate-700;
   }
 
   .project-background {
