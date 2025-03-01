@@ -55,7 +55,7 @@
   }
 
   .tech-button {
-    @apply relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 p-4.5 transition duration-200 group-hover:scale-90 group-hover:opacity-90 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40;
+    @apply relative m-0.5 flex cursor-pointer items-center justify-start rounded-xl border border-slate-400 bg-slate-900/20 p-4.5 transition duration-200 group-hover:scale-90 group-hover:opacity-85 hover:scale-110 hover:bg-slate-900/30 hover:opacity-100 active:bg-slate-900/40 dark:border-slate-700 dark:bg-slate-100/10;
   }
 
   .tech-button-image {
