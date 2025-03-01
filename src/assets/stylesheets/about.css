@@ -67,7 +67,7 @@
   }
 
   .tech-button-external {
-    @apply absolute top-0 right-0 m-0.5 size-4;
+    @apply absolute top-0.5 right-0.5 m-0.5 size-3;
   }
 
   /* From Tablets' Viewports */
