@@ -22,7 +22,7 @@
   /* From Mobile's Viewports */
   /* Global Styles */
   .light-gradient-background {
-    @apply bg-gradient-to-br from-amber-300/30 from-10% via-slate-300/20 via-60% to-red-300/20 to-90%;
+    @apply bg-gradient-to-br from-amber-300/30 from-10% via-slate-300/20 via-60% to-red-300/20 to-90% transition-colors duration-1000 dark:from-slate-700 dark:via-slate-700 dark:via-20% dark:to-stone-900 dark:to-90%;
   }
 
   .global {
@@ -74,11 +74,11 @@
   }
 
   .div-background {
-    @apply rounded-2xl bg-slate-900/20 px-5 py-8 shadow-2xl shadow-slate-900/50;
+    @apply rounded-2xl bg-slate-900/20 px-5 py-8 shadow-2xl shadow-slate-900/50 dark:bg-slate-950/30;
   }
 
   .inner-div {
-    @apply flex flex-col overflow-y-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 px-3 py-8;
+    @apply flex flex-col overflow-y-scroll rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 px-3 py-8 dark:from-slate-950/30 dark:to-stone-800/30;
   }
 
   .content-border {

@@ -4,7 +4,7 @@
   /* From Mobile's Viewports */
   /* Ending Section Styles */
   .ending-div {
-    @apply mt-[90svh] mb-40 w-9/10 place-self-center rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 pb-8 shadow-2xl shadow-slate-900/50;
+    @apply mt-[90svh] mb-40 w-9/10 place-self-center rounded-2xl bg-linear-to-br from-slate-900/20 to-amber-900/30 pb-8 shadow-2xl shadow-slate-900/50 dark:from-slate-700/30 dark:to-stone-700/30;
   }
 
   .ending-group {
