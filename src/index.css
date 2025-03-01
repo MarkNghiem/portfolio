@@ -90,7 +90,7 @@
   }
 
   .div-effect {
-    @apply transition-all duration-1000 ease-in-out;
+    @apply transition duration-1000 ease-in-out;
   }
 
   .content-effect {
