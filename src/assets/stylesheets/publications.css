@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer utilities {
   /* From Mobile's Viewports */
   /* Publications Section Styles */
@@ -12,7 +14,7 @@
   }
 
   .publications-individual {
-    @apply relative w-[99%] place-self-center rounded-2xl border border-slate-300 bg-slate-300/20;
+    @apply relative w-[99%] place-self-center rounded-2xl border border-slate-300 bg-slate-300/20 dark:border-slate-700 dark:bg-slate-700/20 transition-colors duration-1000;
   }
 
   .publications-collab {
