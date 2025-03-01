@@ -5,6 +5,8 @@ import PropTypes from "prop-types";
 
 import "../assets/stylesheets/navBar.css";
 
+import DarkMode from './DarkMode';
+
 const NavBar = ({ scrollTo }) => {
   const [visible, setVisible] = useState(false);
   const [leftVisible, setLeftVisible] = useState(false);
@@ -53,8 +55,9 @@ const NavBar = ({ scrollTo }) => {
     >
       <div
         id="navbar-left"
-        className={`navbar-left-style transition-transform duration-500 ease-out ${leftVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
+        className={`relative flex justify-center navbar-left-style transition-transform duration-500 ease-out ${leftVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
       >
+        <DarkMode />
         <p className="animate-font-stretch font-semibold">
           Hey it&apos;s Mark!
         </p>

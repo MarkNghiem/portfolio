@@ -33,7 +33,7 @@
 
   /* Recommendations Section Styles */
   .rec-title {
-    @apply text-4xl/15 font-bold font-stretch-120%;
+    @apply text-3xl/15 font-bold font-stretch-120%;
   }
 
   .rec-inner {
