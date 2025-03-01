@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer utilities {
   /* From Mobile's Viewports */
   .footer {
-    @apply relative items-center rounded-t-full bg-linear-to-br from-amber-400/80 to-red-400/80;
+    @apply relative items-center rounded-t-full bg-linear-to-br from-amber-400/80 to-red-400/80 dark:from-indigo-900/50 dark:to-blue-900/50 transition-colors duration-1000
   }
 
   .footer-inner {
@@ -23,7 +25,7 @@
   }
 
   .footer-right {
-    @apply place-self-end flex flex-col gap-8 pt-8 pb-5 rounded-t-full bg-linear-to-br from-slate-100 to-slate-400;
+    @apply place-self-end flex flex-col gap-8 pt-8 pb-5 rounded-t-full bg-linear-to-br from-slate-100 to-slate-400 dark:from-slate-600 dark:to-slate-950 transition-colors duration-1000;
   }
 
   .footer-right-icon-container {
@@ -31,7 +33,7 @@
   }
 
   .footer-icon {
-    @apply size-12 rounded-xl bg-slate-400 p-2 transition-transform duration-200 hover:scale-110
+    @apply size-12 rounded-xl bg-slate-400 p-2 transition-transform duration-200 hover:scale-110 dark:bg-slate-200/10
   }
 
   .footer-link {

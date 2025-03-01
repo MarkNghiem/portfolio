@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { langs, techs, others } from "../assets/data/techStack";
-import ExternalLink from "../../public/svg/external-link.svg";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const TechStack = () => {
   const [divVisible, setDivVisible] = useState(false);
@@ -49,7 +49,7 @@ const TechStack = () => {
                   <button className="tech-button">
                     <img src={lang.icon} className="tech-button-image" />
                     <p className="tech-button-description">{lang.name}</p>
-                    <img src={ExternalLink} className="tech-button-external" />
+                    <FaExternalLinkAlt className="tech-button-external" />
                   </button>
                 </a>
               );
@@ -68,7 +68,7 @@ const TechStack = () => {
                   <button className="tech-button">
                     <img src={tech.icon} className="tech-button-image" />
                     <p className="tech-button-description">{tech.name}</p>
-                    <img src={ExternalLink} className="tech-button-external" />
+                    <FaExternalLinkAlt className="tech-button-external" />
                   </button>
                 </a>
               );
@@ -87,7 +87,7 @@ const TechStack = () => {
                   <button className="tech-button">
                     <img src={other.icon} className="tech-button-image" />
                     <p className="tech-button-description">{other.name}</p>
-                    <img src={ExternalLink} className="tech-button-external" />
+                    <FaExternalLinkAlt className="tech-button-external" />
                   </button>
                 </a>
               );
