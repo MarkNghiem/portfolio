@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/MarkNghiem/portfolio/compare/v1.2.0...v1.3.0) (2025-03-01)
+
+
+### Features
+
+* Added Toggle for Dark Mode ([b521995](https://github.com/MarkNghiem/portfolio/commit/b521995d1605d95cac399c7c9ed74d46de4ba4cb))
+
 ## [1.2.0](https://github.com/MarkNghiem/portfolio/compare/v1.1.2...v1.2.0) (2025-02-27)
 
 
