@@ -53,7 +53,7 @@
   }
 
   .project-card {
-    @apply relative h-full w-full rounded-2xl border border-slate-400 shadow-2xl shadow-slate-900/80 transition duration-300 dark:border-slate-700;
+    @apply relative h-full w-full rounded-2xl border border-slate-400 py-2 shadow-2xl shadow-slate-900/80 transition duration-300 dark:border-slate-700;
   }
 
   .project-background {
@@ -194,6 +194,7 @@
     .project-description {
       @apply block;
     }
+
   }
 
   /* From Desktops' Viewports */

@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 
 import { publications } from "../assets/data/publications";
 
+import { FaExternalLinkAlt } from 'react-icons/fa';
+
 const Publications = () => {
   const [divVisible, setDivVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
@@ -54,6 +56,7 @@ const Publications = () => {
                     className="publications-learnmore"
                   >
                     Learn More
+                    <FaExternalLinkAlt className='size-3' />
                   </a>
                   <div className="publications-ending">
                     <p className="publications-hosts">{publication.host}</p>

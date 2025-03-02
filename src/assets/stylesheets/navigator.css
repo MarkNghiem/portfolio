@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer utilities {
   /* From Mobile's Viewports */
   .navigator {
@@ -10,8 +12,20 @@
     @apply flex justify-end transition duration-300;
   }
 
+  .navigator-list-items-active {
+    @apply scale-105 text-orange-400 dark:text-orange-300
+  }
+
   .navigator-text {
-    @apply font-semibold transition duration-300;
+    @apply font-semibold transition duration-300 text-orange-400 dark:text-orange-300;
+  }
+
+  .surprised-active {
+    @apply scale-105 text-red-500 dark:text-red-400
+  }
+
+  .surprised-text {
+    @apply font-semibold transition duration-300 text-red-500 dark:text-red-400;
   }
 
   /* From Desktops' Viewports */

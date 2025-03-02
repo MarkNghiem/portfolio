@@ -17,6 +17,7 @@ import CSSIcon from "../../public/svg/css.svg";
 import ReactIcon from "../../public/svg/react.svg";
 import ViteIcon from "../../public/svg/vite.svg";
 import TailwindCSSIcon from "../../public/svg/tailwindcss.svg";
+import MUIIcon from '../../public/svg/mui.svg';
 import VercelIcon from "../../public/svg/vercel.svg";
 
 const Footer = ({ handleEmail, scrollTo }) => {
@@ -27,6 +28,7 @@ const Footer = ({ handleEmail, scrollTo }) => {
     ReactIcon,
     ViteIcon,
     TailwindCSSIcon,
+    MUIIcon,
     VercelIcon,
   ];
 

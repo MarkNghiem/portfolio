@@ -82,10 +82,10 @@ const Navigator = () => {
           return (
             <li
               key={index}
-              className={`navigator-list-items mb-1 ${index === activeDiv ? "scale-105 text-orange-400" : ""}`}
+              className={`navigator-list-items mb-1 ${index === activeDiv ? "navigator-list-items-active" : ""}`}
             >
               <p
-                className={`navigator-text text-orange-400 ${index === activeDiv ? "opacity-100" : "opacity-0"}`}
+                className={`navigator-text ${index === activeDiv ? "opacity-100" : "opacity-0"}`}
               >
                 {navItem}
               </p>
@@ -94,10 +94,10 @@ const Navigator = () => {
           );
         })}
         <li
-          className={`navigator-list-items ${activeDiv === 3 ? "scale-105 text-red-500" : ""}`}
+          className={`navigator-list-items ${activeDiv === 3 ? "surprised-active" : ""}`}
         >
           <p
-            className={`navigator-text text-red-500 ${activeDiv === 3 ? "opacity-100" : "opacity-0"}`}
+            className={`surprised-text ${activeDiv === 3 ? "opacity-100" : "opacity-0"}`}
           >
             SURPRISED!!!
           </p>
