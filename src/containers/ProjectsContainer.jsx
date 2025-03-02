@@ -1,6 +1,8 @@
 // Project Container
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { Box, Fade, Popper, Typography } from "@mui/material";
+import debounce from "lodash.debounce";
 
 import "../assets/stylesheets/projects.css";
 
@@ -19,6 +21,24 @@ import Portfolio from "../../public/portfolio.jpg";
 const ProjectsContainer = () => {
   const [divVisible, setDivVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
+  const [open, setOpen] = useState({ projectIndex: null, resourceIndex: null });
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handlePopperOpen = useCallback((event, projectIndex, resourceIndex) => {
+    setAnchorEl(event.currentTarget);
+    setOpen({ projectIndex, resourceIndex });
+  }, []);
+
+  const debouncedOpen = useMemo(
+    () => debounce(handlePopperOpen, 500),
+    [handlePopperOpen],
+  );
+
+  const handlePopperClose = () => {
+    debouncedOpen.cancel();
+    setAnchorEl(null);
+    setOpen({ projectIndex: null, resourceIndex: null });
+  };
 
   useEffect(() => {
     const divTimer = setTimeout(() => {
@@ -38,7 +58,7 @@ const ProjectsContainer = () => {
   const projects = [
     {
       type: "Open-source Product",
-      name: "BottleNetes ",
+      name: "BottleNetes",
       slogan: "Uncorking Kubernetes Bottlenecks & Insights, One Pod at a time",
       description:
         "An Open-source tool for managing and monitoring Kubernetes Clusters, featuring real-time data charts to track resources, limits and latency with an intuitive and interactive heat map.",
@@ -181,9 +201,9 @@ const ProjectsContainer = () => {
         <h1 className="title pb-8">Projects</h1>
         <div className={`inner-div project-inner-div h-[70svh]`}>
           <div id="projects" className={`group project-group`}>
-            {projects.map((project, index) => {
+            {projects.map((project, index1) => {
               return (
-                <div key={index} className={`project-card ${project.style}`}>
+                <div key={index1} className={`project-card ${project.style}`}>
                   <div
                     className="project-background"
                     style={{
@@ -200,17 +220,37 @@ const ProjectsContainer = () => {
                   </div>
                   <div className="project-hover">
                     <div className="project-icon-container">
-                      {project.resources?.map((resource, index) => {
+                      {project.resources?.map((resource, index2) => {
                         return (
                           <a
-                            key={index}
+                            key={index2}
                             href={resource.url}
-                            title={resource.type}
                             aria-label={resource.type}
                           >
-                            <button className="project-button">
+                            <button
+                              className="project-button"
+                              onMouseEnter={(e) =>
+                                handlePopperOpen(e, index1, index2)
+                              }
+                              onMouseLeave={handlePopperClose}
+                            >
                               {resource.icon}
                             </button>
+                            <Popper
+                              open={
+                                open.projectIndex === index1 &&
+                                open.resourceIndex === index2
+                              }
+                              anchorEl={anchorEl}
+                              placement="top-start"
+                              transition
+                            >
+                              {({ TransitionProps }) => (
+                                <Fade {...TransitionProps} timeout={100}>
+                                  <p className="mb-2 ml-2 rounded-t-xl rounded-br-xl px-4 py-2 bg-gradient-to-br from-slate-600 via-slate-950 to-blue-950 border border-slate-700 typography-global">{`Visit ${resource.type}`}</p>
+                                </Fade>
+                              )}
+                            </Popper>
                           </a>
                         );
                       })}
