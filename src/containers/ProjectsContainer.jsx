@@ -1,14 +1,19 @@
 // Project Container
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Box, Fade, Popper, Typography } from "@mui/material";
+import { Fade, Popper } from "@mui/material";
 import debounce from "lodash.debounce";
 
 import "../assets/stylesheets/projects.css";
 
 import { CgWebsite } from "react-icons/cg";
 import { SiMedium } from "react-icons/si";
-import { FaGithub, FaLinkedin, FaProductHunt } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaProductHunt,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
 import BottleNetes from "../../public/bottlenetes.png";
@@ -247,7 +252,10 @@ const ProjectsContainer = () => {
                             >
                               {({ TransitionProps }) => (
                                 <Fade {...TransitionProps} timeout={100}>
-                                  <p className="mb-2 ml-2 rounded-t-xl rounded-br-xl px-4 py-2 bg-gradient-to-br from-slate-600 via-slate-950 to-blue-950 border border-slate-700 typography-global">{`Visit ${resource.type}`}</p>
+                                  <div className="popper-desktop typography-global flex relative">
+                                    <p>{`Visit ${project.name}'s ${resource.type}`}</p>
+                                    <FaExternalLinkAlt className='external' />
+                                  </div>
                                 </Fade>
                               )}
                             </Popper>
