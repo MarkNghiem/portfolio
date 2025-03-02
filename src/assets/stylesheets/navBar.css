@@ -6,11 +6,11 @@
   /* From Mobile's Viewports */
   /* Navbar Style */
   .navbar-style {
-    @apply sticky top-0 z-20 flex rounded-b-4xl border-b-2 border-slate-200 bg-slate-100/95 dark:border-slate-950 dark:bg-slate-900;
+    @apply sticky top-0 z-20 flex rounded-b-4xl border-b-2 border-slate-200 bg-gradient-to-r from-slate-200/95 to-slate-100/95 dark:border-slate-950 dark:from-slate-900 dark:to-slate-800;
   }
 
   .navbar-left-style {
-    @apply w-full rounded-b-4xl bg-slate-900/30 p-3 dark:bg-slate-950/70;
+    @apply w-full rounded-b-4xl bg-gradient-to-r from-slate-900/40 to-slate-900/10 p-3 dark:from-slate-950/70 dark:to-slate-950/30;
   }
 
   .navbar-right-style {
