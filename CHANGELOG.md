@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.1](https://github.com/MarkNghiem/portfolio/compare/v1.3.0...v1.3.1) (2025-03-02)
+
+
+### Bug Fixes
+
+* Added icons and poppers for Info Section ([427d10c](https://github.com/MarkNghiem/portfolio/commit/427d10cc6c2c0c5eede5ec9f011ed737d7b5fb45))
+* Added Popper for buttons in Projects Section ([f841573](https://github.com/MarkNghiem/portfolio/commit/f841573e4d8ced5d74ab51b8034a0bfb7e247287))
+* Added project names and external icon for poppers ([c77e994](https://github.com/MarkNghiem/portfolio/commit/c77e99476893a1da1f5dcde90f44035eeb1dd9c5))
+* Minor fixes ([b0ecff9](https://github.com/MarkNghiem/portfolio/commit/b0ecff98536a9d1ceaf52c99607cc6319801c32b))
+* Minor fixes ([d71d72c](https://github.com/MarkNghiem/portfolio/commit/d71d72cd5eec9da6d2e1cb426b22348070dbd3a1))
+* Minor fixes to NavBar colors ([19119db](https://github.com/MarkNghiem/portfolio/commit/19119db96f95fedb0bb22fde0489cd3a034ea6cb))
+* Minor fixes to tech stack colors ([df1a3e9](https://github.com/MarkNghiem/portfolio/commit/df1a3e9a0afbe688c107d22e5092fb2697a87cdc))
+
 ## [1.3.0](https://github.com/MarkNghiem/portfolio/compare/v1.2.0...v1.3.0) (2025-03-01)
 
 
