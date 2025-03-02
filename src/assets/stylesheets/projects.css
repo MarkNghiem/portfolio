@@ -195,13 +195,6 @@
       @apply block;
     }
 
-    .popper-desktop {
-      @apply mb-2 ml-2 rounded-t-xl rounded-br-xl border bg-gradient-to-br px-4 py-2 border-slate-400 from-slate-300 via-amber-100 to-amber-300 dark:border-slate-700 dark:from-slate-600 dark:via-slate-950 dark:to-blue-950;
-    }
-
-    .external {
-      @apply size-2.5 absolute top-0 right-0 m-1
-    }
   }
 
   /* From Desktops' Viewports */

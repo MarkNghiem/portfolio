@@ -14,7 +14,7 @@
   }
 
   .publications-individual {
-    @apply relative w-[99%] place-self-center rounded-2xl border border-slate-300 bg-slate-300/20 dark:border-slate-700 dark:bg-slate-700/20 transition-colors duration-1000;
+    @apply relative w-[99%] place-self-center rounded-2xl border border-slate-300 bg-slate-300/20 transition-colors duration-1000 dark:border-slate-700 dark:bg-slate-700/20;
   }
 
   .publications-collab {
@@ -22,7 +22,7 @@
   }
 
   .publications-learnmore {
-    @apply text-lg font-semibold;
+    @apply flex text-lg font-semibold gap-1;
   }
 
   .publications-ending {
@@ -79,7 +79,7 @@
   @media screen and (min-width: 1920px) {
     /* Publications Container Styles */
     .publication-layout {
-      @apply mt-40
+      @apply mt-40;
     }
 
     .publication-container-desktop-layout {

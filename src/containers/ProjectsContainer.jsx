@@ -27,11 +27,13 @@ const ProjectsContainer = () => {
   const [divVisible, setDivVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
   const [open, setOpen] = useState({ projectIndex: null, resourceIndex: null });
+  const [popperID, setPopperID] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handlePopperOpen = useCallback((event, projectIndex, resourceIndex) => {
     setAnchorEl(event.currentTarget);
     setOpen({ projectIndex, resourceIndex });
+    setPopperID(`${projectIndex}.${resourceIndex}`);
   }, []);
 
   const debouncedOpen = useMemo(
@@ -43,6 +45,7 @@ const ProjectsContainer = () => {
     debouncedOpen.cancel();
     setAnchorEl(null);
     setOpen({ projectIndex: null, resourceIndex: null });
+    setPopperID(null);
   };
 
   useEffect(() => {
@@ -234,6 +237,7 @@ const ProjectsContainer = () => {
                           >
                             <button
                               className="project-button"
+                              aria-owns={popperID}
                               onMouseEnter={(e) =>
                                 handlePopperOpen(e, index1, index2)
                               }
@@ -242,6 +246,7 @@ const ProjectsContainer = () => {
                               {resource.icon}
                             </button>
                             <Popper
+                              id={popperID}
                               open={
                                 open.projectIndex === index1 &&
                                 open.resourceIndex === index2
@@ -252,9 +257,9 @@ const ProjectsContainer = () => {
                             >
                               {({ TransitionProps }) => (
                                 <Fade {...TransitionProps} timeout={100}>
-                                  <div className="popper-desktop typography-global flex relative">
+                                  <div className="popper-desktop typography-global">
                                     <p>{`Visit ${project.name}'s ${resource.type}`}</p>
-                                    <FaExternalLinkAlt className='external' />
+                                    <FaExternalLinkAlt className="icons" />
                                   </div>
                                 </Fade>
                               )}

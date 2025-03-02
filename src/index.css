@@ -105,6 +105,14 @@
     @apply transition duration-200 hover:scale-110 hover:brightness-50 active:brightness-150;
   }
 
+  .popper-desktop {
+    @apply relative mb-2 ml-4 flex rounded-t-xl rounded-br-xl border border-slate-400 bg-gradient-to-br from-slate-300 via-amber-100 to-amber-300 px-6 py-2 dark:border-slate-700 dark:from-slate-600 dark:via-slate-950 dark:to-blue-950 shadow-xl shadow-slate-900;
+  }
+
+  .icons {
+    @apply hidden;
+  }
+
   /* From Tablets' Viewports */
   @media screen and (min-width: 1024px) {
     /* Global Styles */
@@ -126,6 +134,10 @@
 
     .body {
       @apply text-xl;
+    }
+
+    .icons {
+      @apply block absolute top-0 right-0 m-1 size-3
     }
   }
 

@@ -49,7 +49,7 @@ const TechStack = () => {
                   <button className="tech-button">
                     <img src={lang.icon} className="tech-button-image" />
                     <p className="tech-button-description">{lang.name}</p>
-                    <FaExternalLinkAlt className="tech-button-external" />
+                    <FaExternalLinkAlt className="icons" />
                   </button>
                 </a>
               );
@@ -68,7 +68,7 @@ const TechStack = () => {
                   <button className="tech-button">
                     <img src={tech.icon} className="tech-button-image" />
                     <p className="tech-button-description">{tech.name}</p>
-                    <FaExternalLinkAlt className="tech-button-external" />
+                    <FaExternalLinkAlt className="icons" />
                   </button>
                 </a>
               );
@@ -87,7 +87,7 @@ const TechStack = () => {
                   <button className="tech-button">
                     <img src={other.icon} className="tech-button-image" />
                     <p className="tech-button-description">{other.name}</p>
-                    <FaExternalLinkAlt className="tech-button-external" />
+                    <FaExternalLinkAlt className="icons" />
                   </button>
                 </a>
               );
