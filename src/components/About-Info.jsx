@@ -95,7 +95,7 @@ const Info = ({ handleEmail }) => {
     >
       <div
         id="info-content"
-        className={`content-effect ${contentVisible ? "opacity-100" : "opacity-0"}`}
+        className={`content-effect ${contentVisible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
       >
         <h1 className="title">Kiet (Mark) Nghiem</h1>
         <div className="col-flex info-content-layout">

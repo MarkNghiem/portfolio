@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 // Custom Hooks
-import useSmoothFadeInTransition from '../hooks/useSmoothFadeInTransition';
+import useSmoothFadeInTransition from "../hooks/useSmoothFadeInTransition";
 
 // Data
 import { langs, techs, others } from "../assets/data/techStack";
@@ -25,7 +25,7 @@ const TechStack = () => {
     >
       <div
         id="tech-stack-content"
-        className={`content-effect ${contentVisible ? "opacity-100" : "opacity-0"}`}
+        className={`content-effect ${contentVisible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
       >
         <h1 className="title pb-8">Tech Stacks</h1>
         <div className="inner-div max-h-[70svh]">

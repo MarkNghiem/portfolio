@@ -3,13 +3,13 @@
 import { useState } from "react";
 
 // Custom Hooks
-import useSmoothFadeInTransition from '../hooks/useSmoothFadeInTransition';
+import useSmoothFadeInTransition from "../hooks/useSmoothFadeInTransition";
 
 // Data
 import { publications } from "../assets/data/publications";
 
 // React Icons
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Publications = () => {
   const [divVisible, setDivVisible] = useState(false);
@@ -25,7 +25,7 @@ const Publications = () => {
     >
       <div
         id="publications-content"
-        className={`col-flex content-effect ${contentVisible ? "opacity-100" : "opacity-0"}`}
+        className={`col-flex content-effect ${contentVisible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
       >
         <h1 className="title pb-8">Publications</h1>
         <div className="publication-inner-layout inner-div">
@@ -48,7 +48,7 @@ const Publications = () => {
                     className="publications-learnmore"
                   >
                     Learn More
-                    <FaExternalLinkAlt className='size-3' />
+                    <FaExternalLinkAlt className="size-3" />
                   </a>
                   <div className="publications-ending">
                     <p className="publications-hosts">{publication.host}</p>

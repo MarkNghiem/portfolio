@@ -23,7 +23,7 @@ const AboutMe = () => {
     >
       <div
         id="about-me-content"
-        className={`content-effect ${contentVisible ? "opacity-100" : "opacity-0"}`}
+        className={`content-effect ${contentVisible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
       >
         <h2 className="title mb-5">About Me...</h2>
         <p className="mb-3">
