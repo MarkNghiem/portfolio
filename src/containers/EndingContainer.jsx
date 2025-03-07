@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 
+// Stylesheets
 import '../assets/stylesheets/ending.css';
 
+// Assets
 import PikaEnding from "../../public/pika-ending-small.jpg";
 import ChuchuEnding from "../../public/chuchu-ending-small.jpg";
 import Together from "../../public/together-ending-small.jpg";

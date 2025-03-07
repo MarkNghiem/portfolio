@@ -1,7 +1,11 @@
 // 'About Me' Section - Containing a summary of me as well as Pika and Chuchu
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
+// Custom Hooks
+import useSmoothFadeInTransition from "../hooks/useSmoothFadeInTransition";
+
+// Assets
 import chuchuLarge from "../../public/chuchu-large.jpeg";
 import pikaLarge from "../../public/pika-large.jpeg";
 
@@ -10,20 +14,7 @@ const AboutMe = () => {
   const [contentVisible, setContentVisible] = useState(false);
 
   // Timer to create smooth fade in effect for each components
-  useEffect(() => {
-    const divTimer = setTimeout(() => {
-      setDivVisible(true);
-    }, 5600);
-
-    const contentTimer = setTimeout(() => {
-      setContentVisible(true);
-    }, 6000);
-
-    return () => {
-      clearTimeout(divTimer);
-      clearTimeout(contentTimer);
-    };
-  }, []);
+  useSmoothFadeInTransition(setDivVisible, setContentVisible, 5600, 6000);
 
   return (
     <div

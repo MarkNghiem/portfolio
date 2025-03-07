@@ -5,7 +5,7 @@
 @layer utilities {
   /* From Mobile's Viewports */
   .footer {
-    @apply relative items-center rounded-t-full bg-linear-to-br from-amber-400/80 to-red-400/80 dark:from-indigo-900/50 dark:to-blue-900/50 transition-colors duration-1000
+    @apply relative items-center rounded-t-full bg-linear-to-br from-amber-400/80 to-red-400/80 transition-colors duration-1000 dark:from-indigo-900/50 dark:to-blue-900/50;
   }
 
   .footer-inner {
@@ -25,7 +25,7 @@
   }
 
   .footer-right {
-    @apply place-self-end flex flex-col gap-8 pt-8 pb-5 rounded-t-full bg-linear-to-br from-slate-100 to-slate-400 dark:from-slate-600 dark:to-slate-950 transition-colors duration-1000;
+    @apply flex flex-col gap-8 place-self-end rounded-t-full bg-linear-to-br from-slate-100 to-slate-400 pt-8 pb-5 transition-colors duration-1000 dark:from-slate-600 dark:to-slate-950;
   }
 
   .footer-right-icon-container {
@@ -33,15 +33,19 @@
   }
 
   .footer-icon {
-    @apply size-12 rounded-xl bg-slate-400 p-2 transition-transform duration-200 hover:scale-110 dark:bg-slate-200/10
+    @apply size-12 rounded-xl bg-slate-400 p-2 transition-transform duration-200 hover:scale-110 dark:bg-slate-200/10;
+  }
+
+  .footer-popper {
+    @apply mr-5 ml-0 rounded-br-none rounded-bl-xl;
   }
 
   .footer-link {
-    @apply transition-colors duration-300 hover:cursor-pointer hover:text-amber-800
+    @apply transition-colors duration-300 hover:cursor-pointer hover:text-amber-800;
   }
 
   .footer-back-to-top {
-    @apply absolute bottom-0 left-1/2 hidden -translate-x-1/2 rounded-t-full bg-slate-900/10 px-3 pt-3 pb-1 transition-colors duration-200 hover:cursor-pointer hover:bg-slate-900/20 active:bg-slate-900/30
+    @apply absolute bottom-0 left-1/2 hidden -translate-x-1/2 rounded-t-full bg-slate-900/10 px-3 pt-3 pb-1 transition-colors duration-200 hover:cursor-pointer hover:bg-slate-900/20 active:bg-slate-900/30;
   }
 
   /* From Tablets' Viewports */
@@ -51,15 +55,15 @@
     }
 
     .footer-inner {
-      @apply flex col-span-3 ml-20 py-5;
+      @apply col-span-3 ml-20 flex py-5;
     }
 
     .footer-info {
-      @apply mb-0
+      @apply mb-0;
     }
 
     .footer-right {
-      @apply col-span-2
+      @apply col-span-2;
     }
 
     .footer-right-icon-container {
@@ -74,7 +78,7 @@
     }
 
     .footer-inner {
-      @apply flex-row col-span-3 items-center justify-evenly;
+      @apply col-span-3 flex-row items-center justify-evenly;
     }
 
     .footer-picture {
@@ -82,7 +86,7 @@
     }
 
     .footer-info {
-      @apply pb-15
+      @apply pb-15;
     }
 
     .footer-right {
@@ -94,7 +98,7 @@
     }
 
     .footer-back-to-top {
-      @apply block
+      @apply block;
     }
   }
 

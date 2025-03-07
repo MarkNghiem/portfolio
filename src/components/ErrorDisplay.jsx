@@ -1,7 +1,9 @@
 // Component to be rendered if there are any errors
 
+// Stylesheets
 import '../assets/stylesheets/error.css';
 
+// Assets
 import pikaHiding from "../../public/pika-hiding.jpeg";
 import chuchuHiding from "../../public/chuchu-hiding.jpeg";
 

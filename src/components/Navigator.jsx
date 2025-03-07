@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+// Stylesheets
 import "../assets/stylesheets/navigator.css";
 
 const Navigator = () => {
@@ -32,6 +33,11 @@ const Navigator = () => {
        * offsetTop === the distance from the top of the page to the div
        * offsetHeight === the height of the div
        * ALL ARE MEASURED IN 'px'
+       */
+
+      /**
+       * If not yet scrolled, no activeDiv
+       * If scrolled to a section (between the height of that section), then activeDiv is set to that section's index
        */
       if (scrollY < aboutStart?.offsetTop) {
         setActiveDiv(null);

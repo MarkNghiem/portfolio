@@ -1,24 +1,16 @@
-import { useState, useEffect } from "react";
+// Recommendations Section - Recommendations from LinkedIn
+
+import { useState } from "react";
+
+// Custom Hooks
+import useSmoothFadeInTransition from '../hooks/useSmoothFadeInTransition';
 
 const Recommendation = () => {
   const [divVisible, setDivVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
 
   // Timer to create smooth fade in effect for each components
-  useEffect(() => {
-    const divTimer = setTimeout(() => {
-      setDivVisible(true);
-    }, 6000);
-
-    const contentTimer = setTimeout(() => {
-      setContentVisible(true);
-    }, 6400);
-
-    return () => {
-      clearTimeout(divTimer);
-      clearTimeout(contentTimer);
-    };
-  }, []);
+  useSmoothFadeInTransition(setDivVisible, setContentVisible, 6000, 6400);
 
   return (
     <div
