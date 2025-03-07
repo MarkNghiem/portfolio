@@ -3,13 +3,21 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
+// Stylesheets
 import "../assets/stylesheets/navBar.css";
 
+// Components
 import DarkMode from './DarkMode';
 
+// Data
+import { navBarList } from '../assets/data/navBarList';
+
 const NavBar = ({ scrollTo }) => {
+  // State for the entire NavBar
   const [visible, setVisible] = useState(false);
+  // Left-side NavBar
   const [leftVisible, setLeftVisible] = useState(false);
+  // Right side NavBar
   const [rightVisible, setRightVisible] = useState(false);
 
   // Timer to create smooth fade in effect for each components
@@ -32,21 +40,6 @@ const NavBar = ({ scrollTo }) => {
       clearTimeout(rightTimer);
     };
   }, []);
-
-  const navBarList = [
-    {
-      item: "About",
-      id: "about-navigate",
-    },
-    {
-      item: "Projects",
-      id: "projects-navigate",
-    },
-    {
-      item: "Publications",
-      id: "publications-navigate",
-    },
-  ];
 
   return (
     <div

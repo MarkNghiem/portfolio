@@ -1,8 +1,14 @@
 // 'Tech Stack' Section - Contain the stack that I have experience in
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
+// Custom Hooks
+import useSmoothFadeInTransition from '../hooks/useSmoothFadeInTransition';
+
+// Data
 import { langs, techs, others } from "../assets/data/techStack";
+
+// React Icons
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const TechStack = () => {
@@ -10,20 +16,7 @@ const TechStack = () => {
   const [contentVisible, setContentVisible] = useState(false);
 
   // Timer to create smooth fade in effect for each components
-  useEffect(() => {
-    const divTimer = setTimeout(() => {
-      setDivVisible(true);
-    }, 5700);
-
-    const contentTimer = setTimeout(() => {
-      setContentVisible(true);
-    }, 6100);
-
-    return () => {
-      clearTimeout(divTimer);
-      clearTimeout(contentTimer);
-    };
-  }, []);
+  useSmoothFadeInTransition(setDivVisible, setContentVisible, 5700, 6100);
 
   return (
     <div

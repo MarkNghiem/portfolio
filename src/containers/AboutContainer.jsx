@@ -1,8 +1,11 @@
 // About Container - First Section
+
 import PropTypes from "prop-types";
 
-import '../assets/stylesheets/about.css';
+// Stylesheets
+import "../assets/stylesheets/about.css";
 
+// Components
 import AboutMe from "../components/About-AboutMe";
 import Info from "../components/About-Info";
 import TechStack from "../components/About-TechStack";
@@ -11,7 +14,7 @@ const AboutContainer = ({ handleEmail }) => {
   return (
     <div
       id="about"
-      className='col-flex mobile-to-tablet-layout mt-10 desktop-layout about-container-desktop-layout'
+      className="col-flex mobile-to-tablet-layout desktop-layout about-container-desktop-layout mt-10"
     >
       <Info handleEmail={handleEmail} />
       <AboutMe />

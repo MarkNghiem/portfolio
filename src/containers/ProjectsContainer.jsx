@@ -1,21 +1,23 @@
 // Project Container
 
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { Fade, Popper } from "@mui/material";
-import debounce from "lodash.debounce";
+import { useState } from "react";
 
+// Custom Hooks
+import useSmoothFadeInTransition from "../hooks/useSmoothFadeInTransition";
+
+// Components
+import Project from "../components/Projects-Project";
+
+// Stylesheets
 import "../assets/stylesheets/projects.css";
 
+// React Icons
 import { CgWebsite } from "react-icons/cg";
 import { SiMedium } from "react-icons/si";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaProductHunt,
-  FaExternalLinkAlt,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaProductHunt } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
+// Assets
 import BottleNetes from "../../public/bottlenetes.png";
 import YAP from "../../public/yap.png";
 import Attune from "../../public/attune.png";
@@ -26,42 +28,9 @@ import Portfolio from "../../public/portfolio.jpg";
 const ProjectsContainer = () => {
   const [divVisible, setDivVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
-  const [open, setOpen] = useState({ projectIndex: null, resourceIndex: null });
-  const [popperID, setPopperID] = useState(null);
-  const [anchorEl, setAnchorEl] = useState(null);
 
-  const handlePopperOpen = useCallback((event, projectIndex, resourceIndex) => {
-    setAnchorEl(event.currentTarget);
-    setOpen({ projectIndex, resourceIndex });
-    setPopperID(`${projectIndex}.${resourceIndex}`);
-  }, []);
-
-  const debouncedOpen = useMemo(
-    () => debounce(handlePopperOpen, 500),
-    [handlePopperOpen],
-  );
-
-  const handlePopperClose = () => {
-    debouncedOpen.cancel();
-    setAnchorEl(null);
-    setOpen({ projectIndex: null, resourceIndex: null });
-    setPopperID(null);
-  };
-
-  useEffect(() => {
-    const divTimer = setTimeout(() => {
-      setDivVisible(true);
-    }, 5800);
-
-    const contentTimer = setTimeout(() => {
-      setContentVisible(true);
-    }, 6200);
-
-    return () => {
-      clearTimeout(divTimer);
-      clearTimeout(contentTimer);
-    };
-  }, []);
+  // Timer to create smooth fade in effect for each components
+  useSmoothFadeInTransition(setDivVisible, setContentVisible, 5800, 6200);
 
   const projects = [
     {
@@ -208,85 +177,7 @@ const ProjectsContainer = () => {
       >
         <h1 className="title pb-8">Projects</h1>
         <div className={`inner-div project-inner-div h-[70svh]`}>
-          <div id="projects" className={`group project-group`}>
-            {projects.map((project, index1) => {
-              return (
-                <div key={index1} className={`project-card ${project.style}`}>
-                  <div
-                    className="project-background"
-                    style={{
-                      backgroundImage: `url(${project.background})`,
-                      opacity: 0.05,
-                    }}
-                  />
-                  <div className="project-card-inner">
-                    <h4 className="project-type">{project.type}</h4>
-                    <div className="project-description-field">
-                      <h2 className="project-title">{project.name}</h2>
-                      <p className="body">{project.slogan}</p>
-                    </div>
-                  </div>
-                  <div className="project-hover">
-                    <div className="project-icon-container">
-                      {project.resources?.map((resource, index2) => {
-                        return (
-                          <a
-                            key={index2}
-                            href={resource.url}
-                            aria-label={resource.type}
-                          >
-                            <button
-                              className="project-button"
-                              aria-owns={popperID}
-                              onMouseEnter={(e) =>
-                                handlePopperOpen(e, index1, index2)
-                              }
-                              onMouseLeave={handlePopperClose}
-                            >
-                              {resource.icon}
-                            </button>
-                            <Popper
-                              id={popperID}
-                              open={
-                                open.projectIndex === index1 &&
-                                open.resourceIndex === index2
-                              }
-                              anchorEl={anchorEl}
-                              placement="top-start"
-                              transition
-                            >
-                              {({ TransitionProps }) => (
-                                <Fade {...TransitionProps} timeout={100}>
-                                  <div className="popper-desktop typography-global">
-                                    <p>{`Visit ${project.name}'s ${resource.type}`}</p>
-                                    <FaExternalLinkAlt className="icons" />
-                                  </div>
-                                </Fade>
-                              )}
-                            </Popper>
-                          </a>
-                        );
-                      })}
-                    </div>
-                    <p className="project-title project-title-hover">
-                      {project.name}
-                    </p>
-                    <p className="project-description body">
-                      {project.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-            {blankGridPosition.map((grid, index) => {
-              return (
-                <div
-                  key={index}
-                  className={`rounded-2xl bg-slate-900/70 py-20 ${grid}`}
-                />
-              );
-            })}
-          </div>
+          <Project projects={projects} blank={blankGridPosition} />
         </div>
       </div>
     </div>

@@ -6,31 +6,37 @@
  * - Changelog: This website will be updated regularly
  */
 
+import { useState } from "react";
 import PropTypes from "prop-types";
 
+// MUI Components
+import { Fade, Popper } from "@mui/material";
+
+// Stylesheets
 import "../assets/stylesheets/footer.css";
 
+// Data
+import { builtWithIcons } from "../assets/data/builtWith";
+
+// Assets
 import MeFooter from "../../public/me-footer.jpg";
-import JavaScriptIcon from "../../public/svg/javascript.svg";
-import HTMLIcon from "../../public/svg/html5.svg";
-import CSSIcon from "../../public/svg/css.svg";
-import ReactIcon from "../../public/svg/react.svg";
-import ViteIcon from "../../public/svg/vite.svg";
-import TailwindCSSIcon from "../../public/svg/tailwindcss.svg";
-import MUIIcon from '../../public/svg/mui.svg';
-import VercelIcon from "../../public/svg/vercel.svg";
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const Footer = ({ handleEmail, scrollTo }) => {
-  const builtWithIcons = [
-    JavaScriptIcon,
-    HTMLIcon,
-    CSSIcon,
-    ReactIcon,
-    ViteIcon,
-    TailwindCSSIcon,
-    MUIIcon,
-    VercelIcon,
-  ];
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [open, setOpen] = useState(null);
+  const [popperID, setPopperID] = useState(null);
+
+  const handlePopperOpen = (event, index) => {
+    setAnchorEl(event.currentTarget);
+    setOpen(index);
+    setPopperID(index);
+  };
+
+  const handlePopperClose = () => {
+    setAnchorEl(null);
+    setOpen(null);
+  };
 
   return (
     <div id="footer" className="footer">
@@ -69,7 +75,35 @@ const Footer = ({ handleEmail, scrollTo }) => {
         <h5 className="subtitle mt-5">Built With</h5>
         <div className="footer-right-icon-container">
           {builtWithIcons.map((icon, index) => {
-            return <img src={icon} key={index} className="footer-icon" />;
+            return (
+              <div key={index}>
+                <img
+                  src={icon.icon}
+                  className="footer-icon"
+                  title={icon.name}
+                  aria-label={icon.name}
+                  aria-owns={popperID}
+                  id={index}
+                  onMouseEnter={(event) => handlePopperOpen(event, index)}
+                  onMouseLeave={handlePopperClose}
+                />
+                <Popper
+                  open={open === index}
+                  anchorEl={anchorEl}
+                  id={popperID}
+                  placement="top-end"
+                  transition
+                >
+                  {({ TransitionProps }) => (
+                    <Fade {...TransitionProps} timeout={100}>
+                      <div className="typography-global popper-desktop footer-popper">
+                        {icon.name}
+                      </div>
+                    </Fade>
+                  )}
+                </Popper>
+              </div>
+            );
           })}
         </div>
         <div className="body flex justify-center">
@@ -77,18 +111,20 @@ const Footer = ({ handleEmail, scrollTo }) => {
             href="https://github.com/MarkNghiem/portfolio/blob/main/CHANGELOG.md"
             title="Changelog"
             aria-label="Changelog"
-            className="footer-link"
+            className="footer-link flex gap-1"
           >
             Changelog
+            <FaExternalLinkAlt className='size-3'/>
           </a>
           <p className="mx-5">|</p>
           <a
             href="https://github.com/MarkNghiem/portfolio/issues/new"
             title="Report Issue"
             aria-label="Report Issue"
-            className="footer-link"
+            className="footer-link flex gap-1"
           >
             Report Issue
+            <FaExternalLinkAlt className='size-3'/>
           </a>
         </div>
       </div>

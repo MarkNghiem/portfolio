@@ -1,9 +1,14 @@
 // Publications Section - Containing article and video featuring me and the products of the group
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
+// Custom Hooks
+import useSmoothFadeInTransition from '../hooks/useSmoothFadeInTransition';
+
+// Data
 import { publications } from "../assets/data/publications";
 
+// React Icons
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const Publications = () => {
@@ -11,20 +16,7 @@ const Publications = () => {
   const [contentVisible, setContentVisible] = useState(false);
 
   // Timer to create smooth fade in effect for each components
-  useEffect(() => {
-    const divTimer = setTimeout(() => {
-      setDivVisible(true);
-    }, 5900);
-
-    const contentTimer = setTimeout(() => {
-      setContentVisible(true);
-    }, 6300);
-
-    return () => {
-      clearTimeout(divTimer);
-      clearTimeout(contentTimer);
-    };
-  }, []);
+  useSmoothFadeInTransition(setDivVisible, setContentVisible, 5900, 6300);
 
   return (
     <div

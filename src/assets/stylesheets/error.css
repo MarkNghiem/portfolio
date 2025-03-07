@@ -1,31 +1,33 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer utilities {
   /* From Mobile's Viewports */
   .error-container {
-    @apply flex h-svh flex-col items-center justify-center overflow-y-scroll bg-gradient-to-br from-amber-300/30 from-10% via-slate-300/20 via-60% to-red-300/20 to-90% text-center text-2xl text-slate-700 font-stretch-125%;
+    @apply flex h-svh flex-col items-center justify-center overflow-y-scroll bg-gradient-to-br from-amber-300/30 from-10% via-slate-300/20 via-60% to-red-300/20 to-90% text-center text-2xl text-slate-700 font-stretch-125% dark:from-slate-700 dark:via-slate-700 dark:via-20% dark:to-stone-900 dark:to-90% dark:text-slate-300/80;
   }
 
   .error-title {
-    @apply flex items-center gap-4
+    @apply flex items-center gap-4;
   }
 
   .error-pictures-container {
-    @apply mt-10 flex gap-5
+    @apply mt-10 flex gap-5;
   }
 
   .error-pictures {
-    @apply size-50
+    @apply size-50;
   }
 
   /* From Tablets' Viewports */
   @media screen and (min-width: 1024px) {
     .error-pictures-container {
-      @apply gap-20
+      @apply gap-20;
     }
 
     .error-pictures {
-      @apply size-96
+      @apply size-96;
     }
   }
 }

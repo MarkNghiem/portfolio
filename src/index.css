@@ -21,7 +21,7 @@
 @layer utilities {
   /* From Mobile's Viewports */
   /* Global Styles */
-  .light-gradient-background {
+  .gradient-background {
     @apply bg-gradient-to-br from-amber-300/30 from-10% via-slate-300/20 via-60% to-red-300/20 to-90% transition-colors duration-1000 dark:from-slate-700 dark:via-slate-700 dark:via-20% dark:to-stone-900 dark:to-90%;
   }
 

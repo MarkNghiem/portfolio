@@ -44,7 +44,7 @@ const App = () => {
   return (
     <div
       id="app"
-      className="light-gradient-background global typography-global"
+      className="gradient-background global typography-global"
     >
       <h1
         className={`fixed w-full pointer-events-none absolute-centered opening-text content-effect ${visible ? "opacity-100" : "opacity-0"}`}

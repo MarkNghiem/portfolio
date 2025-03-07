@@ -1,8 +1,16 @@
 // 'Info' Section - Containing personal portrait and links
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import PropTypes from "prop-types";
+import debounce from "lodash.debounce";
 
+// MUI Components
+import { Fade, Popper } from "@mui/material";
+
+// Custom Hooks
+import useSmoothFadeInTransition from "../hooks/useSmoothFadeInTransition";
+
+// React Icons
 import { FaFilePdf } from "react-icons/fa6";
 import {
   FaLinkedin,
@@ -14,10 +22,9 @@ import { SiWellfound } from "react-icons/si";
 import { BiLogoGmail } from "react-icons/bi";
 import { IoIosSend } from "react-icons/io";
 
+// Assets
 import me from "../../public/me.jpeg";
 import resume from "../../public/my-resume.pdf";
-import debounce from "lodash.debounce";
-import { Fade, Popper } from "@mui/material";
 
 const Info = ({ handleEmail }) => {
   const [divVisible, setDivVisible] = useState(false);
@@ -26,6 +33,12 @@ const Info = ({ handleEmail }) => {
   const [popperID, setPopperID] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
 
+  /**
+   * Memoized callback to handle Popper open and close states when hovering over a button
+   * anchorEl is set to current hovering target
+   * If index is provide or index is 0 (Explicitly since 0 is falsy), trigger the opening of popper and set the current opening popper ID
+   * Otherwise, trigger the opening of popper using the provided element as well as its ID
+   */
   const handlePopperOpen = useCallback((event, element, index) => {
     setAnchorEl(event.currentTarget);
     if (index || index === 0) {
@@ -37,11 +50,17 @@ const Info = ({ handleEmail }) => {
     }
   }, []);
 
+  // Debounce to make the popper trigger when hovering the button for 500ms
   const debouncedOpen = useMemo(
     () => debounce(handlePopperOpen, 500),
     [handlePopperOpen],
   );
 
+  /**
+   * When not hovering anymore:
+   * - Cancel debounce
+   * - Deactivate the opening of popper and disable anchorEl
+   */
   const handlePopperClose = () => {
     debouncedOpen.cancel();
     setAnchorEl(null);
@@ -49,20 +68,7 @@ const Info = ({ handleEmail }) => {
   };
 
   // Timer to create smooth fade in effect for each components
-  useEffect(() => {
-    const divTimer = setTimeout(() => {
-      setDivVisible(true);
-    }, 5500);
-
-    const contentTimer = setTimeout(() => {
-      setContentVisible(true);
-    }, 5900);
-
-    return () => {
-      clearTimeout(divTimer);
-      clearTimeout(contentTimer);
-    };
-  }, []);
+  useSmoothFadeInTransition(setDivVisible, setContentVisible, 5500, 5900);
 
   const buttons = [
     {
