@@ -173,7 +173,7 @@ const ProjectsContainer = () => {
     >
       <div
         id="projects-content"
-        className={`content-effect ${contentVisible ? "opacity-100" : "opacity-0"}`}
+        className={`content-effect ${contentVisible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
       >
         <h1 className="title pb-8">Projects</h1>
         <div className={`inner-div project-inner-div h-[70svh]`}>

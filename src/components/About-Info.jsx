@@ -33,6 +33,12 @@ const Info = ({ handleEmail }) => {
   const [popperID, setPopperID] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
 
+  // Debounce to make the popper trigger when hovering the button for 300ms
+  const debouncedSetOpen = useMemo(
+    () => debounce((index) => setOpen(index), 300),
+    [],
+  );
+
   /**
    * Memoized callback to handle Popper open and close states when hovering over a button
    * anchorEl is set to current hovering target
@@ -42,19 +48,13 @@ const Info = ({ handleEmail }) => {
   const handlePopperOpen = useCallback((event, element, index) => {
     setAnchorEl(event.currentTarget);
     if (index || index === 0) {
-      setOpen(index);
+      debouncedSetOpen(index);
       setPopperID(index);
     } else {
-      setOpen(element);
+      debouncedSetOpen(element);
       setPopperID(element);
     }
-  }, []);
-
-  // Debounce to make the popper trigger when hovering the button for 500ms
-  const debouncedOpen = useMemo(
-    () => debounce(handlePopperOpen, 500),
-    [handlePopperOpen],
-  );
+  }, [debouncedSetOpen]);
 
   /**
    * When not hovering anymore:
@@ -62,9 +62,9 @@ const Info = ({ handleEmail }) => {
    * - Deactivate the opening of popper and disable anchorEl
    */
   const handlePopperClose = () => {
-    debouncedOpen.cancel();
-    setAnchorEl(null);
+    debouncedSetOpen.cancel();
     setOpen(null);
+    setAnchorEl(null);
   };
 
   // Timer to create smooth fade in effect for each components
@@ -95,7 +95,7 @@ const Info = ({ handleEmail }) => {
     >
       <div
         id="info-content"
-        className={`content-effect ${contentVisible ? "opacity-100" : "opacity-0"}`}
+        className={`content-effect ${contentVisible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
       >
         <h1 className="title">Kiet (Mark) Nghiem</h1>
         <div className="col-flex info-content-layout">
@@ -127,22 +127,24 @@ const Info = ({ handleEmail }) => {
                   <FaFilePdf className="info-icon-size" />
                   <FaFileDownload className="icons" />
                 </button>
-                <Popper
-                  open={open === "download-resume"}
-                  id={popperID}
-                  anchorEl={anchorEl}
-                  placement="top-start"
-                  transition
-                >
-                  {({ TransitionProps }) => (
-                    <Fade {...TransitionProps} timeout={100}>
-                      <div className="popper-desktop typography-global">
-                        <p>My Resume</p>
-                        <FaFileDownload className="icons" />
-                      </div>
-                    </Fade>
-                  )}
-                </Popper>
+                {anchorEl && (
+                  <Popper
+                    open={open === "download-resume"}
+                    id={popperID}
+                    anchorEl={anchorEl}
+                    placement="top-start"
+                    transition
+                  >
+                    {({ TransitionProps }) => (
+                      <Fade {...TransitionProps} timeout={200}>
+                        <div className="popper-desktop typography-global">
+                          <p>My Resume</p>
+                          <FaFileDownload className="icons" />
+                        </div>
+                      </Fade>
+                    )}
+                  </Popper>
+                )}
               </a>
               {buttons.map((button, index) => {
                 return (
@@ -163,22 +165,24 @@ const Info = ({ handleEmail }) => {
                       {button.icon}
                       <FaExternalLinkAlt className="icons" />
                     </button>
-                    <Popper
-                      id={popperID}
-                      open={open === index}
-                      anchorEl={anchorEl}
-                      placement="top-start"
-                      transition
-                    >
-                      {({ TransitionProps }) => (
-                        <Fade {...TransitionProps} timeout={100}>
-                          <div className="popper-desktop typography-global">
-                            <p>{`Visit My ${button.type}`}</p>
-                            <FaExternalLinkAlt className="icons" />
-                          </div>
-                        </Fade>
-                      )}
-                    </Popper>
+                    {anchorEl && (
+                      <Popper
+                        id={popperID}
+                        open={open === index}
+                        anchorEl={anchorEl}
+                        placement="top-start"
+                        transition
+                      >
+                        {({ TransitionProps }) => (
+                          <Fade {...TransitionProps} timeout={200}>
+                            <div className="popper-desktop typography-global">
+                              <p>{`Visit My ${button.type}`}</p>
+                              <FaExternalLinkAlt className="icons" />
+                            </div>
+                          </Fade>
+                        )}
+                      </Popper>
+                    )}
                   </a>
                 );
               })}
@@ -197,22 +201,24 @@ const Info = ({ handleEmail }) => {
                 <BiLogoGmail className="info-icon-size" />
                 <IoIosSend className="icons" />
               </button>
-              <Popper
-                id={popperID}
-                open={open === "send-email-button"}
-                anchorEl={anchorEl}
-                placement="top-start"
-                transition
-              >
-                {({ TransitionProps }) => (
-                  <Fade {...TransitionProps} timeout={100}>
-                    <div className="popper-desktop typography-global">
-                      <p>Send me an Email</p>
-                      <IoIosSend className="icons" />
-                    </div>
-                  </Fade>
-                )}
-              </Popper>
+              {anchorEl && (
+                <Popper
+                  id={popperID}
+                  open={open === "send-email-button"}
+                  anchorEl={anchorEl}
+                  placement="top-start"
+                  transition
+                >
+                  {({ TransitionProps }) => (
+                    <Fade {...TransitionProps} timeout={200}>
+                      <div className="popper-desktop typography-global">
+                        <p>Send me an Email</p>
+                        <IoIosSend className="icons" />
+                      </div>
+                    </Fade>
+                  )}
+                </Popper>
+              )}
             </div>
             <h2 className="info-ending">Welcome to my Portfolio!</h2>
           </div>

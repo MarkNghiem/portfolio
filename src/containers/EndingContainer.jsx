@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 // Stylesheets
-import '../assets/stylesheets/ending.css';
+import "../assets/stylesheets/ending.css";
 
 // Assets
 import PikaEnding from "../../public/pika-ending-small.jpg";
@@ -27,7 +27,7 @@ const EndingContainer = () => {
   return (
     <div
       id="ending"
-      className={`mobile-to-tablet-layout ending-div div-effect ${divVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}
+      className={`mobile-to-tablet-layout ending-div div-effect ${divVisible ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-10 opacity-0"}`}
     >
       <div id="ending-content">
         <h1 className="title mx-3 py-8">You have reached the end!</h1>
@@ -47,7 +47,7 @@ const EndingContainer = () => {
             );
           })}
         </div>
-        <h3 className='mx-10 pt-10 font-semibold subtitle'>
+        <h3 className="subtitle mx-10 pt-10 font-semibold">
           Thank you for checking out my website!
         </h3>
       </div>

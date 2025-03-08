@@ -9,9 +9,15 @@ import { Fade, Popper } from "@mui/material";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Resources = ({ resources, index1, projectName }) => {
-  const [open, setOpen] = useState({ projectIndex: null, resourceIndex: null });
+  const [open, setOpen] = useState({ index1: null, index2: null });
   const [popperID, setPopperID] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
+
+  // Debouncing each event to only trigger when hovering over a grid for at least 300ms
+  const setDebouncedOpen = useMemo(
+    () => debounce((index1, index2) => setOpen({ index1, index2 }), 300),
+    [],
+  );
 
   /** A Memoize callback to handle popper open when hovering over a grid
    * When hovered:
@@ -20,16 +26,13 @@ const Resources = ({ resources, index1, projectName }) => {
    * - Set popperID to the 'outerIndex.innerIndex' format
    * Reason for 2 indexes is because it is nested map. 1 for 'projects' array and 1 for 'resources' array nested in each objects in 'projects' array
    */
-  const handlePopperOpen = useCallback((event, projectIndex, resourceIndex) => {
-    setAnchorEl(event.currentTarget);
-    setOpen({ projectIndex, resourceIndex });
-    setPopperID(`${projectIndex}.${resourceIndex}`);
-  }, []);
-
-  // Debouncing each event to only trigger when hovering over a grid for at least 500ms
-  const debouncedOpen = useMemo(
-    () => debounce(handlePopperOpen, 500),
-    [handlePopperOpen],
+  const handlePopperOpen = useCallback(
+    (event, index1, index2) => {
+      setAnchorEl(event.currentTarget);
+      setPopperID(`${index1}.${index2}`);
+      setDebouncedOpen(index1, index2);
+    },
+    [setDebouncedOpen],
   );
 
   /** When stop hovering:
@@ -37,7 +40,7 @@ const Resources = ({ resources, index1, projectName }) => {
    * - Set open and popperID back to initial state
    */
   const handlePopperClose = () => {
-    debouncedOpen.cancel();
+    setDebouncedOpen.cancel();
     setAnchorEl(null);
     setOpen({ projectIndex: null, resourceIndex: null });
     setPopperID(null);
@@ -51,29 +54,31 @@ const Resources = ({ resources, index1, projectName }) => {
             <button
               className="project-button"
               aria-owns={popperID}
-              onMouseEnter={(e) => handlePopperOpen(e, index1, index2)}
+              onMouseEnter={(event) => handlePopperOpen(event, index1, index2)}
               onMouseLeave={handlePopperClose}
             >
               {resource.icon}
             </button>
-            <Popper
-              id={popperID}
-              open={
-                open.projectIndex === index1 && open.resourceIndex === index2
-              }
-              anchorEl={anchorEl}
-              placement="top-start"
-              transition
-            >
-              {({ TransitionProps }) => (
-                <Fade {...TransitionProps} timeout={100}>
-                  <div className="popper-desktop typography-global">
-                    <p>{`Visit ${projectName}'s ${resource.type}`}</p>
-                    <FaExternalLinkAlt className="icons" />
-                  </div>
-                </Fade>
-              )}
-            </Popper>
+            {anchorEl && (
+              <Popper
+                id={popperID}
+                open={
+                  open.index1 === index1 && open.index2 === index2
+                }
+                anchorEl={anchorEl}
+                placement="top-start"
+                transition
+              >
+                {({ TransitionProps }) => (
+                  <Fade {...TransitionProps} timeout={200}>
+                    <div className="popper-desktop typography-global">
+                      <p>{`Visit ${projectName}'s ${resource.type}`}</p>
+                      <FaExternalLinkAlt className="icons" />
+                    </div>
+                  </Fade>
+                )}
+              </Popper>
+            )}
           </a>
         );
       })}

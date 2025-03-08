@@ -27,12 +27,18 @@ import IstioIcon from "../../../public/svg/istio.svg";
 import HelmIcon from "../../../public/svg/helm.svg";
 import JestIcon from "../../../public/svg/jest.svg";
 import VercelIcon from "../../../public/svg/vercel.svg";
+import PostmanIcon from '../../../public/svg/postman.svg';
+import GoogleCloudIcon from '../../../public/svg/google-cloud.svg';
+import OpenAIIcon from '../../../public/svg/openai.svg';
+import SupabaseIcon from '../../../public/svg/supabase.svg'
 import HTMLIcon from "../../../public/svg/html5.svg";
 import CSSIcon from "../../../public/svg/css.svg";
 import JSONIcon from "../../../public/svg/json.svg";
 import YAMLIcon from "../../../public/svg/yaml.svg";
+import GitIcon from '../../../public/svg/git.svg';
+import ExcalidrawIcon from '../../../public/svg/excalidraw.svg';
 
-// Programming Language list
+// Programming Languages list
 export const langs = [
   {
     name: "JavaScript",
@@ -48,7 +54,7 @@ export const langs = [
   },
 ];
 
-// Framework and Technology list
+// Frameworks and Technologies list
 export const techs = [
   {
     name: "React",
@@ -103,12 +109,6 @@ export const techs = [
     url: "https://kubernetes.io/",
     label: "Kubernetes Homepage",
     icon: KubernetesIcon,
-  },
-  {
-    name: "AWS",
-    url: "https://aws.amazon.com/",
-    label: "AWS Homepage",
-    icon: AWSIcon,
   },
   {
     name: "Redux",
@@ -206,6 +206,36 @@ export const techs = [
     label: "Vercel Homepage",
     icon: VercelIcon,
   },
+  {
+    name: "Postman",
+    url: "https://www.postman.com/",
+    label: "Postman Homepage",
+    icon: PostmanIcon,
+  },
+  {
+    name: "OpenAI API",
+    url: "https://openai.com/api/",
+    label: "OpenAI API Page",
+    icon: OpenAIIcon,
+  },
+  {
+    name: "Supabase",
+    url: "https://supabase.com/",
+    label: "Supabase Homepage",
+    icon: SupabaseIcon,
+  },
+  {
+    name: "Amazon Web Services",
+    url: "https://aws.amazon.com/",
+    label: "AWS Homepage",
+    icon: AWSIcon,
+  },
+  {
+    name: "Google Cloud Platform",
+    url: "https://cloud.google.com/?hl=en",
+    label: "GCP Homepage",
+    icon: GoogleCloudIcon,
+  },
 ];
 
 // Other minor techs and languages
@@ -233,5 +263,17 @@ export const others = [
     url: "https://yaml.org/",
     label: "YAML Homepage",
     icon: YAMLIcon,
+  },
+  {
+    name: "Git (Version Control)",
+    url: "https://git-scm.com/",
+    label: "Git Homepage",
+    icon: GitIcon,
+  },
+  {
+    name: "Excalidraw (Wireframing)",
+    url: "https://plus.excalidraw.com/how-to-start",
+    label: "Excalidraw - Getting Started",
+    icon: ExcalidrawIcon,
   },
 ];
