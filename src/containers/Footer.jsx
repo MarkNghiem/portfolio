@@ -6,7 +6,7 @@
  * - Changelog: This website will be updated regularly
  */
 
-import { useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import PropTypes from "prop-types";
 
 // MUI Components
@@ -20,18 +20,29 @@ import { builtWithIcons } from "../assets/data/builtWith";
 
 // Assets
 import MeFooter from "../../public/me-footer.jpg";
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt } from "react-icons/fa";
+import debounce from "lodash.debounce";
 
 const Footer = ({ handleEmail, scrollTo }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [open, setOpen] = useState(null);
   const [popperID, setPopperID] = useState(null);
 
-  const handlePopperOpen = (event, index) => {
-    setAnchorEl(event.currentTarget);
-    setOpen(index);
-    setPopperID(index);
-  };
+  // Debounce function, makes popper appear ONLY when hovering over an icons for at least 300ms
+  const debouncedSetOpen = useMemo(
+    () => debounce((index) => setOpen(index), 300),
+    [],
+  );
+
+  // Memoized callback, handle poppers' appearances when hovering over an icon
+  const handlePopperOpen = useCallback(
+    (event, index) => {
+      setAnchorEl(event.currentTarget);
+      setPopperID(index);
+      debouncedSetOpen(index);
+    },
+    [debouncedSetOpen],
+  );
 
   const handlePopperClose = () => {
     setAnchorEl(null);
@@ -87,21 +98,23 @@ const Footer = ({ handleEmail, scrollTo }) => {
                   onMouseEnter={(event) => handlePopperOpen(event, index)}
                   onMouseLeave={handlePopperClose}
                 />
-                <Popper
-                  open={open === index}
-                  anchorEl={anchorEl}
-                  id={popperID}
-                  placement="top-end"
-                  transition
-                >
-                  {({ TransitionProps }) => (
-                    <Fade {...TransitionProps} timeout={100}>
-                      <div className="typography-global popper-desktop footer-popper">
-                        {icon.name}
-                      </div>
-                    </Fade>
-                  )}
-                </Popper>
+                {anchorEl && (
+                  <Popper
+                    open={open === index}
+                    anchorEl={anchorEl}
+                    id={popperID}
+                    placement="top-end"
+                    transition
+                  >
+                    {({ TransitionProps }) => (
+                      <Fade {...TransitionProps} timeout={100}>
+                        <div className="typography-global popper-desktop footer-popper">
+                          {icon.name}
+                        </div>
+                      </Fade>
+                    )}
+                  </Popper>
+                )}
               </div>
             );
           })}
@@ -114,7 +127,7 @@ const Footer = ({ handleEmail, scrollTo }) => {
             className="footer-link flex gap-1"
           >
             Changelog
-            <FaExternalLinkAlt className='size-3'/>
+            <FaExternalLinkAlt className="size-3" />
           </a>
           <p className="mx-5">|</p>
           <a
@@ -124,7 +137,7 @@ const Footer = ({ handleEmail, scrollTo }) => {
             className="footer-link flex gap-1"
           >
             Report Issue
-            <FaExternalLinkAlt className='size-3'/>
+            <FaExternalLinkAlt className="size-3" />
           </a>
         </div>
       </div>

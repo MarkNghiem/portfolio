@@ -96,6 +96,7 @@ const TechStack = () => {
                         <Fade {...TransitionProps} timeout={200}>
                           <div className="typography-global popper-desktop">
                             {lang.label}
+                            <FaExternalLinkAlt className='icons' />
                           </div>
                         </Fade>
                       )}
@@ -139,6 +140,7 @@ const TechStack = () => {
                         <Fade {...TransitionProps} timeout={200}>
                           <div className="typography-global popper-desktop">
                             {tech.label}
+                            <FaExternalLinkAlt className="icons" />
                           </div>
                         </Fade>
                       )}
@@ -182,6 +184,7 @@ const TechStack = () => {
                         <Fade {...TransitionProps} timeout={200}>
                           <div className="typography-global popper-desktop">
                             {other.label}
+                            <FaExternalLinkAlt className="icons" />
                           </div>
                         </Fade>
                       )}
