@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/MarkNghiem/portfolio/compare/v1.3.1...v1.4.0) (2025-03-08)
+
+
+### Features
+
+* feat:  ([f1ee386](https://github.com/MarkNghiem/portfolio/commit/f1ee386e84b5d3758e547d95b6c0d4254f16d7bf))
+
 ## [1.3.1](https://github.com/MarkNghiem/portfolio/compare/v1.3.0...v1.3.1) (2025-03-02)
 
 
