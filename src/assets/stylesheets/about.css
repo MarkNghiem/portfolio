@@ -52,6 +52,10 @@
   }
 
   /* Tech Stack Section Styles */
+  .tech-height {
+    @apply max-h-[70svh]
+  }
+  
   .tech-button-group {
     @apply flex flex-wrap justify-center gap-2 place-self-center;
   }
@@ -164,6 +168,10 @@
     .tech-desktop-layout {
       @apply col-span-3 row-span-4;
     }
+
+    .tech-height {
+      @apply max-h-[80svh]
+    }
   }
 
   /* From Widescreens' Viewports */
@@ -177,6 +185,10 @@
     /* About Me Section Styles */
     .partner-image {
       @apply size-80;
+    }
+
+    .tech-height {
+      @apply max-h-[65svh]
     }
   }
 }
