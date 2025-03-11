@@ -164,7 +164,22 @@ const ProjectsContainer = () => {
     },
   ];
 
-  const blankGridPosition = ["project-blank"];
+  const blankGridPosition = [
+    "project-blank-1",
+    "project-blank-2",
+    "project-blank-3",
+    "project-blank-4",
+    "project-blank-5",
+    "project-blank-6",
+    "project-blank-7",
+    "project-blank-8",
+    "project-blank-9",
+    "project-blank-10",
+    "project-blank-11",
+    "project-blank-12",
+    "project-blank-13",
+    "project-blank-14",
+  ];
 
   return (
     <div

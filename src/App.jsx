@@ -42,12 +42,9 @@ const App = () => {
   };
 
   return (
-    <div
-      id="app"
-      className="gradient-background global typography-global"
-    >
+    <div id="app" className="gradient-background global typography-global">
       <h1
-        className={`fixed w-full pointer-events-none absolute-centered opening-text content-effect ${visible ? "opacity-100" : "opacity-0"}`}
+        className={`absolute-centered opening-text content-effect pointer-events-none fixed w-full ${visible ? "opacity-100" : "opacity-0"}`}
       >
         Hey it&apos;s Mark! 🎉
       </h1>
@@ -60,9 +57,7 @@ const App = () => {
         <ProjectsContainer />
         <div id="publications-navigate" className="h-1" />
         <PublicationsContainer />
-        <div
-          className='animate-font-stretch h-[100vh] col-flex items-center justify-end opening-text'
-        >
+        <div className="animate-font-stretch col-flex opening-text h-[100vh] items-center justify-end">
           <h3 className="mb-5">Is it over? Or is it not?</h3>
           <p className="animate-bounce">↓</p>
         </div>
