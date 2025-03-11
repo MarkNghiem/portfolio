@@ -133,7 +133,7 @@
   @media screen and (min-width: 1440px) {
     /* Projects Section Styles */
     .project-background-overall {
-      @apply fixed inset-0 top-0 -z-10 block bg-[url(/public/ultrasun.png)] bg-contain bg-scroll bg-center bg-no-repeat opacity-20 transition-opacity duration-1000 dark:bg-[url(/public/ultramoon.png)];
+      @apply fixed inset-0 top-0 -z-10 block bg-[url(/public/ultrasun.png)] bg-contain bg-scroll bg-center bg-no-repeat opacity-10 transition-opacity duration-1000 dark:bg-[url(/public/ultramoon.png)];
     }
 
     .project-1 {
@@ -272,7 +272,7 @@
     }
 
     .project-card {
-      @apply absolute transform-3d group-hover:scale-90 group-hover:opacity-90 group-hover:brightness-90 hover:z-10 hover:scale-105 hover:cursor-pointer hover:opacity-100 hover:brightness-125;
+      @apply absolute transform-3d group-hover:scale-90 group-hover:opacity-90 group-hover:brightness-90 hover:z-10 hover:scale-105 hover:cursor-pointer hover:opacity-100 hover:brightness-125 border-3;
     }
 
     .project-card-inner {

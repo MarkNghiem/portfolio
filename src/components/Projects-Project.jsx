@@ -21,7 +21,7 @@ const Project = ({ projects, blank }) => {
         return (
           <div
             key={index1}
-            className={`project-card ${project.style} ${flipped === index1 ? "z-10 rotate-y-180" : ""}`}
+            className={`project-card ${project.style} ${flipped === index1 ? "z-10 rotate-y-180 scale-200" : ""}`}
             onClick={() => handleFlip(index1)}
           >
             <div
