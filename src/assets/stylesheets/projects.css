@@ -98,7 +98,7 @@
   }
 
   .project-icon-container {
-    @apply absolute top-0 left-0 z-30 m-2 flex gap-3;
+    @apply absolute top-3 left-3 z-30 flex gap-4;
   }
 
   .project-button {
@@ -113,11 +113,23 @@
     @apply hidden;
   }
 
+  .project-learn-more {
+    @apply mt-40 cursor-pointer rounded-xl border bg-slate-950/50 px-4 py-2 transition duration-200 hover:scale-110 hover:brightness-110 active:scale-95 active:brightness-90;
+  }
+
+  .project-learn-more-close {
+    @apply fixed -top-7 right-2;
+  }
+
+  .from-tablet {
+    @apply hidden;
+  }
+
   /* From Tablets' Viewports */
   @media screen and (min-width: 1024px) {
     /* Projects Section Styles */
     .project-icon {
-      @apply size-6;
+      @apply size-7;
     }
 
     .project-type {
@@ -126,6 +138,18 @@
 
     .project-title {
       @apply text-5xl;
+    }
+
+    .project-learn-more-close {
+      @apply -top-5 right-3 cursor-pointer rounded-xl border bg-slate-950/50 px-4 py-2 transition duration-200 hover:scale-110 hover:brightness-110 active:scale-95 active:brightness-90;
+    }
+
+    .mobile {
+      @apply hidden;
+    }
+
+    .from-tablet {
+      @apply block;
     }
   }
 
@@ -272,7 +296,7 @@
     }
 
     .project-card {
-      @apply absolute transform-3d group-hover:scale-90 group-hover:opacity-90 group-hover:brightness-90 hover:z-10 hover:scale-105 hover:cursor-pointer hover:opacity-100 hover:brightness-125 border-3;
+      @apply absolute border-3 transform-3d group-hover:scale-90 group-hover:opacity-90 group-hover:brightness-90 hover:z-10 hover:scale-105 hover:opacity-100 hover:brightness-125;
     }
 
     .project-card-inner {
@@ -292,11 +316,7 @@
     }
 
     .project-hover {
-      @apply opacity-0 transition-opacity duration-200 hover:opacity-100 active:opacity-100;
-    }
-
-    .project-icon-container {
-      @apply m-3;
+      @apply opacity-0 transition-opacity duration-200 hover:opacity-100;
     }
 
     .project-button {
@@ -309,6 +329,10 @@
 
     .project-description {
       @apply block;
+    }
+
+    .project-learn-more {
+      @apply mt-8;
     }
   }
 

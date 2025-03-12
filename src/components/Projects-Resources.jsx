@@ -49,6 +49,7 @@ const Resources = ({ resources, index1, projectName }) => {
   return (
     <div className="project-icon-container">
       {resources?.map((resource, index2) => {
+        const Icon = resource.icon;
         return (
           <a key={index2} href={resource.url} aria-label={resource.type}>
             <button
@@ -57,7 +58,7 @@ const Resources = ({ resources, index1, projectName }) => {
               onMouseEnter={(event) => handlePopperOpen(event, index1, index2)}
               onMouseLeave={handlePopperClose}
             >
-              {resource.icon}
+              <Icon className='project-icon'/>
             </button>
             {anchorEl && (
               <Popper
