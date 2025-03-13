@@ -5,12 +5,12 @@ import { FaGithub, FaLinkedin, FaProductHunt } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
 // Assets
-import BottleNetes from "../../../public/bottlenetes.png";
-import YAP from "../../../public/yap.png";
-import Attune from "../../../public/attune.png";
-import ArmaDollar from "../../../public/armadollar.png";
-import Clockin from "../../../public/clockin.png";
-import Portfolio from "../../../public/portfolio.jpg";
+import BottleNetes from "/bottlenetes.png?url";
+import YAP from "/yap.png?url";
+import Attune from "/attune.png?url";
+import ArmaDollar from "/armadollar.png?url";
+import Clockin from "/clockin.png?url";
+import Portfolio from "/portfolio.jpg?url";
 
 export const projects = [
   {

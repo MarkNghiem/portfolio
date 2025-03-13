@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import sun from "../../public/sun.png";
-import moon from "../../public/moon.png";
+import sun from "/sun.png?url";
+import moon from "/moon.png?url";
 
 const DarkMode = () => {
   /**

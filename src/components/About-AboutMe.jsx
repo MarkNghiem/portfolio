@@ -6,8 +6,8 @@ import { useState } from "react";
 import useSmoothFadeInTransition from "../hooks/useSmoothFadeInTransition";
 
 // Assets
-import chuchuLarge from "../../public/chuchu-large.jpeg";
-import pikaLarge from "../../public/pika-large.jpeg";
+import chuchuLarge from "/chuchu-large.jpeg?url";
+import pikaLarge from "/pika-large.jpeg?url";
 
 const AboutMe = () => {
   const [divVisible, setDivVisible] = useState(false);

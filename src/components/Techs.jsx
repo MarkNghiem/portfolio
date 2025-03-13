@@ -1,8 +1,8 @@
 // Reusable Tech Component
 
-import { useState, useMemo, useCallback } from 'react';
-import debounce from 'lodash.debounce';
-import PropTypes from 'prop-types';
+import { useState, useMemo, useCallback } from "react";
+import debounce from "lodash.debounce";
+import PropTypes from "prop-types";
 
 // MUI Components
 import { Popper, Fade } from "@mui/material";
@@ -16,30 +16,34 @@ const Techs = ({ dataset }) => {
   const [popperID, setPopperID] = useState(null);
 
   // Debounce the handler to only run when hovered for at least 300ms
-    const setDebouncedOpen = useMemo(
-      () => debounce((index) => setOpen(index), 300),
-      [],
-    );
-  
-    /**
-     * A memoized callback for handling popper appearance when hovering over a button
-     * When hovered:
-     * - Set anchorEl to the current hovered object
-     * - Set open and popperID to the index of current hovered object
-     */
-    const handlePopperOpen = useCallback((event, index) => {
+  const setDebouncedOpen = useMemo(
+    () => debounce((index) => setOpen(index), 300),
+    [],
+  );
+
+  /**
+   * A memoized callback for handling popper appearance when hovering over a button.
+   * 
+   * When hovered:
+   * - Set anchorEl to the current hovered object
+   * - Set open and popperID to the index of current hovered object
+   */
+  const handlePopperOpen = useCallback(
+    (event, index) => {
       setAnchorEl(event.currentTarget);
       setPopperID(index);
       setDebouncedOpen(index);
-    }, [setDebouncedOpen]);
-  
-    // When not hovering anymore, cancel debounce, set anchorEl, open and popperID to their initial states
-    const handlePopperClose = () => {
-      setDebouncedOpen.cancel();
-      setAnchorEl(null);
-      setOpen(null);
-      setAnchorEl(null);
-    };
+    },
+    [setDebouncedOpen],
+  );
+
+  // When not hovering anymore, cancel debounce, set anchorEl, open and popperID to their initial states
+  const handlePopperClose = () => {
+    setDebouncedOpen.cancel();
+    setAnchorEl(null);
+    setOpen(null);
+    setAnchorEl(null);
+  };
 
   return (
     <div id={`${dataset}-button`} className="tech-button-group group">
@@ -87,7 +91,7 @@ const Techs = ({ dataset }) => {
 };
 
 Techs.propTypes = {
-  dataset: PropTypes.array
-}
+  dataset: PropTypes.array,
+};
 
 export default Techs;

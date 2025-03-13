@@ -6,9 +6,9 @@ import { useState, useEffect } from "react";
 import "../assets/stylesheets/ending.css";
 
 // Assets
-import PikaEnding from "../../public/pika-ending-small.jpg";
-import ChuchuEnding from "../../public/chuchu-ending-small.jpg";
-import Together from "../../public/together-ending-small.jpg";
+import PikaEnding from "/pika-ending-small.jpg?url";
+import ChuchuEnding from "/chuchu-ending-small.jpg?url";
+import Together from "/together-ending-small.jpg?url";
 
 const EndingContainer = () => {
   const [divVisible, setDivVisible] = useState(false);

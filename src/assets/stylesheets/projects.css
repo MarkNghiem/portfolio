@@ -157,7 +157,7 @@
   @media screen and (min-width: 1440px) {
     /* Projects Section Styles */
     .project-background-overall {
-      @apply fixed inset-0 top-0 -z-10 block bg-[url(/public/ultrasun.png)] bg-contain bg-scroll bg-center bg-no-repeat opacity-10 transition-opacity duration-1000 dark:bg-[url(/public/ultramoon.png)];
+      @apply fixed inset-0 top-0 -z-10 block bg-[url(/ultrasun.png)] bg-contain bg-scroll bg-center bg-no-repeat opacity-10 transition-opacity duration-1000 dark:bg-[url(/ultramoon.png)];
     }
 
     .project-1 {

@@ -19,7 +19,7 @@ import "../assets/stylesheets/footer.css";
 import { builtWithIcons } from "../assets/data/builtWith";
 
 // Assets
-import MeFooter from "../../public/me-footer.jpg";
+import MeFooter from "/me-footer.jpg?url";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import debounce from "lodash.debounce";
 
