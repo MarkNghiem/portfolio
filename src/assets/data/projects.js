@@ -22,32 +22,32 @@ export const projects = [
     background: BottleNetes,
     resources: [
       {
-        type: "Website",
+        type: "🌐 Website",
         url: "https://www.bottlenetes.com/",
         icon: CgWebsite,
       },
       {
-        type: "Medium Article",
+        type: "📜 Medium Article",
         url: "https://medium.com/@bottlenetes/bottlenetes-simplifying-kubernetes-management-f91118f07f1c",
         icon: SiMedium,
       },
       {
-        type: "GitHub Repository",
+        type: "🖥️ GitHub Repository",
         url: "https://github.com/oslabs-beta/BottleNetes",
         icon: FaGithub,
       },
       {
-        type: "LinkedIn",
+        type: "📋 LinkedIn",
         url: "https://www.linkedin.com/company/bottlenetes/posts/?feedView=all",
         icon: FaLinkedin,
       },
       {
-        type: "Product Hunt",
+        type: "🚀 Product Hunt",
         url: "https://www.producthunt.com/products/bottlenetes#bottlenetes",
         icon: FaProductHunt,
       },
       {
-        type: "X",
+        type: "🛰️ X",
         url: "https://x.com/bottlenetes",
         icon: FaSquareXTwitter,
       },
@@ -63,7 +63,7 @@ export const projects = [
     background: YAP,
     resources: [
       {
-        type: "GitHub Repository",
+        type: "🖥️ GitHub Repository",
         url: "https://github.com/bugs-go-away/ai",
         icon: FaGithub,
       },
@@ -79,7 +79,7 @@ export const projects = [
     background: Attune,
     resources: [
       {
-        type: "GitHub Repository",
+        type: "🖥️ GitHub Repository",
         url: "https://github.com/attune-iteration/attune_2.0",
         icon: FaGithub,
       },
@@ -95,7 +95,7 @@ export const projects = [
     background: ArmaDollar,
     resources: [
       {
-        type: "GitHub Repository",
+        type: "🖥️ GitHub Repository",
         url: "https://github.com/PFArmadillos/scratch",
         icon: FaGithub,
       },
@@ -111,7 +111,7 @@ export const projects = [
     background: Clockin,
     resources: [
       {
-        type: "GitHub Repository",
+        type: "🖥️ GitHub Repository",
         url: "https://github.com/MarkNghiem/Clockin",
         icon: FaGithub,
       },
@@ -127,7 +127,7 @@ export const projects = [
     background: Portfolio,
     resources: [
       {
-        type: "GitHub Repository",
+        type: "🖥️ GitHub Repository",
         url: "https://github.com/MarkNghiem/portfolio",
         icon: FaGithub,
       },

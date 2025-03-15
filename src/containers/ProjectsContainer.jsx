@@ -11,9 +11,6 @@ import Project from "../components/Projects-Project";
 // Stylesheets
 import "../assets/stylesheets/projects.css";
 
-// Data
-import { projects, blankGridPosition } from "../assets/data/projects";
-
 const ProjectsContainer = () => {
   const [divVisible, setDivVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
@@ -32,7 +29,7 @@ const ProjectsContainer = () => {
       >
         <h1 className="title pb-8">Projects</h1>
         <div className={`inner-div project-inner-div h-[70svh]`}>
-          <Project projects={projects} blank={blankGridPosition} />
+          <Project />
         </div>
       </div>
     </div>

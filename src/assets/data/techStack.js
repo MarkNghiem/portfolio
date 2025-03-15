@@ -29,14 +29,18 @@ import JestIcon from "/svg/jest.svg?url";
 import VercelIcon from "/svg/vercel.svg?url";
 import PostmanIcon from "/svg/postman.svg?url";
 import GoogleCloudIcon from "/svg/google-cloud.svg?url";
+import GoogleMapsIcon from "/svg/google-maps.svg?url";
 import OpenAIIcon from "/svg/openai.svg?url";
 import SupabaseIcon from "/svg/supabase.svg?url";
+import SpotifyIcon from "/svg/spotify.svg?url";
 import HTMLIcon from "/svg/html5.svg?url";
 import CSSIcon from "/svg/css.svg?url";
 import JSONIcon from "/svg/json.svg?url";
 import YAMLIcon from "/svg/yaml.svg?url";
 import GitIcon from "/svg/git.svg?url";
+import GitHubActionsIcon from '/svg/githubactions.svg?url'
 import ExcalidrawIcon from "/svg/excalidraw.svg?url";
+import TrelloIcon from "/svg/trello.svg?url";
 
 // Programming Languages list
 export const langs = [
@@ -213,7 +217,7 @@ export const techs = [
     icon: PostmanIcon,
   },
   {
-    name: "OpenAI API",
+    name: "OpenAI",
     url: "https://openai.com/api/",
     label: "OpenAI API Page",
     icon: OpenAIIcon,
@@ -223,6 +227,12 @@ export const techs = [
     url: "https://supabase.com/",
     label: "Supabase Homepage",
     icon: SupabaseIcon,
+  },
+  {
+    name: "Spotify",
+    url: "https://developer.spotify.com/documentation/web-api",
+    label: "Spotify for Developers Documentation",
+    icon: SpotifyIcon,
   },
   {
     name: "Amazon Web Services",
@@ -235,6 +245,12 @@ export const techs = [
     url: "https://cloud.google.com/?hl=en",
     label: "GCP Homepage",
     icon: GoogleCloudIcon,
+  },
+  {
+    name: "Google Maps Platform",
+    url: "https://mapsplatform.google.com/",
+    label: "Google Maps Platform Page",
+    icon: GoogleMapsIcon,
   },
 ];
 
@@ -271,9 +287,21 @@ export const others = [
     icon: GitIcon,
   },
   {
+    name: "GitHub Actions (Automating Workflows)",
+    url: "https://github.com/features/actions",
+    label: "GitHub Actions Feature Page",
+    icon: GitHubActionsIcon,
+  },
+  {
     name: "Excalidraw (Wireframing)",
     url: "https://plus.excalidraw.com/how-to-start",
     label: "Excalidraw - Getting Started",
     icon: ExcalidrawIcon,
+  },
+  {
+    name: "Trello (Scrum)",
+    url: "https://trello.com/",
+    label: "Trello Homepage",
+    icon: TrelloIcon,
   },
 ];

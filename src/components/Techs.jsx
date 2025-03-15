@@ -61,7 +61,7 @@ const Techs = ({ dataset }) => {
               onMouseEnter={(event) => handlePopperOpen(event, `lang.${index}`)}
               onMouseLeave={handlePopperClose}
             >
-              <img src={data.icon} className="tech-button-image" />
+              <img src={data.icon} alt={data.name} className="tech-button-image" />
               <p className="tech-button-description">{data.name}</p>
               <FaExternalLinkAlt className="icons" />
             </button>

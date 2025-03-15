@@ -63,20 +63,20 @@ const Footer = ({ handleEmail, scrollTo }) => {
           <ul className="footer-contact subtitle">
             Contact Me via:
             <li className="body font-normal first:mt-2">
-              Email:{" "}
+              ✉️ Email:{" "}
               <span onClick={handleEmail} className="footer-link">
                 mark.kietnghiem@gmail.com
               </span>
             </li>
             <li className="body font-normal">
-              LinkedIn:{" "}
+              📋 LinkedIn:{" "}
               <a
                 href="https://www.linkedin.com/in/mark-nghiem/"
                 title="LinkedIn"
                 aria-label="LinkedIn"
                 className="footer-link"
               >
-                Visit me <span className="font-semibold">here</span>
+                Visit me{" "}<span className="font-semibold">here</span>
               </a>
             </li>
           </ul>
