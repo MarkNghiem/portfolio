@@ -94,7 +94,7 @@
     }
 
     .footer-right-icon-container {
-      @apply w-9/10 place-self-center gap-x-3;
+      @apply w-[95%] place-self-center gap-x-3;
     }
 
     .footer-icon {
@@ -113,7 +113,7 @@
     }
 
     .footer-right-icon-container {
-      @apply gap-x-5
+      @apply gap-x-5 w-9/10
     }
 
     .footer-icon {
@@ -123,11 +123,15 @@
 
    /* From Widescreens' Viewports */
   @media screen and (min-width: 2560px) {
+    .footer-picture {
+      @apply size-88
+    }
+
     .footer-right-icon-container {
       @apply gap-x-8 w-4/5
     }
     .footer-icon {
-      @apply size-20
+      @apply size-18
     }
   }
 }

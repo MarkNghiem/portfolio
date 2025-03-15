@@ -20,6 +20,10 @@ export const builtWithIcons = [
     icon: JavaScriptIcon,
   },
   {
+    name: "TypeScript",
+    icon: TypeScriptIcon,
+  },
+  {
     name: "HTML",
     icon: HTMLIcon,
   },
