@@ -15,4 +15,12 @@ export const publications = [
     host: "Authors: Zoe Xu, Quin Kirsten, Julie Hoagland-Sorensen",
     collaboratedWith: "Collaborated with: BottleNetes, OSLabs",
   },
+  {
+    type: "Another Use for Code Commenting - Article",
+    description:
+      "Give your code comments another piece of functionality! Speed up your development and onboarding process with this useful tip.",
+    url: "https://medium.com/@mark.kietnghiem/another-use-for-code-commenting-fdc8751db080",
+    host: "Authors: Kiet (Mark) Nghiem",
+    collaboratedWith: null,
+  },
 ];
