@@ -4,8 +4,8 @@
 import '../assets/stylesheets/error.css';
 
 // Assets
-import pikaHiding from "../../public/pika-hiding.jpeg";
-import chuchuHiding from "../../public/chuchu-hiding.jpeg";
+import pikaHiding from "/pika-hiding.jpeg?url";
+import chuchuHiding from "/chuchu-hiding.jpeg?url";
 
 const ErrorDisplay = () => {
   return (

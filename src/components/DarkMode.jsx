@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-import sun from "../../public/sun.png";
-import moon from "../../public/moon.png";
+import sun from "/sun.png?url";
+import moon from "/moon.png?url";
 
 const DarkMode = () => {
   /**
@@ -18,7 +18,6 @@ const DarkMode = () => {
     } else {
       document.documentElement.classList.remove("dark");
     }
-    localStorage.setItem("theme", theme);
   }, [theme]);
 
   /**
@@ -27,8 +26,8 @@ const DarkMode = () => {
    * Else, switch it to light which is default theme
    */
   const toggleTheme = () => {
-    setTheme((prevTheme) => {
-      return prevTheme === "light" ? "dark" : "light";
+    setTheme((prev) => {
+      return prev === "light" ? "dark" : "light";
     });
   };
 

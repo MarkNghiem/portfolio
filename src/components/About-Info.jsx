@@ -23,8 +23,8 @@ import { BiLogoGmail } from "react-icons/bi";
 import { IoIosSend } from "react-icons/io";
 
 // Assets
-import me from "../../public/me.jpeg";
-import resume from "../../public/my-resume.pdf";
+import me from "/me.jpeg?url";
+import resume from "/my-resume.pdf?url";
 
 const Info = ({ handleEmail }) => {
   const [divVisible, setDivVisible] = useState(false);

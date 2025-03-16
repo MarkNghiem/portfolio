@@ -48,7 +48,7 @@ const NavBar = ({ scrollTo }) => {
     >
       <div
         id="navbar-left"
-        className={`relative flex justify-center navbar-left-style transition-transform duration-500 ease-out ${leftVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
+        className={`navbar-left-style relative flex justify-center transition-transform duration-500 ease-out ${leftVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
       >
         <DarkMode />
         <p className="animate-font-stretch font-semibold">

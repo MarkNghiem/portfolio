@@ -1,17 +1,27 @@
 // Assets
-import JavaScriptIcon from '../../../public/svg/javascript.svg';
-import HTMLIcon from "../../../public/svg/html5.svg";
-import CSSIcon from "../../../public/svg/css.svg";
-import ReactIcon from "../../../public/svg/react.svg";
-import ViteIcon from "../../../public/svg/vite.svg";
-import TailwindCSSIcon from "../../../public/svg/tailwindcss.svg";
-import MUIIcon from '../../../public/svg/mui.svg';
-import VercelIcon from "../../../public/svg/vercel.svg";
+import JavaScriptIcon from '/svg/javascript.svg?url';
+import TypeScriptIcon from '/svg/typescript.svg?url';
+import HTMLIcon from "/svg/html5.svg?url";
+import CSSIcon from "/svg/css.svg?url";
+import ReactIcon from "/svg/react.svg?url";
+import ViteIcon from "/svg/vite.svg?url";
+import LucideIcon from "/svg/lucide.svg?url"
+import MUIIcon from '/svg/mui.svg?url';
+import TailwindCSSIcon from "/svg/tailwindcss.svg?url";
+import VercelIcon from "/svg/vercel.svg?url";
+import GitIcon from '/svg/git.svg?url';
+import GitHubActionsIcon from '/svg/githubactions.svg?url';
+import ExcalidrawIcon from '/svg/excalidraw.svg?url';
+
 
 export const builtWithIcons = [
   {
     name: "JavaScript",
     icon: JavaScriptIcon,
+  },
+  {
+    name: "TypeScript",
+    icon: TypeScriptIcon,
   },
   {
     name: "HTML",
@@ -30,6 +40,10 @@ export const builtWithIcons = [
     icon: ViteIcon,
   },
   {
+    name: "Lucide",
+    icon: LucideIcon,
+  },
+  {
     name: "Tailwind CSS",
     icon: TailwindCSSIcon,
   },
@@ -40,5 +54,17 @@ export const builtWithIcons = [
   {
     name: "Vercel",
     icon: VercelIcon,
+  },
+  {
+    name: "Git",
+    icon: GitIcon,
+  },
+  {
+    name: "GitHub Actions",
+    icon: GitHubActionsIcon,
+  },
+  {
+    name: "Excalidraw",
+    icon: ExcalidrawIcon,
   },
 ];

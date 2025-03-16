@@ -65,7 +65,7 @@
   }
 
   .tech-button-image {
-    @apply size-10 rounded-lg;
+    @apply size-10 rounded-md;
   }
 
   .tech-button-description {
@@ -127,7 +127,7 @@
     }
 
     .tech-button-image {
-      @apply mr-3 size-10 rounded-lg;
+      @apply mr-3;
     }
 
     .tech-button-description {

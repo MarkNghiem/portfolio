@@ -6,8 +6,8 @@ import { useState } from "react";
 import useSmoothFadeInTransition from "../hooks/useSmoothFadeInTransition";
 
 // Assets
-import chuchuLarge from "../../public/chuchu-large.jpeg";
-import pikaLarge from "../../public/pika-large.jpeg";
+import chuchuLarge from "/chuchu-large.jpeg?url";
+import pikaLarge from "/pika-large.jpeg?url";
 
 const AboutMe = () => {
   const [divVisible, setDivVisible] = useState(false);
@@ -28,27 +28,27 @@ const AboutMe = () => {
         <h2 className="title mb-5">About Me...</h2>
         <p className="mb-3">
           👋🏼 Hey there! my name is Kiet Nghiem but I go by Mark most of the
-          time. I am a passionate and hungry-for-knowledge Software Engineer
-          dedicated to continuously improve myself with self-education and
-          hands-on experiences by building scalable applications and intuitive
-          user and developer experiences while adhering to best practices and
-          staying informed with the latest technologies.
+          time. I am an innovative and dedicated Software Engineer who loves to
+          build products for consumers. Engaging and tackling their problems
+          while solving bottlenecks with scalable applications and intuitive
+          user and developer experiences.
         </p>
         <p className="mb-3">
           🛠️ With expertise in JavaScript, TypeScript, React, Node.js, and
           Kubernetes, I specialize in creating efficient, maintainable, and
-          secure software solutions.
+          secured software solutions.
         </p>
         <p className="mb-3">
-          ✨ I love seeing people around me happy and accomplish great things.
-          Therefore I enjoy helping my teammates with both technical and
-          non-technical issues within my ability whenever I can.
+          ✨ I like watching my peers, teammates and partners accomplish great
+          feats. I am also a great listener and I enjoy helping them with any
+          technical or non-technical issues within my ability and watching them
+          celebrete victories, no matter big or small.
         </p>
         <p className="mb-3">
           🎮 Beyond coding, I enjoy collaborating in agile environments,
           mentoring engineers, and constantly pushing myself to learn new
           technologies. When I&apos;m not coding, you can find me tweaking UI
-          mods in games, enjoying great food, watching Anime and TV Shows.{" "}
+          mods in games, enjoying great food or watching Anime and TV Shows.{" "}
           <span className="italic">
             My current favorites right now are &apos;The Apothecary
             Diaries&apos; as well as &apos;Suits&apos;.

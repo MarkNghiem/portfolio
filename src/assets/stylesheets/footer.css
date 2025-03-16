@@ -21,7 +21,7 @@
   }
 
   .footer-contact {
-    @apply list-disc text-start;
+    @apply text-start;
   }
 
   .footer-right {
@@ -29,7 +29,7 @@
   }
 
   .footer-right-icon-container {
-    @apply mx-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-2;
+    @apply mx-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3;
   }
 
   .footer-icon {
@@ -94,7 +94,11 @@
     }
 
     .footer-right-icon-container {
-      @apply w-9/10 place-self-center;
+      @apply w-[95%] place-self-center gap-x-3;
+    }
+
+    .footer-icon {
+      @apply size-10
     }
 
     .footer-back-to-top {
@@ -106,6 +110,28 @@
   @media screen and (min-width: 1920px) {
     .footer-picture {
       @apply size-72;
+    }
+
+    .footer-right-icon-container {
+      @apply gap-x-5 w-9/10
+    }
+
+    .footer-icon {
+      @apply size-12
+    }
+  }
+
+   /* From Widescreens' Viewports */
+  @media screen and (min-width: 2560px) {
+    .footer-picture {
+      @apply size-88
+    }
+
+    .footer-right-icon-container {
+      @apply gap-x-8 w-4/5
+    }
+    .footer-icon {
+      @apply size-18
     }
   }
 }

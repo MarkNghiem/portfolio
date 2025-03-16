@@ -1,42 +1,46 @@
 // Icons imported from 'svg' folder
-import JavaScriptIcon from "../../../public/svg/javascript.svg";
-import TypeScriptIcon from "../../../public/svg/typescript.svg";
-import ReactIcon from "../../../public/svg/react.svg";
-import NodeIcon from "../../../public/svg/nodedotjs.svg";
-import ExpressIcon from "../../../public/svg/express.svg";
-import PostgreSQLIcon from "../../../public/svg/postgresql.svg";
-import MongoDBIcon from "../../../public/svg/mongodb.svg";
-import WebpackIcon from "../../../public/svg/webpack.svg";
-import ViteIcon from "../../../public/svg/vite.svg";
-import DockerIcon from "../../../public/svg/docker.svg";
-import KubernetesIcon from "../../../public/svg/kubernetes.svg";
-import AWSIcon from "../../../public/svg/amazonwebservices.svg";
-import ReduxIcon from "../../../public/svg/redux.svg";
-import ReactRouterIcon from "../../../public/svg/reactrouter.svg";
-import PassportIcon from "../../../public/svg/passport.svg";
-import TailwindCSSIcon from "../../../public/svg/tailwindcss.svg";
-import SassIcon from "../../../public/svg/sass.svg";
-import ChartJSIcon from "../../../public/svg/chartdotjs.svg";
-import ZustandIcon from "../../../public/svg/zustand.svg";
-import SequelizeIcon from "../../../public/svg/sequelize.svg";
-import LucideIcon from "../../../public/svg/lucide.svg";
-import MUIIcon from "../../../public/svg/mui.svg";
-import AxiosIcon from "../../../public/svg/axios.svg";
-import PrometheusIcon from "../../../public/svg/prometheus.svg";
-import IstioIcon from "../../../public/svg/istio.svg";
-import HelmIcon from "../../../public/svg/helm.svg";
-import JestIcon from "../../../public/svg/jest.svg";
-import VercelIcon from "../../../public/svg/vercel.svg";
-import PostmanIcon from '../../../public/svg/postman.svg';
-import GoogleCloudIcon from '../../../public/svg/google-cloud.svg';
-import OpenAIIcon from '../../../public/svg/openai.svg';
-import SupabaseIcon from '../../../public/svg/supabase.svg'
-import HTMLIcon from "../../../public/svg/html5.svg";
-import CSSIcon from "../../../public/svg/css.svg";
-import JSONIcon from "../../../public/svg/json.svg";
-import YAMLIcon from "../../../public/svg/yaml.svg";
-import GitIcon from '../../../public/svg/git.svg';
-import ExcalidrawIcon from '../../../public/svg/excalidraw.svg';
+import JavaScriptIcon from "/svg/javascript.svg?url";
+import TypeScriptIcon from "/svg/typescript.svg?url";
+import ReactIcon from "/svg/react.svg?url";
+import NodeIcon from "/svg/nodedotjs.svg?url";
+import ExpressIcon from "/svg/express.svg?url";
+import PostgreSQLIcon from "/svg/postgresql.svg?url";
+import MongoDBIcon from "/svg/mongodb.svg?url";
+import WebpackIcon from "/svg/webpack.svg?url";
+import ViteIcon from "/svg/vite.svg?url";
+import DockerIcon from "/svg/docker.svg?url";
+import KubernetesIcon from "/svg/kubernetes.svg?url";
+import AWSIcon from "/svg/amazonwebservices.svg?url";
+import ReduxIcon from "/svg/redux.svg?url";
+import ReactRouterIcon from "/svg/reactrouter.svg?url";
+import PassportIcon from "/svg/passport.svg?url";
+import TailwindCSSIcon from "/svg/tailwindcss.svg?url";
+import SassIcon from "/svg/sass.svg?url";
+import ChartJSIcon from "/svg/chartdotjs.svg?url";
+import ZustandIcon from "/svg/zustand.svg?url";
+import SequelizeIcon from "/svg/sequelize.svg?url";
+import LucideIcon from "/svg/lucide.svg?url";
+import MUIIcon from "/svg/mui.svg?url";
+import AxiosIcon from "/svg/axios.svg?url";
+import PrometheusIcon from "/svg/prometheus.svg?url";
+import IstioIcon from "/svg/istio.svg?url";
+import HelmIcon from "/svg/helm.svg?url";
+import JestIcon from "/svg/jest.svg?url";
+import VercelIcon from "/svg/vercel.svg?url";
+import PostmanIcon from "/svg/postman.svg?url";
+import GoogleCloudIcon from "/svg/google-cloud.svg?url";
+import GoogleMapsIcon from "/svg/google-maps.svg?url";
+import OpenAIIcon from "/svg/openai.svg?url";
+import SupabaseIcon from "/svg/supabase.svg?url";
+import SpotifyIcon from "/svg/spotify.svg?url";
+import HTMLIcon from "/svg/html5.svg?url";
+import CSSIcon from "/svg/css.svg?url";
+import JSONIcon from "/svg/json.svg?url";
+import YAMLIcon from "/svg/yaml.svg?url";
+import GitIcon from "/svg/git.svg?url";
+import GitHubActionsIcon from '/svg/githubactions.svg?url'
+import ExcalidrawIcon from "/svg/excalidraw.svg?url";
+import TrelloIcon from "/svg/trello.svg?url";
 
 // Programming Languages list
 export const langs = [
@@ -213,7 +217,7 @@ export const techs = [
     icon: PostmanIcon,
   },
   {
-    name: "OpenAI API",
+    name: "OpenAI",
     url: "https://openai.com/api/",
     label: "OpenAI API Page",
     icon: OpenAIIcon,
@@ -223,6 +227,12 @@ export const techs = [
     url: "https://supabase.com/",
     label: "Supabase Homepage",
     icon: SupabaseIcon,
+  },
+  {
+    name: "Spotify",
+    url: "https://developer.spotify.com/documentation/web-api",
+    label: "Spotify for Developers Documentation",
+    icon: SpotifyIcon,
   },
   {
     name: "Amazon Web Services",
@@ -235,6 +245,12 @@ export const techs = [
     url: "https://cloud.google.com/?hl=en",
     label: "GCP Homepage",
     icon: GoogleCloudIcon,
+  },
+  {
+    name: "Google Maps Platform",
+    url: "https://mapsplatform.google.com/",
+    label: "Google Maps Platform Page",
+    icon: GoogleMapsIcon,
   },
 ];
 
@@ -271,9 +287,21 @@ export const others = [
     icon: GitIcon,
   },
   {
+    name: "GitHub Actions (Automating Workflows)",
+    url: "https://github.com/features/actions",
+    label: "GitHub Actions Feature Page",
+    icon: GitHubActionsIcon,
+  },
+  {
     name: "Excalidraw (Wireframing)",
     url: "https://plus.excalidraw.com/how-to-start",
     label: "Excalidraw - Getting Started",
     icon: ExcalidrawIcon,
+  },
+  {
+    name: "Trello (Scrum)",
+    url: "https://trello.com/",
+    label: "Trello Homepage",
+    icon: TrelloIcon,
   },
 ];

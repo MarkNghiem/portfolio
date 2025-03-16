@@ -17,43 +17,60 @@
   }
 
   .project-group {
-    @apply flex w-[99%] flex-col gap-3 place-self-center;
+    @apply relative flex w-[99%] flex-col gap-3 place-self-center perspective-distant;
+  }
+
+  .project-background-overall {
+    @apply hidden;
   }
 
   .project-1 {
-    @apply to-cyan-900 dark:to-cyan-950;
+    @apply to-cyan-600 dark:to-cyan-950;
   }
 
   .project-2 {
-    @apply to-violet-900 dark:to-violet-950;
+    @apply to-violet-600 dark:to-violet-950;
   }
 
   .project-3 {
-    @apply to-teal-900 dark:to-teal-950;
+    @apply to-teal-600 dark:to-teal-950;
   }
 
   .project-4 {
-    @apply to-pink-900 dark:to-pink-950;
+    @apply to-pink-600 dark:to-pink-950;
   }
 
   .project-5 {
-    @apply to-sky-900 dark:to-sky-950;
+    @apply to-sky-600 dark:to-sky-950;
   }
 
   .project-6 {
-    @apply to-amber-900 dark:to-amber-950;
+    @apply to-amber-600 dark:to-amber-950;
   }
 
   .project-7 {
     @apply to-slate-700;
   }
 
-  .project-blank {
+  .project-blank-1,
+  .project-blank-2,
+  .project-blank-3,
+  .project-blank-4,
+  .project-blank-5,
+  .project-blank-6,
+  .project-blank-7,
+  .project-blank-8,
+  .project-blank-9,
+  .project-blank-10,
+  .project-blank-11,
+  .project-blank-12,
+  .project-blank-13,
+  .project-blank-14 {
     @apply hidden;
   }
 
   .project-card {
-    @apply relative h-full w-full rounded-2xl border border-slate-400 py-2 shadow-2xl shadow-slate-900/80 transition duration-300 dark:border-slate-700;
+    @apply relative h-full w-full rounded-2xl border border-slate-400 py-2 shadow-2xl shadow-slate-900/80 transition duration-500 dark:border-slate-700;
   }
 
   .project-background {
@@ -81,7 +98,7 @@
   }
 
   .project-icon-container {
-    @apply absolute top-0 left-0 z-30 m-2 flex gap-3;
+    @apply absolute top-3 left-3 z-30 flex gap-4;
   }
 
   .project-button {
@@ -96,11 +113,51 @@
     @apply hidden;
   }
 
+  .project-learn-more {
+    @apply mt-40 cursor-pointer rounded-xl border border-slate-500 bg-slate-300/40 px-4 py-2 transition duration-200 hover:scale-110 hover:brightness-110 active:scale-95 active:brightness-90 dark:bg-slate-950/50;
+  }
+
+  .project-learn-more-close {
+    @apply fixed top-1 right-2;
+  }
+
+  .from-tablet {
+    @apply hidden;
+  }
+
+  .backside {
+    @apply absolute inset-0 rotate-y-180 overflow-y-scroll py-8 text-start;
+  }
+
+  .backside-content {
+    @apply mx-5;
+  }
+
+  .arrows {
+    @apply hidden;
+  }
+
+  .arrows-styles {
+    @apply size-12 transition duration-300 hover:scale-125 hover:brightness-125 active:scale-110 active:brightness-90;
+  }
+
+  .project-tech-scroll {
+    @apply -mx-5 flex gap-x-3 overflow-x-scroll scroll-smooth py-2;
+  }
+
+  .project-tech-scroll-button {
+    @apply pointer-events-none flex shrink-0 items-center justify-center gap-x-3 rounded-4xl border border-slate-500 bg-slate-300/40 px-6 py-2 dark:bg-slate-950/50;
+  }
+
+  .backside-rss {
+    @apply flex flex-col justify-center gap-x-5;
+  }
+
   /* From Tablets' Viewports */
   @media screen and (min-width: 1024px) {
     /* Projects Section Styles */
     .project-icon {
-      @apply size-6;
+      @apply size-7;
     }
 
     .project-type {
@@ -110,53 +167,164 @@
     .project-title {
       @apply text-5xl;
     }
+
+    .project-learn-more-close {
+      @apply top-3 right-3 cursor-pointer rounded-xl border border-slate-500 bg-slate-300/40 px-4 py-2 transition duration-200 hover:scale-110 hover:brightness-110 active:scale-95 active:brightness-90 dark:bg-slate-950/50;
+    }
+
+    .mobile {
+      @apply hidden;
+    }
+
+    .from-tablet {
+      @apply block;
+    }
   }
 
   /* From Small Desktops' Viewports */
   @media screen and (min-width: 1440px) {
     /* Projects Section Styles */
+    .project-background-overall {
+      @apply fixed inset-0 top-0 -z-10 block bg-[url(/ultrasun.png)] bg-contain bg-scroll bg-center bg-no-repeat opacity-10 transition-opacity duration-1000 dark:bg-[url(/ultramoon.png)];
+    }
+
     .project-1 {
-      @apply col-span-3 row-span-4;
+      @apply col-end-4 row-end-5;
     }
 
     .project-2 {
-      @apply col-span-2 col-start-4 row-span-3;
+      @apply absolute -top-5 col-start-4 col-end-7 row-end-4;
     }
 
     .project-3 {
-      @apply col-span-2 col-start-4 row-span-2 row-start-4;
+      @apply absolute left-35 col-start-3 col-end-5 row-start-6 row-end-9 w-lg;
     }
 
     .project-4 {
-      @apply col-span-2 row-span-2 row-start-5;
+      @apply absolute top-10 left-10 col-end-3 row-start-5 row-end-8 w-lg;
     }
 
     .project-5 {
-      @apply col-span-3 col-start-3 row-start-6;
+      @apply absolute left-3 col-start-4 col-end-7 row-start-4 row-end-6;
     }
 
     .project-6 {
-      @apply col-span-3 row-start-7;
+      @apply absolute top-20 col-start-1 col-end-3 row-start-8 row-end-10 w-xl;
     }
 
     .project-7 {
-      @apply col-span-2 row-start-7;
+      @apply col-start-4 col-end-6 row-start-9 row-end-11;
     }
 
-    .project-blank {
-      @apply col-start-3 row-start-5 block h-full w-full;
+    .project-blank-1,
+    .project-blank-2,
+    .project-blank-3,
+    .project-blank-4,
+    .project-blank-5,
+    .project-blank-6,
+    .project-blank-7,
+    .project-blank-8,
+    .project-blank-9,
+    .project-blank-10,
+    .project-blank-11,
+    .project-blank-12,
+    .project-blank-13,
+    .project-blank-14 {
+      @apply -z-10 block h-full w-full transition-colors duration-300;
+    }
+
+    .project-blank-1,
+    .project-blank-8,
+    .project-blank-13,
+    .project-blank-14 {
+      @apply animate-pulse bg-amber-300/15 dark:bg-slate-900/70;
+    }
+
+    .project-blank-2,
+    .project-blank-9 {
+      @apply bg-slate-400/30 dark:bg-slate-950/60;
+    }
+
+    .project-blank-4,
+    .project-blank-10 {
+      @apply absolute animate-pulse bg-slate-300/30 dark:bg-slate-900/90;
+    }
+
+    .project-blank-5,
+    .project-blank-11 {
+      @apply absolute bg-amber-400/10 dark:bg-slate-950/50;
+    }
+
+    .project-blank-7,
+    .project-blank-12 {
+      @apply absolute bg-slate-500/10 dark:bg-slate-950/40;
+    }
+
+    .project-blank-1 {
+      @apply col-start-3 row-start-5;
+    }
+
+    .project-blank-2 {
+      @apply col-start-5 row-start-6 row-end-8 ml-2;
+    }
+
+    .project-blank-3 {
+      @apply col-start-5 row-start-7 row-end-9 -ml-15 animate-pulse bg-amber-600/20 dark:bg-slate-900/70;
+    }
+
+    .project-blank-4 {
+      @apply top-1/3 col-start-2 col-end-4 row-start-8 row-end-10;
+    }
+
+    .project-blank-5 {
+      @apply left-1/3 col-start-1 col-end-2 row-start-10 row-end-11 w-xl;
+    }
+
+    .project-blank-6 {
+      @apply absolute top-20 -left-20 col-start-2 col-end-4 row-start-5 row-end-9 bg-amber-600/10 dark:bg-slate-900/50;
+    }
+
+    .project-blank-7 {
+      @apply absolute top-20 -left-15 col-start-1 col-end-4 row-start-4 row-end-5;
+    }
+
+    .project-blank-8 {
+      @apply absolute -left-10 col-start-1 col-end-2 row-start-2 row-end-3;
+    }
+
+    .project-blank-9 {
+      @apply absolute -top-20 left-15 col-start-1 col-end-2 row-start-1 row-end-4;
+    }
+
+    .project-blank-10 {
+      @apply -top-10 left-20 col-start-3 col-end-5 row-start-2 row-end-5;
+    }
+
+    .project-blank-11 {
+      @apply top-10 left-20 col-start-4 col-end-6 row-start-3 row-end-4;
+    }
+    .project-blank-12 {
+      @apply -top-20 left-10 col-start-5 col-end-6 row-start-1 row-end-3;
+    }
+
+    .project-blank-13 {
+      @apply absolute -left-10 col-start-1 col-end-2 row-start-7 row-end-8;
+    }
+
+    .project-blank-14 {
+      @apply absolute top-5 left-20 col-start-5 col-end-6 row-start-10 row-end-11;
     }
 
     .project-inner-div {
-      @apply h-[80svh] py-10;
+      @apply h-[80svh] overflow-x-hidden py-10;
     }
 
     .project-group {
-      @apply grid grid-cols-5 grid-rows-7;
+      @apply grid grid-cols-5 grid-rows-10;
     }
 
     .project-card {
-      @apply group-hover:scale-90 group-hover:opacity-70 hover:z-10 hover:scale-105 hover:opacity-100;
+      @apply absolute border-3 transform-3d group-hover:scale-90 group-hover:opacity-90 group-hover:brightness-90 hover:z-10 hover:scale-105 hover:opacity-100 hover:brightness-125;
     }
 
     .project-card-inner {
@@ -176,11 +344,7 @@
     }
 
     .project-hover {
-      @apply opacity-0 transition-opacity duration-200 hover:opacity-100 active:opacity-100;
-    }
-
-    .project-icon-container {
-      @apply m-3;
+      @apply opacity-0 transition-opacity duration-200 hover:opacity-100;
     }
 
     .project-button {
@@ -195,11 +359,38 @@
       @apply block;
     }
 
+    .project-learn-more {
+      @apply mt-8;
+    }
+
+    .arrows {
+      @apply absolute top-1/2 block -translate-y-1/2 cursor-pointer;
+    }
+
+    .project-tech-scroll {
+      @apply mx-12 overflow-x-hidden;
+    }
   }
 
   /* From Desktops' Viewports */
   @media screen and (min-width: 1920px) {
     /* Projects Section Styles */
+    .project-3 {
+      @apply w-2xl;
+    }
+
+    .project-4 {
+      @apply left-0 w-2xl;
+    }
+
+    .project-5 {
+      @apply left-10;
+    }
+
+    .project-6 {
+      @apply left-10;
+    }
+
     .project-layout {
       @apply mt-40;
     }
@@ -213,6 +404,26 @@
 
     .project-title {
       @apply text-7xl;
+    }
+  }
+
+  /* From Widescreens' Viewports */
+  @media screen and (min-width: 2560px) {
+    /* Projects Section Styles */
+    .project-3 {
+      @apply left-50 w-3xl;
+    }
+
+    .project-4 {
+      @apply left-20 w-3xl;
+    }
+
+    .project-6 {
+      @apply absolute -left-5 w-3xl;
+    }
+
+    .project-blank-5 {
+      @apply w-3xl;
     }
   }
 }
