@@ -25,7 +25,7 @@ const Publications = () => {
     >
       <div
         id="publications-content"
-        className={`col-flex content-effect ${contentVisible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
+        className={`col-flex content-effect max-h-full ${contentVisible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
       >
         <h1 className="title pb-8">Publications</h1>
         <div className="publication-inner-layout inner-div">

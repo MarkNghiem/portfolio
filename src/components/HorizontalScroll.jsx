@@ -54,10 +54,11 @@ const HorizontalScroll = ({ dataset }) => {
 
   return (
     <div className="relative w-full">
+      {/* Scroll Left Button */}
       {canScrollLeft && (
-          <button className="arrows left-0" onClick={() => scroll("left")}>
-            <ChevronLeftCircle className="arrows-styles" />
-          </button>
+        <button className="arrows left-0" onClick={() => scroll("left")}>
+          <ChevronLeftCircle className="arrows-styles" />
+        </button>
       )}
       <div
         ref={scrollRef}
@@ -80,6 +81,7 @@ const HorizontalScroll = ({ dataset }) => {
           <p>No Data Available</p>
         )}
       </div>
+      {/* Scroll Right Button */}
       {canScrollRight && (
         <button className="arrows right-0" onClick={() => scroll("right")}>
           <ChevronRightCircle className="arrows-styles" />
