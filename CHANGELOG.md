@@ -1,5 +1,25 @@
 # Changelog
 
+## [2.0.0](https://github.com/MarkNghiem/portfolio/compare/v1.4.0...v2.0.0) (2025-03-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* Finished Recommendations. Completed Portfolio v2.0.0
+
+### Features
+
+* Added Logo for website ([5c1c8b3](https://github.com/MarkNghiem/portfolio/commit/5c1c8b304adfa58f175194403ae6d6801a328b52))
+* Added Lucide package. Added backside for each project ([9a96233](https://github.com/MarkNghiem/portfolio/commit/9a962330f7f38986d47c7e6b4010fcb5267739d3))
+* Added new publication ([e1e9dbe](https://github.com/MarkNghiem/portfolio/commit/e1e9dbe02cf9400de6b112c82564d3e2188a481b))
+* Finished Recommendations. Completed Portfolio v2.0.0 ([b8edc2d](https://github.com/MarkNghiem/portfolio/commit/b8edc2d0fe634f73ec4f042da3ed9fbd93c8be42))
+* Overhauled Projects Section styles ([44fd7cd](https://github.com/MarkNghiem/portfolio/commit/44fd7cd09ff2289abd818275dd40f0899f2fea1b))
+
+
+### Bug Fixes
+
+* Rearranged Footer's icons ([b9145cb](https://github.com/MarkNghiem/portfolio/commit/b9145cb0873bba8af6413f7183caae90a58869ce))
+
 ## [1.4.0](https://github.com/MarkNghiem/portfolio/compare/v1.3.1...v1.4.0) (2025-03-08)
 
 
