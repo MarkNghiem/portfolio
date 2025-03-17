@@ -1,3 +1,3 @@
 # My Portfolio
 
-Nothing to see here. Shoo shoo...
+This is a work in progress. Please check back soon!
