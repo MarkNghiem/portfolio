@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/MarkNghiem/portfolio/compare/v2.0.1...v2.0.2) (2025-03-20)
+
+
+### Bug Fixes
+
+* Resolved issue in addition to fixing Popper's content in Projects-Resources ([8240e18](https://github.com/MarkNghiem/portfolio/commit/8240e18bf09d023a3114ba4ec8515e322f630c89))
+
 ## [2.0.1](https://github.com/MarkNghiem/portfolio/compare/v2.0.0...v2.0.1) (2025-03-20)
 
 
