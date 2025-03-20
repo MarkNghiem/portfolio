@@ -24,7 +24,7 @@ import { IoIosSend } from "react-icons/io";
 
 // Assets
 import me from "/me.jpeg?url";
-import resume from "/my-resume.pdf?url";
+import resume from "/mark-resume.pdf?url";
 
 const Info = ({ handleEmail }) => {
   const [divVisible, setDivVisible] = useState(false);
