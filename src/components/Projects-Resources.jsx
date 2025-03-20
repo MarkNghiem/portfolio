@@ -73,7 +73,7 @@ const Resources = ({ resources, index1, projectName }) => {
                 {({ TransitionProps }) => (
                   <Fade {...TransitionProps} timeout={200}>
                     <div className="popper-desktop typography-global">
-                      <p>{`Visit ${projectName}'s ${resource.type}`}</p>
+                      <p>{`Visit ${projectName}'s ${resource.type.split(" ").slice(1).join(" ")}`}</p>
                       <FaExternalLinkAlt className="icons" />
                     </div>
                   </Fade>

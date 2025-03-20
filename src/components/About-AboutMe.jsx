@@ -29,9 +29,13 @@ const AboutMe = () => {
         <p className="mb-3">
           👋🏼 Hey there! my name is Kiet Nghiem but I go by Mark most of the
           time. I am an innovative and dedicated Software Engineer who loves to
-          build products for consumers. Engaging and tackling their problems
-          while solving bottlenecks with scalable applications and intuitive
-          user and developer experiences.
+          build intelligent and scalable products, providing solutions to
+          bottlenecks for consumer uses with intuitive and appealing UI.
+        </p>
+        <p className="mb-3">
+          😉 More importantly, I strive to always iterate and enchance UX/DX for
+          retention improvement in addition to attracting new clients and
+          consumers.
         </p>
         <p className="mb-3">
           🛠️ With expertise in JavaScript, TypeScript, React, Node.js, and

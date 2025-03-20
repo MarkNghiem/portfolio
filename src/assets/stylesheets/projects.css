@@ -363,6 +363,10 @@
       @apply mt-8;
     }
 
+    .backside {
+      @apply scale-90
+    }
+
     .arrows {
       @apply absolute top-1/2 block -translate-y-1/2 cursor-pointer;
     }

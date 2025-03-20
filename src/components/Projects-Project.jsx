@@ -21,7 +21,7 @@ const Project = () => {
         return (
           <div
             key={index1}
-            className={`project-card ${project.style} ${flipped === index1 ? "top-0 left-0 z-10 col-span-full w-full rotate-y-180" : ""}`}
+            className={`project-card ${project.style} ${flipped === index1 ? "top-0 left-0 z-10 col-span-full w-full max-h-full rotate-y-180" : ""}`}
           >
             <div
               className="project-background opacity-5"
