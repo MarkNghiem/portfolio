@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.1](https://github.com/MarkNghiem/portfolio/compare/v2.0.0...v2.0.1) (2025-03-20)
+
+
+### Bug Fixes
+
+* Replace Resume ([e765cf4](https://github.com/MarkNghiem/portfolio/commit/e765cf41a5c46c952665299127748851126ad9c7))
+* Replace Resume ([#27](https://github.com/MarkNghiem/portfolio/issues/27)) ([5857999](https://github.com/MarkNghiem/portfolio/commit/58579998d5547ede91f71f80a4189ab2ea1038fe))
+
 ## [2.0.0](https://github.com/MarkNghiem/portfolio/compare/v1.4.0...v2.0.0) (2025-03-16)
 
 
