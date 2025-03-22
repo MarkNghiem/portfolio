@@ -1,24 +1,31 @@
 /* eslint-disable no-unused-vars */
 // If there are any errors, this component will render
 
-import React from "react";
-import PropTypes from 'prop-types';
+import React, { ErrorInfo } from "react";
 
-import ErrorDisplay from "../components/ErrorDisplay.jsx";
+import ErrorDisplay from "../components/ErrorDisplay.js";
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+interface ErrorBoundaryState {
+  hasError: boolean;
+}
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
 
   // If there are en errors, hasError will be reassigned to true
-  static getDerivedStateFromError(_err) {
+  static getDerivedStateFromError(_err: Error) {
     return { hasError: true };
   }
 
   // Log the errors to console if they are caught
-  componentDidCatch(err, errInfo) {
+  componentDidCatch(err: Error, errInfo: ErrorInfo) {
     console.error(err);
     console.error(errInfo);
   }
@@ -32,10 +39,6 @@ class ErrorBoundary extends React.Component {
     // Otherwise, render the child, which, in this case, is App
     return this.props.children;
   }
-}
-
-ErrorBoundary.propTypes = {
-  children: PropTypes.element,
 }
 
 export default ErrorBoundary;
