@@ -26,12 +26,15 @@ import { IoIosSend } from "react-icons/io";
 import me from "/me.jpeg?url";
 import resume from "/mark-resume.pdf?url";
 
-const Info = ({ handleEmail }) => {
+// Types
+import { AboutProps } from "../types/types";
+
+const Info = ({ handleEmail }: AboutProps) => {
   const [divVisible, setDivVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
-  const [open, setOpen] = useState(null);
-  const [popperID, setPopperID] = useState(null);
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [open, setOpen] = useState<string | number | null>(null);
+  const [popperID, setPopperID] = useState<string | number | null>(null);
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
 
   // Debounce to make the popper trigger when hovering the button for 300ms
   const debouncedSetOpen = useMemo(
@@ -45,16 +48,23 @@ const Info = ({ handleEmail }) => {
    * If index is provide or index is 0 (Explicitly since 0 is falsy), trigger the opening of popper and set the current opening popper ID
    * Otherwise, trigger the opening of popper using the provided element as well as its ID
    */
-  const handlePopperOpen = useCallback((event, element, index) => {
-    setAnchorEl(event.currentTarget);
-    if (index || index === 0) {
-      debouncedSetOpen(index);
-      setPopperID(index);
-    } else {
-      debouncedSetOpen(element);
-      setPopperID(element);
-    }
-  }, [debouncedSetOpen]);
+  const handlePopperOpen = useCallback(
+    (
+      event: React.MouseEvent<HTMLElement | null>,
+      element: string | null,
+      index?: number | undefined,
+    ) => {
+      setAnchorEl(event.currentTarget);
+      if (index || index === 0) {
+        debouncedSetOpen(index);
+        setPopperID(index);
+      } else {
+        debouncedSetOpen(element);
+        setPopperID(element);
+      }
+    },
+    [debouncedSetOpen],
+  );
 
   /**
    * When not hovering anymore:
@@ -117,7 +127,7 @@ const Info = ({ handleEmail }) => {
               >
                 <button
                   id="download-resume"
-                  aria-owns={popperID}
+                  aria-owns={popperID ? String(popperID) : undefined}
                   className="info-button button-hover-effect"
                   onMouseEnter={(event) =>
                     handlePopperOpen(event, "download-resume")
@@ -130,7 +140,7 @@ const Info = ({ handleEmail }) => {
                 {anchorEl && (
                   <Popper
                     open={open === "download-resume"}
-                    id={popperID}
+                    id={popperID ? String(popperID) : undefined}
                     anchorEl={anchorEl}
                     placement="top-start"
                     transition
@@ -156,7 +166,7 @@ const Info = ({ handleEmail }) => {
                   >
                     <button
                       className="info-button button-hover-effect"
-                      aria-owns={popperID}
+                      aria-owns={popperID ? String(popperID) : undefined}
                       onMouseEnter={(event) =>
                         handlePopperOpen(event, null, index)
                       }
@@ -167,7 +177,7 @@ const Info = ({ handleEmail }) => {
                     </button>
                     {anchorEl && (
                       <Popper
-                        id={popperID}
+                        id={popperID ? String(popperID) : undefined}
                         open={open === index}
                         anchorEl={anchorEl}
                         placement="top-start"
@@ -191,7 +201,7 @@ const Info = ({ handleEmail }) => {
                 className="info-button button-hover-effect"
                 title="Send me an Email"
                 aria-label="Send me an Email"
-                aria-owns={popperID}
+                aria-owns={popperID ? String(popperID) : undefined}
                 id="send-email-button"
                 onMouseEnter={(event) =>
                   handlePopperOpen(event, "send-email-button")
@@ -203,7 +213,7 @@ const Info = ({ handleEmail }) => {
               </button>
               {anchorEl && (
                 <Popper
-                  id={popperID}
+                  id={popperID ? String(popperID) : undefined}
                   open={open === "send-email-button"}
                   anchorEl={anchorEl}
                   placement="top-start"

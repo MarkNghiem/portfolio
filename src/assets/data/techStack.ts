@@ -42,8 +42,10 @@ import GitHubActionsIcon from '/svg/githubactions.svg?url'
 import ExcalidrawIcon from "/svg/excalidraw.svg?url";
 import TrelloIcon from "/svg/trello.svg?url";
 
+import { Tech } from "../../types/types";
+
 // Programming Languages list
-export const langs = [
+export const langs: Tech[] = [
   {
     name: "JavaScript",
     url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
@@ -59,7 +61,7 @@ export const langs = [
 ];
 
 // Frameworks and Technologies list
-export const techs = [
+export const techs: Tech[] = [
   {
     name: "React",
     url: "https://react.dev/",
@@ -255,7 +257,7 @@ export const techs = [
 ];
 
 // Other minor techs and languages
-export const others = [
+export const others: Tech[] = [
   {
     name: "HTML",
     url: "https://developer.mozilla.org/en-US/docs/Web/HTML",

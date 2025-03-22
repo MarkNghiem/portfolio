@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import NavBar from "./components/NavBar";
 import Navigator from "./components/Navigator";
-import AboutContainer from "./containers/AboutContainer";
+import AboutContainer from "./containers/AboutContainer.tsx";
 import ProjectsContainer from "./containers/ProjectsContainer";
 import PublicationsContainer from "./containers/PublicationContainer";
 import EndingContainer from "./containers/EndingContainer";
@@ -37,8 +37,14 @@ const App = () => {
   };
 
   // Smooth scrolling behaviour when clicking on a button in the NavBar
-  const scrollTo = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  const scrollTo = (id: string) => {
+    const item = document.getElementById(id);
+
+    if (item) {
+      item.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error('❌ Unable to get Item. App.tsx - App Component - scrollTo func');
+    }
   };
 
   return (

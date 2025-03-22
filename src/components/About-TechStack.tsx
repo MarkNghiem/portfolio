@@ -3,13 +3,13 @@
 import { useState } from "react";
 
 // Components
-import Techs from './Techs';
+import Techs from "./Techs.tsx";
 
 // Custom Hooks
 import useSmoothFadeInTransition from "../hooks/useSmoothFadeInTransition";
 
 // Data
-import { langs, techs, others } from "../assets/data/techStack";
+import { langs, techs, others } from "../assets/data/techStack.ts";
 
 const TechStack = () => {
   const [divVisible, setDivVisible] = useState(false);

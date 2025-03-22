@@ -2,7 +2,6 @@
 
 import { useState, useMemo, useCallback } from "react";
 import debounce from "lodash.debounce";
-import PropTypes from "prop-types";
 
 // MUI Components
 import { Popper, Fade } from "@mui/material";
@@ -10,10 +9,13 @@ import { Popper, Fade } from "@mui/material";
 // React Icons
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-const Techs = ({ dataset }) => {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [open, setOpen] = useState(null);
-  const [popperID, setPopperID] = useState(null);
+// Types
+import { TechProps } from "../types/types";
+
+const Techs = ({ dataset }: TechProps) => {
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+  const [open, setOpen] = useState<string | number | null>(null);
+  const [popperID, setPopperID] = useState<string | number | null>(null);
 
   // Debounce the handler to only run when hovered for at least 300ms
   const setDebouncedOpen = useMemo(
@@ -23,13 +25,13 @@ const Techs = ({ dataset }) => {
 
   /**
    * A memoized callback for handling popper appearance when hovering over a button.
-   * 
+   *
    * When hovered:
    * - Set anchorEl to the current hovered object
    * - Set open and popperID to the index of current hovered object
    */
   const handlePopperOpen = useCallback(
-    (event, index) => {
+    (event: React.MouseEvent<HTMLElement | null>, index: number | string) => {
       setAnchorEl(event.currentTarget);
       setPopperID(index);
       setDebouncedOpen(index);
@@ -57,17 +59,21 @@ const Techs = ({ dataset }) => {
           >
             <button
               className="tech-button"
-              aria-owns={popperID}
+              aria-owns={popperID ? String(popperID) : undefined}
               onMouseEnter={(event) => handlePopperOpen(event, `lang.${index}`)}
               onMouseLeave={handlePopperClose}
             >
-              <img src={data.icon} alt={data.name} className="tech-button-image" />
+              <img
+                src={data.icon}
+                alt={data.name}
+                className="tech-button-image"
+              />
               <p className="tech-button-description">{data.name}</p>
               <FaExternalLinkAlt className="icons" />
             </button>
             {anchorEl && (
               <Popper
-                id={popperID}
+                id={popperID ? String(popperID) : undefined}
                 open={open === `lang.${index}`}
                 anchorEl={anchorEl}
                 placement="top-start"
@@ -88,10 +94,6 @@ const Techs = ({ dataset }) => {
       })}
     </div>
   );
-};
-
-Techs.propTypes = {
-  dataset: PropTypes.array,
 };
 
 export default Techs;

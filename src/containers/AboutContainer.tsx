@@ -1,16 +1,17 @@
 // About Container - First Section
 
-import PropTypes from "prop-types";
-
 // Stylesheets
 import "../assets/stylesheets/about.css";
 
 // Components
-import AboutMe from "../components/About-AboutMe";
-import Info from "../components/About-Info";
-import TechStack from "../components/About-TechStack";
+import AboutMe from "../components/About-AboutMe.tsx";
+import Info from "../components/About-Info.tsx";
+import TechStack from "../components/About-TechStack.tsx";
 
-const AboutContainer = ({ handleEmail }) => {
+// Types
+import { AboutProps } from "../types/types.ts";
+
+const AboutContainer = ({ handleEmail }: AboutProps) => {
   return (
     <div
       id="about"
@@ -21,10 +22,6 @@ const AboutContainer = ({ handleEmail }) => {
       <TechStack />
     </div>
   );
-};
-
-AboutContainer.propTypes = {
-  handleEmail: PropTypes.func,
 };
 
 export default AboutContainer;

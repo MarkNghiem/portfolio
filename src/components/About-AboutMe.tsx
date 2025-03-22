@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 // Custom Hooks
-import useSmoothFadeInTransition from "../hooks/useSmoothFadeInTransition";
+import useSmoothFadeInTransition from "../hooks/useSmoothFadeInTransition.ts";
 
 // Assets
 import chuchuLarge from "/chuchu-large.jpeg?url";
