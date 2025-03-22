@@ -327,6 +327,8 @@
       @apply absolute border-3 transform-3d group-hover:scale-90 group-hover:opacity-90 group-hover:brightness-90 hover:z-10 hover:scale-105 hover:opacity-100 hover:brightness-125;
     }
 
+    
+
     .project-card-inner {
       @apply h-full py-5 group-hover:opacity-0;
     }
