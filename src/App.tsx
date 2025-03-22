@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import NavBar from "./components/NavBar";
 import Navigator from "./components/Navigator";
-import AboutContainer from "./containers/AboutContainer.tsx";
+import AboutContainer from "./containers/AboutContainer";
 import ProjectsContainer from "./containers/ProjectsContainer";
 import PublicationsContainer from "./containers/PublicationContainer";
 import EndingContainer from "./containers/EndingContainer";

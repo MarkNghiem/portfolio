@@ -4,12 +4,12 @@
 import "../assets/stylesheets/about.css";
 
 // Components
-import AboutMe from "../components/About-AboutMe.tsx";
+import AboutMe from "../components/About-AboutMe";
 import Info from "../components/About-Info.tsx";
 import TechStack from "../components/About-TechStack.tsx";
 
 // Types
-import { AboutProps } from "../types/types.ts";
+import { AboutProps } from "../types/types";
 
 const AboutContainer = ({ handleEmail }: AboutProps) => {
   return (

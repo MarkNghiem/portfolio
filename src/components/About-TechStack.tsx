@@ -9,7 +9,7 @@ import Techs from "./Techs.tsx";
 import useSmoothFadeInTransition from "../hooks/useSmoothFadeInTransition";
 
 // Data
-import { langs, techs, others } from "../assets/data/techStack.ts";
+import { langs, techs, others } from "../assets/data/techStack";
 
 const TechStack = () => {
   const [divVisible, setDivVisible] = useState(false);
