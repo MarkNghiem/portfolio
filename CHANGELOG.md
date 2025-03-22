@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/MarkNghiem/portfolio/compare/v2.0.2...v2.0.3) (2025-03-22)
+
+
+### Bug Fixes
+
+* For Safari: Fix a problem where hovering below Project Section resulted in hovering project group ([a99a14c](https://github.com/MarkNghiem/portfolio/commit/a99a14ccb63d4e3f0028a9964fc85c842eedd307))
+
 ## [2.0.2](https://github.com/MarkNghiem/portfolio/compare/v2.0.1...v2.0.2) (2025-03-20)
 
 
