@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.4](https://github.com/MarkNghiem/portfolio/compare/v2.0.3...v2.0.4) (2025-03-23)
+
+
+### Bug Fixes
+
+* Converted the codebase to TS ([b6271a6](https://github.com/MarkNghiem/portfolio/commit/b6271a6fa5bad88ca90cb242ac05df4342369737))
+
 ## [2.0.3](https://github.com/MarkNghiem/portfolio/compare/v2.0.2...v2.0.3) (2025-03-22)
 
 
