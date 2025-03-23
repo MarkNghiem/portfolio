@@ -12,7 +12,10 @@ import DarkMode from './DarkMode';
 // Data
 import { navBarList } from '../assets/data/navBarList';
 
-const NavBar = ({ scrollTo }) => {
+// Types
+import { NavBarProps } from "../types/types";
+
+const NavBar = ({ scrollTo }: NavBarProps) => {
   // State for the entire NavBar
   const [visible, setVisible] = useState(false);
   // Left-side NavBar

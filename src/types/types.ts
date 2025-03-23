@@ -18,6 +18,14 @@ export interface TechProps {
   dataset: Tech[]
 }
 
+/**
+ * Props for NavBar Components
+ * @template scrollTo A function that takes an id to anchor the scroll destinations when a NavBar's button is clicked
+ */
+export interface NavBarProps {
+  scrollTo: (id: string) => void
+}
+
 // Data
 
 /**

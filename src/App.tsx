@@ -10,6 +10,9 @@ import PublicationsContainer from "./containers/PublicationContainer";
 import EndingContainer from "./containers/EndingContainer";
 import Footer from "./containers/Footer";
 
+// Types
+import { NavBarProps } from "./types/types";
+
 const App = () => {
   const [visible, setVisible] = useState(false);
 
@@ -37,13 +40,15 @@ const App = () => {
   };
 
   // Smooth scrolling behaviour when clicking on a button in the NavBar
-  const scrollTo = (id: string) => {
+  const scrollTo: NavBarProps["scrollTo"] = (id) => {
     const item = document.getElementById(id);
 
     if (item) {
       item.scrollIntoView({ behavior: "smooth" });
     } else {
-      console.error('❌ Unable to get Item. App.tsx - App Component - scrollTo func');
+      console.error(
+        "❌ Unable to get Item. App.tsx - App Component - scrollTo func",
+      );
     }
   };
 

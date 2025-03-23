@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import "../assets/stylesheets/navigator.css";
 
 const Navigator = () => {
-  const [activeDiv, setActiveDiv] = useState(null);
+  const [activeDiv, setActiveDiv] = useState<number | null>(null);
   const [divVisible, setDivVisible] = useState(false);
 
   // Timer to create smooth fade in effect for each components
@@ -39,29 +39,37 @@ const Navigator = () => {
        * If not yet scrolled, no activeDiv
        * If scrolled to a section (between the height of that section), then activeDiv is set to that section's index
        */
-      if (scrollY < aboutStart?.offsetTop) {
+      if (aboutStart && scrollY < aboutStart.offsetTop) {
         setActiveDiv(null);
       }
 
       if (
-        scrollY >= aboutStart?.offsetTop &&
-        scrollY <= aboutStart?.offsetTop + aboutSection?.offsetHeight
+        aboutStart &&
+        aboutSection &&
+        scrollY >= aboutStart.offsetTop &&
+        scrollY <= aboutStart.offsetTop + aboutSection.offsetHeight
       ) {
         setActiveDiv(0);
       } else if (
-        scrollY >= projectsStart?.offsetTop &&
-        scrollY <= projectsStart?.offsetTop + projectsSection?.offsetHeight
+        projectsStart &&
+        projectsSection &&
+        scrollY >= projectsStart.offsetTop &&
+        scrollY <= projectsStart.offsetTop + projectsSection.offsetHeight
       ) {
         setActiveDiv(1);
       } else if (
-        scrollY >= publicationsStart?.offsetTop &&
+        publicationsStart &&
+        publicationsSection &&
+        scrollY >= publicationsStart.offsetTop &&
         scrollY <=
-          publicationsStart?.offsetTop + publicationsSection?.offsetHeight
+          publicationsStart.offsetTop + publicationsSection.offsetHeight
       ) {
         setActiveDiv(2);
       } else if (
-        scrollY >= endingStart?.offsetTop &&
-        scrollY <= endingStart?.offsetTop + endingSection?.offsetHeight
+        endingStart &&
+        endingSection &&
+        scrollY >= endingStart.offsetTop &&
+        scrollY <= endingStart.offsetTop + endingSection.offsetHeight
       ) {
         setActiveDiv(3);
       }
