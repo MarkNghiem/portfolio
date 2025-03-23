@@ -71,7 +71,7 @@ const Recommendation = () => {
         id="recommendations-content"
         className={`col-flex content-effect max-h-full ${contentVisible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
       >
-        <div className='rec-title-container'>
+        <div className="rec-title-container">
           {/* Scroll Left Button */}
           {canScrollLeft && (
             <button className="arrows left-0" onClick={() => scroll("left")}>

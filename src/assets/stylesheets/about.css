@@ -53,9 +53,9 @@
 
   /* Tech Stack Section Styles */
   .tech-height {
-    @apply max-h-[70svh]
+    @apply max-h-[70svh];
   }
-  
+
   .tech-button-group {
     @apply flex flex-wrap justify-center gap-2 place-self-center;
   }
@@ -170,7 +170,7 @@
     }
 
     .tech-height {
-      @apply max-h-[80svh]
+      @apply max-h-[80svh];
     }
   }
 
@@ -188,7 +188,7 @@
     }
 
     .tech-height {
-      @apply max-h-[65svh]
+      @apply max-h-[65svh];
     }
   }
 }

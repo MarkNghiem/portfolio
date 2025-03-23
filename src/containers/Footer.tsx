@@ -7,7 +7,6 @@
  */
 
 import { useCallback, useMemo, useState } from "react";
-import PropTypes from "prop-types";
 
 // MUI Components
 import { Fade, Popper } from "@mui/material";
@@ -23,20 +22,23 @@ import MeFooter from "/me-footer.jpg?url";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import debounce from "lodash.debounce";
 
-const Footer = ({ handleEmail, scrollTo }) => {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [open, setOpen] = useState(null);
-  const [popperID, setPopperID] = useState(null);
+// Types
+import { FooterProps } from "../types/propTypes";
+
+const Footer = ({ handleEmail, scrollTo }: FooterProps) => {
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+  const [open, setOpen] = useState<number | null>(null);
+  const [popperID, setPopperID] = useState<string | number | null>(null);
 
   // Debounce function, makes popper appear ONLY when hovering over an icons for at least 300ms
   const debouncedSetOpen = useMemo(
-    () => debounce((index) => setOpen(index), 300),
+    () => debounce((index: number) => setOpen(index), 300),
     [],
   );
 
   // Memoized callback, handle poppers' appearances when hovering over an icon
   const handlePopperOpen = useCallback(
-    (event, index) => {
+    (event: React.MouseEvent<HTMLElement | null>, index: number) => {
       setAnchorEl(event.currentTarget);
       setPopperID(index);
       debouncedSetOpen(index);
@@ -76,7 +78,7 @@ const Footer = ({ handleEmail, scrollTo }) => {
                 aria-label="LinkedIn"
                 className="footer-link"
               >
-                Visit me{" "}<span className="font-semibold">here</span>
+                Visit me <span className="font-semibold">here</span>
               </a>
             </li>
           </ul>
@@ -93,8 +95,8 @@ const Footer = ({ handleEmail, scrollTo }) => {
                   className="footer-icon"
                   title={icon.name}
                   aria-label={icon.name}
-                  aria-owns={popperID}
-                  id={index}
+                  aria-owns={popperID ? String(popperID) : undefined}
+                  id={index ? String(index) : undefined}
                   onMouseEnter={(event) => handlePopperOpen(event, index)}
                   onMouseLeave={handlePopperClose}
                 />
@@ -102,7 +104,7 @@ const Footer = ({ handleEmail, scrollTo }) => {
                   <Popper
                     open={open === index}
                     anchorEl={anchorEl}
-                    id={popperID}
+                    id={popperID ? String(popperID) : undefined}
                     placement="top-end"
                     transition
                   >
@@ -150,11 +152,6 @@ const Footer = ({ handleEmail, scrollTo }) => {
       </div>
     </div>
   );
-};
-
-Footer.propTypes = {
-  handleEmail: PropTypes.func,
-  scrollTo: PropTypes.func,
 };
 
 export default Footer;

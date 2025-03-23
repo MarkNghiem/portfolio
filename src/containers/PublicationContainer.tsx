@@ -5,7 +5,7 @@ import Publications from "../components/Publication-Publication";
 import Recommendation from "../components/Publication-Recommendation";
 
 // Stylesheets
-import '../assets/stylesheets/publications.css';
+import "../assets/stylesheets/publications.css";
 
 const PublicationsContainer = () => {
   return (

@@ -1,7 +1,6 @@
 //The Navigation Bar - Sticky on top of the page
 
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 
 // Stylesheets
 import "../assets/stylesheets/navBar.css";
@@ -76,10 +75,6 @@ const NavBar = ({ scrollTo }: NavBarProps) => {
       </div>
     </div>
   );
-};
-
-NavBar.propTypes = {
-  scrollTo: PropTypes.func,
 };
 
 export default NavBar;

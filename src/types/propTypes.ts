@@ -69,6 +69,21 @@ export interface ProjectBackSideProps {
   setFlipped: React.Dispatch<React.SetStateAction<number | null>>;
 }
 
+/**
+ * PropTypes for HorizontalScroll Component
+ * @template Tech An Object contains information about a technology
+ */
 export interface HorizontalScrollProps {
-  dataset: Tech[] | undefined
+  /** A list of Technologies. The Returned Value from 'populateTech' Function, can be undefined */
+  dataset: Tech[] | undefined;
+}
+
+/**
+ * PropTypes for Footer Component
+ */
+export interface FooterProps {
+  /** A function definition to send an email to my address when a certain button is clicked */
+  handleEmail: () => void;
+  /** A function that takes an id to anchor the scroll destinations when a NavBar's button is clicked */
+  scrollTo: (id: string) => void;
 }

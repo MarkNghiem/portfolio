@@ -1,7 +1,6 @@
 // 'Info' Section - Containing personal portrait and links
 
 import { useCallback, useMemo, useState } from "react";
-import PropTypes from "prop-types";
 import debounce from "lodash.debounce";
 
 // MUI Components
@@ -236,10 +235,6 @@ const Info = ({ handleEmail }: AboutProps) => {
       </div>
     </div>
   );
-};
-
-Info.propTypes = {
-  handleEmail: PropTypes.func,
 };
 
 export default Info;
