@@ -94,11 +94,11 @@
     }
 
     .footer-right-icon-container {
-      @apply w-[95%] place-self-center gap-x-3;
+      @apply w-[95%] gap-x-3 place-self-center;
     }
 
     .footer-icon {
-      @apply size-10
+      @apply size-10;
     }
 
     .footer-back-to-top {
@@ -113,25 +113,25 @@
     }
 
     .footer-right-icon-container {
-      @apply gap-x-5 w-9/10
+      @apply w-9/10 gap-x-5;
     }
 
     .footer-icon {
-      @apply size-12
+      @apply size-12;
     }
   }
 
-   /* From Widescreens' Viewports */
+  /* From Widescreens' Viewports */
   @media screen and (min-width: 2560px) {
     .footer-picture {
-      @apply size-88
+      @apply size-88;
     }
 
     .footer-right-icon-container {
-      @apply gap-x-8 w-4/5
+      @apply w-4/5 gap-x-8;
     }
     .footer-icon {
-      @apply size-18
+      @apply size-18;
     }
   }
 }

@@ -5,7 +5,7 @@
 @layer utilities {
   /* From Mobile's Viewports */
   .navigator {
-    @apply hidden pointer-events-none;
+    @apply pointer-events-none hidden;
   }
 
   .navigator-list-items {
@@ -13,19 +13,19 @@
   }
 
   .navigator-list-items-active {
-    @apply scale-105 text-orange-400 dark:text-orange-300
+    @apply scale-105 text-orange-400 dark:text-orange-300;
   }
 
   .navigator-text {
-    @apply font-semibold transition duration-300 text-orange-400 dark:text-orange-300;
+    @apply font-semibold text-orange-400 transition duration-300 dark:text-orange-300;
   }
 
   .surprised-active {
-    @apply scale-105 text-red-500 dark:text-red-400
+    @apply scale-105 text-red-500 dark:text-red-400;
   }
 
   .surprised-text {
-    @apply font-semibold transition duration-300 text-red-500 dark:text-red-400;
+    @apply font-semibold text-red-500 transition duration-300 dark:text-red-400;
   }
 
   /* From Desktops' Viewports */

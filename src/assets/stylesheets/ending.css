@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @layer utilities {
   /* From Mobile's Viewports */
@@ -23,7 +23,7 @@
     }
   }
 
-   /* From Small Desktops' Viewports */
+  /* From Small Desktops' Viewports */
   @media screen and (min-width: 1440px) {
     /* Ending Section Styles */
     .ending-pictures {
