@@ -4,7 +4,10 @@ import { projects } from "./projects";
 // Utils
 import { populateTech } from "../../utils/populateTech";
 
-const projectClockin = {
+// Types
+import { ProjectBackSideDetail } from "../../types/dataTypes";
+
+const projectClockin: ProjectBackSideDetail = {
   name: "Clockin'",
   summary:
     "A must-have application for managers. Keeping track of your employees' time and information simplified",

@@ -1,11 +1,13 @@
 import { useRef, useState, useEffect, useCallback } from "react";
-import PropTypes from "prop-types";
 
 // Lucide Icons
 import { ChevronLeftCircle, ChevronRightCircle } from "lucide-react";
 
-const HorizontalScroll = ({ dataset }) => {
-  const scrollRef = useRef(null);
+// Types
+import { HorizontalScrollProps } from "../types/propTypes";
+
+const HorizontalScroll = ({ dataset }: HorizontalScrollProps) => {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const [loading, setLoading] = useState(true);
@@ -36,7 +38,7 @@ const HorizontalScroll = ({ dataset }) => {
     return () => scrollEl.removeEventListener("scroll", checkScrollPosition);
   }, [checkScrollPosition]);
 
-  const scroll = (direction) => {
+  const scroll = (direction: string) => {
     if (scrollRef.current) {
       const scrollAmount = scrollRef.current.clientWidth - 250;
       scrollRef.current.scrollBy({
@@ -64,7 +66,7 @@ const HorizontalScroll = ({ dataset }) => {
         ref={scrollRef}
         className="project-tech-scroll min-xl:scrollbar-hidden"
       >
-        {dataset.length > 0 ? (
+        {dataset && dataset.length > 0 ? (
           dataset.map((data, index) => {
             return (
               <div key={index} className="project-tech-scroll-button">
@@ -89,10 +91,6 @@ const HorizontalScroll = ({ dataset }) => {
       )}
     </div>
   );
-};
-
-HorizontalScroll.propTypes = {
-  dataset: PropTypes.array,
 };
 
 export default HorizontalScroll;

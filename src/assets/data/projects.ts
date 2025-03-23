@@ -12,7 +12,10 @@ import ArmaDollar from "/armadollar.png?url";
 import Clockin from "/clockin.png?url";
 import Portfolio from "/portfolio.jpg?url";
 
-export const projects = [
+// Types
+import { Project } from "../../types/dataTypes";
+
+export const projects: Project[] = [
   {
     type: "Open-source Product",
     name: "BottleNetes",

@@ -4,7 +4,10 @@ import { projects } from "./projects";
 // Utils
 import { populateTech } from "../../utils/populateTech";
 
-const projectYAP = {
+// Types
+import { ProjectBackSideDetail } from "../../types/dataTypes";
+
+const projectYAP: ProjectBackSideDetail = {
   name: "YAP",
   summary:
     "Your Adaptive Personal is a free-to-use communication skills enhancement application. From preparing for a job interview to casually talking with friends, YAP will help you replacing those awkward silence moments with interesting and engaging conversation.",

@@ -8,9 +8,9 @@ import BackSide from "./Project-BackSide";
 import { projects, blankGridPosition } from "../assets/data/projects";
 
 const Project = () => {
-  const [flipped, setFlipped] = useState(null);
+  const [flipped, setFlipped] = useState<number | null>(null);
 
-  const handleFlip = (index) => {
+  const handleFlip = (index: number) => {
     setFlipped((prev) => (prev === index ? null : index));
   };
 
@@ -21,7 +21,7 @@ const Project = () => {
         return (
           <div
             key={index1}
-            className={`project-card ${project.style} ${flipped === index1 ? "top-0 left-0 z-10 col-span-full w-full max-h-full rotate-y-180" : ""}`}
+            className={`project-card ${project.style} ${flipped === index1 ? "top-0 left-0 z-10 col-span-full max-h-full w-full rotate-y-180" : ""}`}
           >
             <div
               className="project-background opacity-5"

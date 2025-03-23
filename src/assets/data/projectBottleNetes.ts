@@ -4,7 +4,10 @@ import { projects } from "./projects";
 // Utils
 import { populateTech } from "../../utils/populateTech";
 
-const projectBottleNetes = {
+// Types
+import { ProjectBackSideDetail } from "../../types/dataTypes";
+
+const projectBottleNetes: ProjectBackSideDetail = {
   name: "BottleNetes",
   summary:
     "An ever-improving and maintaining Open-source product. A highly efficient with robust functionalities to manage and monitor Kubernetes Clusters. BottleNetes offers scalable, secured and smart alternative to boost the performance of your container orchestration system with the help of various graph forms and a trained model.",

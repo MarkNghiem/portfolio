@@ -4,7 +4,10 @@ import { projects } from "./projects";
 // Utils
 import { populateTech } from "../../utils/populateTech";
 
-const projectArmaDollar = {
+// Types
+import { ProjectBackSideDetail } from "../../types/dataTypes";
+
+const projectArmaDollar: ProjectBackSideDetail = {
   name: "ArmaDollar",
   summary:
     "Track your dollars with ArmaDollar, a subscription tracker and budget manager",

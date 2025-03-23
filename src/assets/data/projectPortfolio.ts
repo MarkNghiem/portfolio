@@ -4,7 +4,10 @@ import { projects } from "./projects";
 // Utils
 import { populateTech } from "../../utils/populateTech";
 
-const projectPortfolio = {
+// Types
+import { ProjectBackSideDetail } from "../../types/dataTypes";
+
+const projectPortfolio: ProjectBackSideDetail = {
   name: "Portfolio",
   summary:
     "The most robust Front-End Application that I have built. Get to know me better by visiting this website",

@@ -4,7 +4,10 @@ import { projects } from "./projects";
 // Utils
 import { populateTech } from "../../utils/populateTech";
 
-const projectAttune = {
+// Types
+import { ProjectBackSideDetail } from "../../types/dataTypes";
+
+const projectAttune: ProjectBackSideDetail = {
   name: "Attune",
   summary:
     "A Web Application for building good habit with the help of music that fits the mood. Empowered and motivating while working out, or inspiring and calm when studying.",

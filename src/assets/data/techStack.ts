@@ -38,11 +38,11 @@ import CSSIcon from "/svg/css.svg?url";
 import JSONIcon from "/svg/json.svg?url";
 import YAMLIcon from "/svg/yaml.svg?url";
 import GitIcon from "/svg/git.svg?url";
-import GitHubActionsIcon from '/svg/githubactions.svg?url'
+import GitHubActionsIcon from "/svg/githubactions.svg?url";
 import ExcalidrawIcon from "/svg/excalidraw.svg?url";
 import TrelloIcon from "/svg/trello.svg?url";
 
-import { Tech } from "../../types/types";
+import { Tech } from "../../types/dataTypes";
 
 // Programming Languages list
 export const langs: Tech[] = [

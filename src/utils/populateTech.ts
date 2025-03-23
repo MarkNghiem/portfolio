@@ -1,7 +1,7 @@
 import { langs, techs, others } from "../assets/data/techStack";
 
 // Types
-import { Tech } from "../types/types";
+import { Tech } from "../types/dataTypes";
 
 /**
  * A function to populate the 'techonologies' array for each project.

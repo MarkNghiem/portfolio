@@ -1,5 +1,4 @@
 import { useCallback, useMemo, useState } from "react";
-import PropTypes from "prop-types";
 import debounce from "lodash.debounce";
 
 // MUI Components
@@ -8,14 +7,35 @@ import { Fade, Popper } from "@mui/material";
 // React Icons
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-const Resources = ({ resources, index1, projectName }) => {
-  const [open, setOpen] = useState({ index1: null, index2: null });
-  const [popperID, setPopperID] = useState(null);
-  const [anchorEl, setAnchorEl] = useState(null);
+// Types
+import { ProjectResourcesProps } from "../types/propTypes";
+
+/**
+ * Interface for 'open' State
+ */
+interface Open {
+  /** Index from Projects List */
+  index1: number | null;
+  /** Index from Resources List */
+  index2: number | null;
+}
+
+const Resources = ({
+  resources,
+  index1,
+  projectName,
+}: ProjectResourcesProps) => {
+  const [open, setOpen] = useState<Open>({ index1: null, index2: null });
+  const [popperID, setPopperID] = useState<string | number | null>(null);
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
 
   // Debouncing each event to only trigger when hovering over a grid for at least 300ms
   const setDebouncedOpen = useMemo(
-    () => debounce((index1, index2) => setOpen({ index1, index2 }), 300),
+    () =>
+      debounce(
+        (index1: number, index2: number) => setOpen({ index1, index2 }),
+        300,
+      ),
     [],
   );
 
@@ -27,7 +47,11 @@ const Resources = ({ resources, index1, projectName }) => {
    * Reason for 2 indexes is because it is nested map. 1 for 'projects' array and 1 for 'resources' array nested in each objects in 'projects' array
    */
   const handlePopperOpen = useCallback(
-    (event, index1, index2) => {
+    (
+      event: React.MouseEvent<HTMLElement | null>,
+      index1: number,
+      index2: number,
+    ) => {
       setAnchorEl(event.currentTarget);
       setPopperID(`${index1}.${index2}`);
       setDebouncedOpen(index1, index2);
@@ -42,7 +66,7 @@ const Resources = ({ resources, index1, projectName }) => {
   const handlePopperClose = () => {
     setDebouncedOpen.cancel();
     setAnchorEl(null);
-    setOpen({ projectIndex: null, resourceIndex: null });
+    setOpen({ index1: null, index2: null });
     setPopperID(null);
   };
 
@@ -54,18 +78,16 @@ const Resources = ({ resources, index1, projectName }) => {
           <a key={index2} href={resource.url} aria-label={resource.type}>
             <button
               className="project-button"
-              aria-owns={popperID}
+              aria-owns={popperID ? String(popperID) : undefined}
               onMouseEnter={(event) => handlePopperOpen(event, index1, index2)}
               onMouseLeave={handlePopperClose}
             >
-              <Icon className='project-icon'/>
+              <Icon className="project-icon" />
             </button>
             {anchorEl && (
               <Popper
-                id={popperID}
-                open={
-                  open.index1 === index1 && open.index2 === index2
-                }
+                id={popperID ? String(popperID) : undefined}
+                open={open.index1 === index1 && open.index2 === index2}
                 anchorEl={anchorEl}
                 placement="top-start"
                 transition
@@ -85,12 +107,6 @@ const Resources = ({ resources, index1, projectName }) => {
       })}
     </div>
   );
-};
-
-Resources.propTypes = {
-  resources: PropTypes.array,
-  index1: PropTypes.number,
-  projectName: PropTypes.string,
 };
 
 export default Resources;

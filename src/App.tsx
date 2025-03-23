@@ -11,7 +11,7 @@ import EndingContainer from "./containers/EndingContainer";
 import Footer from "./containers/Footer";
 
 // Types
-import { NavBarProps } from "./types/types";
+import { NavBarProps } from "./types/propTypes";
 
 const App = () => {
   const [visible, setVisible] = useState(false);

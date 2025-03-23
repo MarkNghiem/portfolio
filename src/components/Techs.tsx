@@ -10,7 +10,7 @@ import { Popper, Fade } from "@mui/material";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 // Types
-import { TechProps } from "../types/types";
+import { TechProps } from "../types/propTypes";
 
 const Techs = ({ dataset }: TechProps) => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);

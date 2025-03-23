@@ -27,7 +27,7 @@ import me from "/me.jpeg?url";
 import resume from "/mark-resume.pdf?url";
 
 // Types
-import { AboutProps } from "../types/types";
+import { AboutProps } from "../types/propTypes";
 
 const Info = ({ handleEmail }: AboutProps) => {
   const [divVisible, setDivVisible] = useState(false);

@@ -7,13 +7,13 @@ import PropTypes from "prop-types";
 import "../assets/stylesheets/navBar.css";
 
 // Components
-import DarkMode from './DarkMode';
+import DarkMode from "./DarkMode";
 
 // Data
-import { navBarList } from '../assets/data/navBarList';
+import { navBarList } from "../assets/data/navBarList";
 
 // Types
-import { NavBarProps } from "../types/types";
+import { NavBarProps } from "../types/propTypes";
 
 const NavBar = ({ scrollTo }: NavBarProps) => {
   // State for the entire NavBar

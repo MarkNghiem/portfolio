@@ -1,9 +1,15 @@
-import PropTypes from "prop-types";
-
 // Components
 import Resources from "./Projects-Resources";
 
-const FrontSide = ({ project, index1, flipped, handleFlip }) => {
+// Types
+import { ProjectFrontSideProps } from "../types/propTypes";
+
+const FrontSide = ({
+  project,
+  index1,
+  flipped,
+  handleFlip,
+}: ProjectFrontSideProps) => {
   return (
     <>
       <div
@@ -34,13 +40,6 @@ const FrontSide = ({ project, index1, flipped, handleFlip }) => {
       </div>
     </>
   );
-};
-
-FrontSide.propTypes = {
-  project: PropTypes.object,
-  index1: PropTypes.number,
-  flipped: PropTypes.any,
-  handleFlip: PropTypes.func,
 };
 
 export default FrontSide;

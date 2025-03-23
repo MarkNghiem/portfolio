@@ -9,7 +9,7 @@ import Info from "../components/About-Info.tsx";
 import TechStack from "../components/About-TechStack.tsx";
 
 // Types
-import { AboutProps } from "../types/types";
+import { AboutProps } from "../types/propTypes.ts";
 
 const AboutContainer = ({ handleEmail }: AboutProps) => {
   return (

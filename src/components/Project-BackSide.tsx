@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 // Components
 import HorizontalScroll from "./HorizontalScroll";
 
@@ -12,7 +10,10 @@ import projectClockin from "../assets/data/projectClockin";
 import projectPortfolio from "../assets/data/projectPortfolio";
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-const BackSide = ({ project, index1, flipped, setFlipped }) => {
+// Types
+import { ProjectBackSideProps } from "../types/propTypes";
+
+const BackSide = ({ project, index1, flipped, setFlipped }: ProjectBackSideProps) => {
   const data = [
     projectBottleNetes,
     projectYAP,
@@ -67,13 +68,6 @@ const BackSide = ({ project, index1, flipped, setFlipped }) => {
       </div>
     </div>
   );
-};
-
-BackSide.propTypes = {
-  project: PropTypes.object,
-  index1: PropTypes.number,
-  flipped: PropTypes.any,
-  setFlipped: PropTypes.func,
 };
 
 export default BackSide;
