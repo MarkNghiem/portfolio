@@ -12,7 +12,7 @@ import useSmoothFadeInTransition from "../hooks/useSmoothFadeInTransition";
 import recs from "../assets/data/rec";
 
 const Recommendation = () => {
-  const scrollRef = useRef(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
   const [divVisible, setDivVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -45,7 +45,7 @@ const Recommendation = () => {
     return () => scrollEl.removeEventListener("scroll", checkScrollPosition);
   }, [checkScrollPosition]);
 
-  const scroll = (direction) => {
+  const scroll = (direction: string) => {
     if (scrollRef.current) {
       const scrollAmount = scrollRef.current.clientWidth + 56;
       scrollRef.current.scrollBy({

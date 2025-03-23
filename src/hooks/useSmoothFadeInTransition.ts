@@ -2,8 +2,6 @@
 // Disable warning here since the hook will only run once on mount and no need for dependencies
 import { useEffect } from "react";
 
-
-
 const useSmoothFadeInTransition = (
   setState1: React.Dispatch<React.SetStateAction<boolean>>,
   setState2: React.Dispatch<React.SetStateAction<boolean>>,
